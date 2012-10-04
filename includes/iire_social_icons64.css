@@ -1,0 +1,75 @@
+/* 64 x 64 Icons */	
+.icon64 {
+	cursor:pointer;
+	display:block;
+	height:64px;
+	width:64px;
+	padding:0px;		
+}
+.facebook64 { background-position: 0px 0px; }
+.twitter64 { background-position: -64px 0px; }
+.email64 { background-position: -128px 0px; }
+.rss64 { background-position: -192px 0px; }
+.activerain64 { background-position: -256px 0px; }	
+.addthis64 { background-position: -320px 0px; }
+.aim64 { background-position: -384px 0px; }	
+.amazon64 { background-position: -448px 0px; }
+.android64 { background-position: -512px 0px; }
+.aol64 { background-position: -576px 0px; }	
+.apple64 { background-position: -640px 0px; }	
+.badoo64 { background-position: -704px 0px; }
+.bebo64 { background-position: -768px 0px; }
+.blinklist64 { background-position: -832px 0px; }	
+.blogger64 { background-position: -896px 0px; }
+.cafemom64 { background-position: -960px 0px; }	
+.delicious64 { background-position: -1024px 0px; }	
+.deviantart64 { background-position: -1088px 0px; }	
+.digg64 { background-position: -1152px 0px; }
+.dribbble64 { background-position: -1216px 0px; }	
+.feedburner64 { background-position: 0px -64px; }
+.flickr64 { background-position: -64px -64px; }
+.friendfeed64 { background-position: -128px -64px; }
+.friendster64 { background-position: -192px -64px; }
+.foursquare64 { background-position: -256px -64px; }
+.google64 { background-position: -320px -64px; }			
+.googleplus64 { background-position: -384px -64px; }	
+.gmail64 { background-position: -448px -64px; }	
+.hi564 { background-position: -512px -64px; }
+.instagram64 { background-position: -576px -64px; }	
+.lastfm64 { background-position: -640px -64px; }
+.linkedin64 { background-position: -704px -64px; }
+.livejournal64 { background-position: -768px -64px; }
+.microsoft64 { background-position: -832px -64px; }
+.meetup64 { background-position: -896px -64px; }
+.mylife64 { background-position: -960px -64px; }	
+.myspace64 { background-position: -1024px -64px; }	
+.ning64 { background-position: -1088px -64px; }	
+.newsvine64 { background-position: -1152px -64px; }	
+.orkut64 { background-position: -1216px -64px; }
+.pinterest64 { background-position: 0px -128px; }
+.picasa64 { background-position: -64px -128px; }			
+.reddit64 { background-position: -128px -128px; }	
+.sharethis64 { background-position: -192px -128px; }	
+.skype64 { background-position: -256px -128px; }
+.slashdot64 { background-position: -320px -128px; }	
+.slideshare64 { background-position: -384px -128px; }
+.soundcloud64 { background-position: -448px -128px; }			
+.spotify64 { background-position: -512px -128px; }	
+.stumbleupon64 { background-position: -576px -128px; }
+.tagged64 { background-position: -640px -128px; }		
+.technorati64 { background-position: -704px -128px; }
+.tumblr64 { background-position: -768px -128px; }			
+.vimeo64 { background-position: -832px -128px; }	
+.wordpress64 { background-position: -896px -128px; }
+.xing64 { background-position: -960px -128px; }		
+.yahoo64 { background-position: -1024px -128px; }	
+.yelp64 { background-position: -1088px -128px; }	
+.youtube64 { background-position: -1152px -128px; }	
+.favorite64 { background-position: 0px -192px; }			
+.link64 { background-position: -64px -192px; }	
+.website64 { background-position: -128px -192px; }
+.info164 { background-position: -192px -192px; }	
+.info264 { background-position: -256px -192px; }
+.chat64 { background-position: -320px -192px; }																				
+.contact64 { background-position: -384px -192px; }	
+.blank64 { background-position: -448px -192px; }
