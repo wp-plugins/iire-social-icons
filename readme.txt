@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: iiRe Productions
-Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/
+Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, You Tube  
 Requires at least: 3.1
 Tested up to: 3.42
@@ -13,12 +13,12 @@ Add social media icons and links to your site with a customizable user interface
 == Description ==
 
 The overall idea behind this plugin was to be able to easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode.
-Use one the default icon themes or use the symbols and background colors with CSS styling. Don't be afraid to experiment! You can always reset and start over!
+Use one the default icon themes or use the symbols and background colors with CSS styling.
 
-See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/">iiRe Social Icons page</a> for more information.
+See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
 
-* Features *
+Features
 
 * Create an independent social media icons widget and shortcode
 * Majority of social networks supported
@@ -46,20 +46,20 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Customize the container background color
 * Add This social media support
 * Built-in email contact form w/ recipient settings
-* A 'Reset' button!
+* A "Reset" button!
 * Works in most modern browsers, including IE9!
 * Accordian-style options panel
 * Options panel is collapsible!
 
 
-* Support Networks *
+Support Networks
 
 Add This, Amazon, Aim, AOL, Apple, Android, Beboo, Badoo, Blink List, Blogger, Cafe Mom, Delicious, Deviant Art, Digg, Dribble, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Microsoft, Meetup, Myspace, Newsvine, Ning, Orkut, Pinterest, Picasa, Reddit, RSS, Share This, Skype, Slash Dot, Slideshare, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yahoo, Yelp, You Tube
 
 There are additional icons for email, custom links, alternate website, add to favorites, more information, chat and a contact us page.
 
 
-* Quick Start *
+Quick Start
 
 1. Go to 'Wordpress Admin', 'Appearance', 'Widgets'.
 2. Add the 'iiRe Social Media Icons' to a sidebar widget area and 'Save'.
@@ -117,7 +117,7 @@ Q. How do I access all the icons?
 A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
 
 Q. Are there additional icon themes?
-A. Yes, there are additional free theme available as downloalable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/   
+A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/   
 
 
 == Screenshots ==
@@ -138,7 +138,8 @@ Limited number of meta tags in W readme.txt file
 Number of available themes included was reduced to limit the size of the plugin
 Additional theme files posted on website
 Select box for theme code modified to detect new sub-folders in the plugin theme directory
+Updated readme.txt file
 
 
 == Upgrade Notice ==
-See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/">iiRe Social Icons page</a> for more information.
+See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
