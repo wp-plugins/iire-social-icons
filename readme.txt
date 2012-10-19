@@ -117,7 +117,10 @@ Q. How do I access all the icons?
 A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
 
 Q. Are there additional icon themes?
-A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/   
+A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
+
+Q. How do I change the default links for each icon?
+A. In the Widget or Shortcode Designer, just double-click the desired icon to display the title/link icon and enter the appropriate values.   
 
 
 == Screenshots ==
