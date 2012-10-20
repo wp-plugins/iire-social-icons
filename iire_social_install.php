@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation - 09-30-2012
+// Social Icons Installation - 10-20-2012
 
 global $iire_social_version;
-$iire_social_version = "0.12";
+$iire_social_version = "0.20";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {

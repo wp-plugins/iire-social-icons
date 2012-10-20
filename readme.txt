@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: iiRe Productions
 Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
-Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, You Tube  
+Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
 Tested up to: 3.42
-Stable tag: 0.12 
+Stable tag: 0.20 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,8 +12,7 @@ Add social media icons and links to your site with a customizable user interface
 
 == Description ==
 
-The overall idea behind this plugin was to be able to easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode.
-Use one the default icon themes or use the symbols and background colors with CSS styling.
+The overall idea behind this plugin was to be able to easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling.
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
@@ -22,7 +21,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 * Create an independent social media icons widget and shortcode
 * Majority of social networks supported
-* OVer 60 different icons!
+* Over 60 different icons!
 * 5 different icon sizes (16x16px, 24x24px, 32x32px, 48x48px, 64x64px)!
 * Additional free icon themes available
 * Real-time editing! Change icon theme, size. spacing, etc. dynamically
@@ -132,16 +131,24 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 == Changelog ==
 
 = 0.10 =
-Initial beta release
+* Initial beta release
 
 = 0.11 =
-Limited number of meta tags in W readme.txt file
+* Limited number of meta tags in readme.txt file
 
 = 0.12 =
-Number of available themes included was reduced to limit the size of the plugin
-Additional theme files posted on website
-Select box for theme code modified to detect new sub-folders in the plugin theme directory
-Updated readme.txt file
+* Number of available themes included was reduced to limit the size of the plugin
+* Additional theme files posted on website
+* Select box for theme code modified to detect new sub-folders in the plugin theme directory
+* Updated readme.txt file
+
+= 0.20 =
+**Make sure to deactivate and delete all prior versions before installing thelatest version!**
+* Fixed an issue with icon opacity in the Widget/ShortCode Designers
+* Fixed an issue remembering the active theme in Shortcode Designer
+* Added a prefix to each icon ID to allow additional compatiblilty with 3rd party themes that also include social media icons 
+* Modified all stylesheets to use the new icon prefix
+* Updated readme.txt file
 
 
 == Upgrade Notice ==

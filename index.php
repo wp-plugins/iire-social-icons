@@ -1,19 +1,19 @@
 <?php
 /*
 Plugin Name: iiRe Social Icons 
-Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/
+Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
 Description: Add social media icons and links you your site with a customizable user interface. Majority of social networks are supported!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 0.12
-Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, You Tube
+Version: 0.20
+Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube
 Copyright (C) 2012 iiRe Productions
 */
 	
 // ASSIGN VERSION
 global $wpdb, $iire_social_version;
-$iire_version = "0.12";
-$last_modified = "09-30-2012";
+$iire_version = "0.20";
+$last_modified = "10-20-2012";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
