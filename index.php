@@ -236,7 +236,7 @@ add_action('wp_head', 'iire_social_head');
 // FOOTER
 function iire_social_footer() {
     if (! is_admin() ){
-		// Live Site		
+		// Live Site
 		wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js');	
 		wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
 
@@ -282,12 +282,14 @@ function iire_social_icons() {
 		$settings[$row->option_name] = $row->option_value;
 	}	
 
+	$sc = '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>';
+
 	if ($settings['clone_widget_settings'] == '1' ) {
-		$sc = '<div id="iire_social_widget" class="iire_social_widget">';	
+		$sc .= '<div id="iire_social_widget" class="iire_social_widget">';	
 		$sc .= stripslashes($settings['widget_output']);
 		$sc .= '</div>';		
 	} else {
-		$sc = '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
+		$sc .= '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
 		$sc .= stripslashes($settings['sc_output']);
 		$sc .= '</div>';		
 	}		
