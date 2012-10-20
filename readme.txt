@@ -142,8 +142,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Select box for theme code modified to detect new sub-folders in the plugin theme directory
 * Updated readme.txt file
 
-= 0.20 =
-* **Make sure to deactivate and delete all prior versions before installing thelatest version!** 
+= 0.20 Make sure to deactivate and delete all prior versions =
 * Fixed an issue with icon opacity in the Widget/ShortCode Designers
 * Fixed an issue remembering the active theme in Shortcode Designer
 * Added a prefix to each icon ID to allow additional compatiblilty with 3rd party themes that also include social media icons 
