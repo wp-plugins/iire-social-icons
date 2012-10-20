@@ -51,7 +51,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Options panel is collapsible!
 
 
-**Support Networks**
+**Supported Networks**
 
 Add This, Amazon, Aim, AOL, Apple, Android, Beboo, Badoo, Blink List, Blogger, Cafe Mom, Delicious, Deviant Art, Digg, Dribble, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Microsoft, Meetup, Myspace, Newsvine, Ning, Orkut, Pinterest, Picasa, Reddit, RSS, Share This, Skype, Slash Dot, Slideshare, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yahoo, Yelp, You Tube
 
@@ -142,7 +142,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Select box for theme code modified to detect new sub-folders in the plugin theme directory
 * Updated readme.txt file
 
-= 0.20 Make sure to deactivate and delete all prior versions =
+= 0.20    Make sure to deactivate and delete all prior versions =
 * Fixed an issue with icon opacity in the Widget/ShortCode Designers
 * Fixed an issue remembering the active theme in Shortcode Designer
 * Added a prefix to each icon ID to allow additional compatiblilty with 3rd party themes that also include social media icons 
