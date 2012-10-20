@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - 09-30-2012
+// Admin Social Hooks - 10-20-2012
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');

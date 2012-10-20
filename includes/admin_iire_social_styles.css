@@ -1,4 +1,4 @@
-/* Admin CSS - 9-30-2012 */
+/* Admin CSS - 10-20-2012 */
 
 /* Admin Settings Page */
 
@@ -28,7 +28,6 @@ li#toplevel_page_iire_admin_social_home div.wp-menu-image a img { display:none; 
 
 
 /* Widget */
-/* div#viewport { width:auto; min-width:680px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('../includes/images/viewport.png'); background-repeat:no-repeat; background-position: top right;} */
 div#chooseicons { width:auto; min-width:680px; height:auto; padding:10px; margin-top:10px; background-color:#EDEDED; }
 div#codepreview { width:auto; min-width:680px; min-height:235px; height:auto; background:#FFFFCC; padding:10px; }	
 
@@ -79,73 +78,73 @@ span#footer-thankyou { display: none; }
 
 
 
-li#facebook { background-position: 0px 0px; }
-li#twitter { background-position: -24px 0px; }
-li#email { background-position: -48px 0px; }
-li#rss { background-position: -72px 0px; }
-li#activerain { background-position: -96px 0px; }	
-li#addthis { background-position: -120px 0px; }
-li#aim { background-position: -144px 0px; }	
-li#amazon { background-position: -168px 0px; }
-li#android { background-position: -192px 0px; }
-li#aol { background-position: -216px 0px; }	
-li#apple { background-position: -240px 0px; }	
-li#badoo { background-position: -264px 0px; }
-li#bebo { background-position: -288px 0px; }
-li#blinklist { background-position: -312px 0px; }	
-li#blogger { background-position: -336px 0px; }
-li#cafemom { background-position: -360px 0px; }	
-li#delicious { background-position: -384px 0px; }	
-li#deviantart { background-position: -408px 0px; }	
-li#digg { background-position: -432px 0px; }
-li#dribbble { background-position: -456px 0px; }	
-li#feedburner { background-position: 0px -24px; }
-li#flickr { background-position: -24px -24px; }
-li#friendfeed { background-position: -48px -24px; }
-li#friendster { background-position: -72px -24px; }
-li#foursquare { background-position: -96px -24px; }
-li#google { background-position: -120px -24px; }			
-li#googleplus { background-position: -144px -24px; }	
-li#gmail { background-position: -168px -24px; }	
-li#hi5 { background-position: -192px -24px; }
-li#instagram { background-position: -216px -24px; }	
-li#lastfm { background-position: -240px -24px; }
-li#linkedin { background-position: -264px -24px; }
-li#livejournal { background-position: -288px -24px; }
-li#microsoft { background-position: -312px -24px; }
-li#meetup { background-position: -336px -24px; }
-li#mylife { background-position: -360px -24px; }	
-li#myspace { background-position: -384px -24px; }	
-li#ning { background-position: -408px -24px; }	
-li#newsvine { background-position: -432px -24px; }	
-li#orkut { background-position: -456px -24px; }
-li#pinterest { background-position: 0px -48px; }
-li#picasa { background-position: -24px -48px; }			
-li#reddit { background-position: -48px -48px; }	
-li#sharethis { background-position: -72px -48px; }	
-li#skype { background-position: -96px -48px; }
-li#slashdot { background-position: -120px -48px; }	
-li#slideshare { background-position: -144px -48px; }
-li#soundcloud { background-position: -168px -48px; }			
-li#spotify { background-position: -192px -48px; }	
-li#stumbleupon { background-position: -216px -48px; }
-li#tagged { background-position: -240px -48px; }		
-li#technorati { background-position: -264px -48px; }
-li#tumblr { background-position: -288px -48px; }			
-li#vimeo { background-position: -312px -48px; }	
-li#wordpress { background-position: -336px -48px; }
-li#xing { background-position: -360px -48px; }		
-li#yahoo { background-position: -384px -48px; }	
-li#yelp { background-position: -408px -48px; }	
-li#youtube { background-position: -432px -48px; }	
-li#favorite { background-position: 0px -72px; }			
-li#link { background-position: -24px -72px; }	
-li#website { background-position: -48px -72px; }
-li#info1 { background-position: -72px -72px; }	
-li#info2 { background-position: -96px -72px; }
-li#chat { background-position: -120px -72px; }																				
-li#contact { background-position: -144px -72px; }	
-li#blank { background-position: -168px -72px; }	
+li#iire-facebook { background-position: 0px 0px; }
+li#iire-twitter { background-position: -24px 0px; }
+li#iire-email { background-position: -48px 0px; }
+li#iire-rss { background-position: -72px 0px; }
+li#iire-activerain { background-position: -96px 0px; }	
+li#iire-addthis { background-position: -120px 0px; }
+li#iire-aim { background-position: -144px 0px; }	
+li#iire-amazon { background-position: -168px 0px; }
+li#iire-android { background-position: -192px 0px; }
+li#iire-aol { background-position: -216px 0px; }	
+li#iire-apple { background-position: -240px 0px; }	
+li#iire-badoo { background-position: -264px 0px; }
+li#iire-bebo { background-position: -288px 0px; }
+li#iire-blinklist { background-position: -312px 0px; }	
+li#iire-blogger { background-position: -336px 0px; }
+li#iire-cafemom { background-position: -360px 0px; }	
+li#iire-delicious { background-position: -384px 0px; }	
+li#iire-deviantart { background-position: -408px 0px; }	
+li#iire-digg { background-position: -432px 0px; }
+li#iire-dribbble { background-position: -456px 0px; }	
+li#iire-feedburner { background-position: 0px -24px; }
+li#iire-flickr { background-position: -24px -24px; }
+li#iire-friendfeed { background-position: -48px -24px; }
+li#iire-friendster { background-position: -72px -24px; }
+li#iire-foursquare { background-position: -96px -24px; }
+li#iire-google { background-position: -120px -24px; }			
+li#iire-googleplus { background-position: -144px -24px; }	
+li#iire-gmail { background-position: -168px -24px; }	
+li#iire-hi5 { background-position: -192px -24px; }
+li#iire-instagram { background-position: -216px -24px; }	
+li#iire-lastfm { background-position: -240px -24px; }
+li#iire-linkedin { background-position: -264px -24px; }
+li#iire-livejournal { background-position: -288px -24px; }
+li#iire-microsoft { background-position: -312px -24px; }
+li#iire-meetup { background-position: -336px -24px; }
+li#iire-mylife { background-position: -360px -24px; }	
+li#iire-myspace { background-position: -384px -24px; }	
+li#iire-ning { background-position: -408px -24px; }	
+li#iire-newsvine { background-position: -432px -24px; }	
+li#iire-orkut { background-position: -456px -24px; }
+li#iire-pinterest { background-position: 0px -48px; }
+li#iire-picasa { background-position: -24px -48px; }			
+li#iire-reddit { background-position: -48px -48px; }	
+li#iire-sharethis { background-position: -72px -48px; }	
+li#iire-skype { background-position: -96px -48px; }
+li#iire-slashdot { background-position: -120px -48px; }	
+li#iire-slideshare { background-position: -144px -48px; }
+li#iire-soundcloud { background-position: -168px -48px; }			
+li#iire-spotify { background-position: -192px -48px; }	
+li#iire-stumbleupon { background-position: -216px -48px; }
+li#iire-tagged { background-position: -240px -48px; }		
+li#iire-technorati { background-position: -264px -48px; }
+li#iire-tumblr { background-position: -288px -48px; }			
+li#iire-vimeo { background-position: -312px -48px; }	
+li#iire-wordpress { background-position: -336px -48px; }
+li#iire-xing { background-position: -360px -48px; }		
+li#iire-yahoo { background-position: -384px -48px; }	
+li#iire-yelp { background-position: -408px -48px; }	
+li#iire-youtube { background-position: -432px -48px; }	
+li#iire-favorite { background-position: 0px -72px; }			
+li#iire-link { background-position: -24px -72px; }	
+li#iire-website { background-position: -48px -72px; }
+li#iire-info1 { background-position: -72px -72px; }	
+li#iire-info2 { background-position: -96px -72px; }
+li#iire-chat { background-position: -120px -72px; }																				
+li#iire-contact { background-position: -144px -72px; }	
+li#iire-blank { background-position: -168px -72px; }	
 
 div#iire_social_panel_tab {
 	position:fixed;

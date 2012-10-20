@@ -1,5 +1,5 @@
 <?php
-// Admin Social Home Landing Page - 09-30-2012
+// Admin Social Home Landing Page - 10-20-2012
 
 function iire_admin_social_home() {
 	global $wpdb;
@@ -53,18 +53,11 @@ Use one of the default icon themes or use the symbols and background colors with
 <li>- Support of additional social networks</li>
 </ul>
 
-<p>Get the <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">full version</a> of this plugin for $5.00 USD. We will send you a link to download the latest full version upon purchase confirmation and a successful PayPal transaction. If you have questions regarding your transaction,  please <a href="http://www.iireproductions.com/contact-us/" target="_blank">contact us</a>.</p>
+<p>Get the <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">full version</a> of this plugin for $5.00 USD. We will send you a link to download the latest full version upon purchase confirmation and a successful PayPal transaction within 24 hours. If you have questions regarding your transaction,  please <a href="http://www.iireproductions.com/contact-us/" target="_blank">contact us</a>.</p>
 
 
 <h3>Donations</h3>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<p>If you would like to contribute to future development of this plugin, please donate what you can. If we receive your donation, we will email you a registration key to unlock the addtional social media networks in the demo version.</p>
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="LXNX7ML2WGJZQ">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
+<p>If you would like to contribute to future development of this plugin, please <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">donate</a> what you can. If we receive your donation, we will email you a registration key to unlock the addtional social media networks in the demo version.</p>
 
 </div>
 
