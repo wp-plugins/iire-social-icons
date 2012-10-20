@@ -3,7 +3,8 @@
 jQuery(document).ready(function() {
 
 	// SEND EMAIL
-	jQuery('div#email').bind('click', function(e) {
+	jQuery('div#iire-email').bind('click', function(e) {
+		//alert("Email")											
 		e.preventDefault();	
 
 		jQuery("#emaildialog").dialog( "destroy" );
@@ -11,7 +12,7 @@ jQuery(document).ready(function() {
 			resizable: false,
 			draggable: true,			
 			width: 320,									
-			height: 320,
+			height: 330,
 			modal: true,
 			buttons: {
 				"Send Message": function() {
@@ -61,7 +62,7 @@ jQuery(document).ready(function() {
 	
 	
 	// ADD TO FAVORITES
-	jQuery('div#favorite').bind('click', function(e) {
+	jQuery('div#iire-favorite').bind('click', function(e) {
 		e.preventDefault();	
 		if (document.all && window.external) {
  			window.external.AddFavorite (sURL,sTitle);

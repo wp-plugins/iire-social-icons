@@ -134,13 +134,13 @@ jQuery(document).ready(function() {
 		jQuery("input.choose_title").val(title);
 		jQuery("input.choose_id").val(id);
 
-		if (id == 'email') {
+		if (id == 'iire-email') {
 			jQuery("h3#email").trigger('click');
 			alert("Fill out the email details in the sidebar.");
 			return;
 		}
 
-		if (id == 'favorite') {
+		if (id == 'iire-favorite') {
 			alert("No settings needed for Add To Favorites!");			
 			return;
 		}
@@ -238,10 +238,10 @@ jQuery(document).ready(function() {
 		var outputcode =jQuery('div#codepreview').html();
 		
 		switch(id) {
-			case 'email':	
+			case 'iire-email':	
 				var outputicon = '<div id="'+id+'" class="'+ac+' '+id+sz+' sendemail" title="'+title+'" rel="nofollow"></div>';
 				break;	
-			case 'favorite':	
+			case 'iire-favorite':	
 				var outputicon = '<div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'" rel="nofollow"></div>';
 				break;		
 			case 'addthis':	

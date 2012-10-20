@@ -1,5 +1,5 @@
 <?php
-// iiRe Social Icons Widget - 09-30-2012
+// iiRe Social Icons Widget - 10-20-2012
 class iiReSocialMedia extends WP_Widget {
 
   	function iiReSocialMedia()  {
