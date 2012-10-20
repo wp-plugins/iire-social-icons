@@ -250,9 +250,9 @@ jQuery(document).ready(function() {
 			case 'iire-favorite':	
 				var outputicon = '<div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'" rel="nofollow"></div>';
 				break;					
-			case 'addthis':	
+			case 'iire-addthis':	
 				//var outputicon = '<a id="'+id+'" href="http://www.addthis.com/bookmark.php?v=250" class="'+id+' addthis_button '+ac+' '+id+sz+'" title="'+title+'" rel="nofollow">&nbsp;</a>';
-				var outputicon = '<a id="'+id+'" href="http://www.addthis.com/bookmark.php?v=250&pubid='+jQuery('input#addthis_key').val()+'" class="'+id+' addthis_button '+ac+' '+id+sz+'" rel="nofollow" style="float:left"><div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'"></div></a>';				
+				var outputicon = '<a id="addthis" href="http://www.addthis.com/bookmark.php?v=250&pubid='+jQuery('input#addthis_key').val()+'" class="'+id+' addthis_button '+ac+' '+id+sz+'" rel="nofollow" style="float:left"><div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'"></div></a>';				
 				break;				
 			default:
 				var outputicon = '<a href="'+url+'" target="_blank"'+rel+'class="'+id+'"><div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'"></div></a>';		
@@ -356,8 +356,8 @@ jQuery(document).ready(function() {
 				case 'iire-favorite':	
 					outputicons = outputicons+icon;
 					break;					
-				case 'addthis':	
-					outputicons = outputicons+'<a href="http://www.addthis.com/bookmark.php?v=250&pubid='+jQuery('input#addthis_key').val()+'" class="addthis_button '+id+' '+jQuery('input#widget_addclasses').val()+' '+id+jQuery('select#widget_icon_size').val()+'" rel="nofollow" style="float:left">'+icon+'</a>';
+				case 'iire-addthis':	
+					outputicons = outputicons+'<a id="addthis" href="http://www.addthis.com/bookmark.php?v=250&pubid='+jQuery('input#addthis_key').val()+'" class="addthis_button '+id+' '+jQuery('input#widget_addclasses').val()+' '+id+jQuery('select#widget_icon_size').val()+'" rel="nofollow" style="float:left">'+icon+'</a>';
 					break;				
 				default:
 					outputicons = outputicons+'<a href="'+url+'" target="'+tar+'"'+rel+'class="'+id+'">'+icon+'</a>';		
@@ -848,9 +848,9 @@ jQuery(document).ready(function() {
 		
 		var addthis = jQuery("select#addthis").val();
 		if ( addthis == '0') {
-			jQuery("li#addthis").hide();			
+			jQuery("li#iire-addthis").hide();			
 		} else {
-			jQuery("li#addthis").show();				
+			jQuery("li#iire-addthis").show();				
 		}
 		
 		var wb= jQuery("select#widget_background").val();
@@ -926,11 +926,11 @@ jQuery(document).ready(function() {
 		if ( addthis == '0') {
 			jQuery(".addthis").addClass("hidden");
 			jQuery(".addthis2").removeClass("hidden");
-			jQuery("li#addthis").hide();			
+			jQuery("li#iire-addthis").hide();			
 		} else {
 			jQuery(".addthis").removeClass("hidden");
 			jQuery(".addthis2").addClass("hidden");
-			jQuery("li#addthis").show();				
+			jQuery("li#iire-addthis").show();				
 		}															   
 	});
 

@@ -244,7 +244,7 @@ jQuery(document).ready(function() {
 			case 'iire-favorite':	
 				var outputicon = '<div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'" rel="nofollow"></div>';
 				break;		
-			case 'addthis':	
+			case 'iire-addthis':	
 				var outputicon = '<a id="'+id+'" href="http://www.addthis.com/bookmark.php?v=250" class="'+id+' addthis_button '+ac+' '+id+sz+'" title="'+title+'" rel="nofollow">&nbsp;</a>';
 				break;				
 			default:
@@ -337,13 +337,13 @@ jQuery(document).ready(function() {
 			var icon = jQuery(this)[0].outerHTML;
 		
 			switch(id) {
-				case 'email':	
+				case 'iire-email':	
 					outputicons = outputicons+icon;
 					break;
-				case 'favorite':	
+				case 'iire-favorite':	
 					outputicons = outputicons+icon;
 					break;					
-				case 'addthis':	
+				case 'iire-addthis':	
 					outputicons = outputicons+'<a id="'+id+'" href="http://www.addthis.com/bookmark.php?v=250" class="'+id+' addthis_button '+jQuery('input#widget_addclasses').val()+' '+id+jQuery('select#widget_icon_size').val()+'" title="'+title+'" rel="nofollow">&nbsp;</a>';
 					break;				
 				default:
@@ -838,9 +838,9 @@ jQuery(document).ready(function() {
 		
 		var addthis = jQuery("select#addthis").val();
 		if ( addthis == '0') {
-			jQuery("li#addthis").hide();			
+			jQuery("li#iire-addthis").hide();			
 		} else {
-			jQuery("li#addthis").show();				
+			jQuery("li#iire-addthis").show();				
 		}
 		
 		var wb= jQuery("select#sc_background").val();
@@ -913,11 +913,11 @@ jQuery(document).ready(function() {
 		if ( addthis == '0') {
 			jQuery(".addthis").addClass("hidden");
 			jQuery(".addthis2").removeClass("hidden");
-			jQuery("li#addthis").hide();			
+			jQuery("li#iire-addthis").hide();			
 		} else {
 			jQuery(".addthis").removeClass("hidden");
 			jQuery(".addthis2").addClass("hidden");
-			jQuery("li#addthis").show();				
+			jQuery("li#iire-addthis").show();				
 		}															   
 	});
 
