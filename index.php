@@ -282,8 +282,6 @@ function iire_social_icons() {
 		$settings[$row->option_name] = $row->option_value;
 	}	
 
-	$sc = '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>';
-
 	if ($settings['clone_widget_settings'] == '1' ) {
 		$sc .= '<div id="iire_social_widget" class="iire_social_widget">';	
 		$sc .= stripslashes($settings['widget_output']);
