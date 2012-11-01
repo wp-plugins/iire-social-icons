@@ -1,9 +1,5 @@
 <?php 
 header('Content-type: text/css');   
-//header("Cache-Control: must-revalidate"); 
-//$offset = 72000 ; 
-//$ExpStr = "Expires: " . gmdate("D, d M Y H:i:s", time() + $offset) . " GMT"; 
-//header($ExpStr);
 
 	echo '#emaildialog { font-size: 11px; }';
 	echo '#emaildialog input, #emaildialog textarea { padding: 5px; width: 95%; margin-bottom: 5px; }';			

@@ -1,4 +1,4 @@
-// IIRE SOCIAL WIDGET  - 10/20/2012 - 9:00 PM
+// IIRE SOCIAL WIDGET  - 11/01/2012 - 9:00 PM
 
 jQuery(document).ready(function() {
 	var plugin_path =jQuery("input#plugin_path").val(); 
@@ -251,7 +251,6 @@ jQuery(document).ready(function() {
 				var outputicon = '<div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'" rel="nofollow"></div>';
 				break;					
 			case 'iire-addthis':	
-				//var outputicon = '<a id="'+id+'" href="http://www.addthis.com/bookmark.php?v=250" class="'+id+' addthis_button '+ac+' '+id+sz+'" title="'+title+'" rel="nofollow">&nbsp;</a>';
 				var outputicon = '<a id="addthis" href="http://www.addthis.com/bookmark.php?v=250&pubid='+jQuery('input#addthis_key').val()+'" class="'+id+' addthis_button '+ac+' '+id+sz+'" rel="nofollow" style="float:left"><div id="'+id+'" class="'+ac+' '+id+sz+'" title="'+title+'"></div></a>';				
 				break;				
 			default:
@@ -410,7 +409,7 @@ jQuery(document).ready(function() {
 	// ICONS - CHANGE THEME
 	jQuery('select#widget_icon_theme').bind('change', function() {
 		var theme = jQuery(this).val();
-		var allthemes = "default iphone circular_cutouts chrome_panels eco_green gold_bars light_bulbs post_it_notes punch_thru red_alert stickers symbols_black symbols_gray symbols_white wood_crates";
+		var allthemes = "default iphone circular_cutouts chrome_panels eco_green gold_bars light_bulbs post_it_notes punch_thru red_alert stickers symbols_black symbols_gray symbols_white wood_crates custom1 custom2 custom3 custom4 custom5";
 		var imgsrc = plugin_path+'themes/'+theme+'/screenshot.png';
 		jQuery("img.icon_theme").attr("src", imgsrc );
 
@@ -857,7 +856,10 @@ jQuery(document).ready(function() {
 		if (wb == '0') {
 			jQuery("div.iire_social_widget").css("border", "#AAAAAA 1px dashed");
 		}
-		
+
+		jQuery("li.hidden").hide();
+		jQuery("div.update-nag").hide();	
+	  
 		return;
 	}
 
@@ -969,7 +971,7 @@ jQuery(document).ready(function() {
 			jQuery('select#widget_orientation').val('horizontal');	
 			jQuery('select#widget_align').val('left');	
 			jQuery('input#ww').val('225');			
-			jQuery('input#wh').val('350');	
+			jQuery('input#wh').val('225');	
 			
 			jQuery('input#widget_pad_top').val('0');
 			jQuery('input#widget_pad_bottom').val('0');	

@@ -25,7 +25,8 @@
 .iire-delicious64 { background-position: -1024px 0px; }	
 .iire-deviantart64 { background-position: -1088px 0px; }	
 .iire-digg64 { background-position: -1152px 0px; }
-.iire-dribbble64 { background-position: -1216px 0px; }	
+.iire-dribbble64 { background-position: -1216px 0px; }
+	
 .iire-feedburner64 { background-position: 0px -64px; }
 .iire-flickr64 { background-position: -64px -64px; }
 .iire-friendfeed64 { background-position: -128px -64px; }
@@ -46,6 +47,7 @@
 .iire-ning64 { background-position: -1088px -64px; }	
 .iire-newsvine64 { background-position: -1152px -64px; }	
 .iire-orkut64 { background-position: -1216px -64px; }
+
 .iire-pinterest64 { background-position: 0px -128px; }
 .iire-picasa64 { background-position: -64px -128px; }			
 .iire-reddit64 { background-position: -128px -128px; }	
@@ -64,12 +66,26 @@
 .iire-xing64 { background-position: -960px -128px; }		
 .iire-yahoo64 { background-position: -1024px -128px; }	
 .iire-yelp64 { background-position: -1088px -128px; }	
-.iire-youtube64 { background-position: -1152px -128px; }	
+.iire-youtube64 { background-position: -1152px -128px; }
+.iire-blank64 { background-position: -1216px -128px; }
+	
 .iire-favorite64 { background-position: 0px -192px; }			
 .iire-link64 { background-position: -64px -192px; }	
 .iire-website64 { background-position: -128px -192px; }
 .iire-info164 { background-position: -192px -192px; }	
 .iire-info264 { background-position: -256px -192px; }
 .iire-chat64 { background-position: -320px -192px; }																				
-.iire-contact64 { background-position: -384px -192px; }	
-.iire-blank64 { background-position: -448px -192px; }
+.iire-contact64 { background-position: -384px -192px; }
+.iire-print64 { background-position: -448px -192px; }			
+.iire-etsy64 { background-position: -512px -192px; }	
+.iire-buzznet64 { background-position: -576px -192px; }
+.iire-paypal64 { background-position: -640px -192px; }		
+.iire-reverbnation64 { background-position: -704px -192px; }
+.iire-ebay64 { background-position: -768px -192px; }			
+.iire-mixx64 { background-position: -832px -192px; }	
+.iire-purevolume64 { background-position: -896px -192px; }
+.iire-designfloat64 { background-position: -960px -192px; }		
+.iire-500px64 { background-position: -1024px -192px; }	
+.iire-smugmug64 { background-position: -1088px -192px; }	
+.iire-geocaching64 { background-position: -1152px -192px; }
+.iire-evernote64 { background-position: -1216px -192px; }

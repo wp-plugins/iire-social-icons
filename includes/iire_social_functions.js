@@ -1,8 +1,8 @@
-// IIRE SOCIAL  - 10/20/2012 - 9:00 PM
+// IIRE SOCIAL  - 11/01/2012 - 9:00 AM
 
 jQuery(document).ready(function() {
 
-	// SEND EMAIL
+// SEND EMAIL
 	jQuery('div#iire-email').bind('click', function(e) {
 		//alert("Email")											
 		e.preventDefault();	
@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 			resizable: false,
 			draggable: true,			
 			width: 320,									
-			height: 330,
+			height: 375,
 			modal: true,
 			buttons: {
 				"Send Message": function() {
@@ -63,16 +63,54 @@ jQuery(document).ready(function() {
 	
 	// ADD TO FAVORITES
 	jQuery('div#iire-favorite').bind('click', function(e) {
+		//alert("Add To Favorites")														   
 		e.preventDefault();	
-		if (document.all && window.external) {
- 			window.external.AddFavorite (sURL,sTitle);
- 		} else if (window.sidebar) { 
-   			window.sidebar.addPanel(sTitle,sURL,'');
- 		} else {
-  			alert ('Please press Ctrl+D to bookmark this page.');
- 		}
 
+		var sURL = location.href;
+		var sTitle = document.title;
+
+		var userAgent = navigator.userAgent.toLowerCase();
+		var userBrowserName  = navigator.appName.toLowerCase();
+		jQuery.browser = {
+			version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1],
+			safari: /webkit/.test( userAgent ),
+			opera: /opera/.test( userAgent ),
+			msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+			mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+			name:userBrowserName
+		};
+		
+		if (window.chrome) {
+  			alert ('Press Ctrl+D to bookmark this page in Google Chrome.');			
+			return;
+		}		
+		if (jQuery.browser.safari == true) {
+			alert ('Press Ctrl+D (Command+D) to bookmark this page in Apple Safari.');
+			return;
+		}
+		if (jQuery.browser.opera == true) {
+			alert ('Press Ctrl+D to bookmark this page in Opera.');
+			return;
+		}
+		if (jQuery.browser.msie == true) {
+			//alert ('Press Ctrl+D to bookmark this page in Internet Explorer.');
+ 			window.external.AddFavorite (sURL,sTitle);			
+			return;
+		}
+		if (jQuery.browser.mozilla == true) {
+			//alert ('Press Ctrl+D to bookmark this page in Firefox.');
+			window.sidebar.addPanel(sTitle,sURL, "");			
+			return;
+		}
 	});	
+
+
+	// PRINT
+	jQuery('div#iire-print').bind('click', function(e) {						
+		e.preventDefault();
+		window.print();		
+	});
+
 
 
 	// ICON OPACITY ON MOUSE ENTER

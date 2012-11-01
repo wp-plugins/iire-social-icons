@@ -4,7 +4,7 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
 Tested up to: 3.42
-Stable tag: 0.20 
+Stable tag: 0.21 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,11 +130,21 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 == Changelog ==
 
-= 0.10 =
-* Initial beta release
+= 0.21 Make sure to deactivate and delete all prior versions! =
+* Fix an issue where themes were not properly detected when plugin was installed into a different location other that the default folder
+* Rewrote the javascript for the "Add to Favorites" Works in FireFox and IE, a prompt is displayed for Chrome,Safari and Opera  
+* Adjusted the default minimum height of the Widget/Shortcode Designer preview area
+* Added javascript to hide Wordpress nag messages when editing in the Widget/Shortcode Designer
+* Add a "blank" icon - Designers can graphically modify a theme to add an icon logo that may not be available in the network.  
+* Additional support for future upgrades.
+* Updated readme.txt file
 
-= 0.11 =
-* Limited number of meta tags in readme.txt file
+= 0.20 =
+* Fixed an issue with icon opacity in the Widget/ShortCode Designers
+* Fixed an issue remembering the active theme in Shortcode Designer
+* Added a prefix to each icon ID to allow additional compatiblilty with 3rd party themes that also include social media icons 
+* Modified all stylesheets to use the new icon prefix
+* Updated readme.txt file
 
 = 0.12 =
 * Number of available themes included was reduced to limit the size of the plugin
@@ -142,13 +152,19 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Select box for theme code modified to detect new sub-folders in the plugin theme directory
 * Updated readme.txt file
 
-= 0.20    Make sure to deactivate and delete all prior versions =
-* Fixed an issue with icon opacity in the Widget/ShortCode Designers
-* Fixed an issue remembering the active theme in Shortcode Designer
-* Added a prefix to each icon ID to allow additional compatiblilty with 3rd party themes that also include social media icons 
-* Modified all stylesheets to use the new icon prefix
-* Updated readme.txt file
+= 0.11 =
+* Limited number of meta tags in readme.txt file
+
+= 0.10 =
+* Initial beta release
+
+= To Do list = 
+* Print icon and functionality
+* Additional social networks
+* Custom theme capabilities
 
 
 == Upgrade Notice ==
+** Make sure to deactivate and delete all prior versions! **
+
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.

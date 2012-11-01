@@ -1,4 +1,4 @@
-/* Admin CSS - 10-20-2012 */
+/* Admin CSS - 11-01-2012 */
 
 /* Admin Settings Page */
 
@@ -97,7 +97,8 @@ li#iire-cafemom { background-position: -360px 0px; }
 li#iire-delicious { background-position: -384px 0px; }	
 li#iire-deviantart { background-position: -408px 0px; }	
 li#iire-digg { background-position: -432px 0px; }
-li#iire-dribbble { background-position: -456px 0px; }	
+li#iire-dribbble { background-position: -456px 0px; }
+	
 li#iire-feedburner { background-position: 0px -24px; }
 li#iire-flickr { background-position: -24px -24px; }
 li#iire-friendfeed { background-position: -48px -24px; }
@@ -118,6 +119,7 @@ li#iire-myspace { background-position: -384px -24px; }
 li#iire-ning { background-position: -408px -24px; }	
 li#iire-newsvine { background-position: -432px -24px; }	
 li#iire-orkut { background-position: -456px -24px; }
+
 li#iire-pinterest { background-position: 0px -48px; }
 li#iire-picasa { background-position: -24px -48px; }			
 li#iire-reddit { background-position: -48px -48px; }	
@@ -136,7 +138,9 @@ li#iire-wordpress { background-position: -336px -48px; }
 li#iire-xing { background-position: -360px -48px; }		
 li#iire-yahoo { background-position: -384px -48px; }	
 li#iire-yelp { background-position: -408px -48px; }	
-li#iire-youtube { background-position: -432px -48px; }	
+li#iire-youtube { background-position: -432px -48px; }
+li#iire-blank { background-position: -456px -48px; }	
+
 li#iire-favorite { background-position: 0px -72px; }			
 li#iire-link { background-position: -24px -72px; }	
 li#iire-website { background-position: -48px -72px; }
@@ -144,7 +148,20 @@ li#iire-info1 { background-position: -72px -72px; }
 li#iire-info2 { background-position: -96px -72px; }
 li#iire-chat { background-position: -120px -72px; }																				
 li#iire-contact { background-position: -144px -72px; }	
-li#iire-blank { background-position: -168px -72px; }	
+li#iire-print { background-position: -168px -72px; }			
+li#iire-etsy { background-position: -192px -72px; }	
+li#iire-buzznet { background-position: -216px -72px; }
+li#iire-paypal { background-position: -240px -72px; }		
+li#iire-reverbnation { background-position: -264px -72px; }
+li#iire-ebay { background-position: -288px -72px; }			
+li#iire-mixx { background-position: -312px -72px; }	
+li#iire-purevolume { background-position: -336px -72px; }
+li#iire-designfloat { background-position: -360px -72px; }		
+li#iire-500px { background-position: -384px -72px; }	
+li#iire-smugmug { background-position: -408px -72px; }	
+li#iire-geocaching { background-position: -432px -72px; }
+li#iire-evernote { background-position: -456px -72px; }	
+
 
 div#iire_social_panel_tab {
 	position:fixed;

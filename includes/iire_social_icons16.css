@@ -25,7 +25,8 @@
 .iire-delicious16 { background-position: -256px 0px; }	
 .iire-deviantart16 { background-position: -272px 0px; }	
 .iire-digg16 { background-position: -288px 0px; }
-.iire-dribbble16 { background-position: -304px 0px; }	
+.iire-dribbble16 { background-position: -304px 0px; }
+	
 .iire-feedburner16 { background-position: 0px -16px; }
 .iire-flickr16 { background-position: -16px -16px; }
 .iire-friendfeed16 { background-position: -32px -16px; }
@@ -46,6 +47,7 @@
 .iire-ning16 { background-position: -272px -16px; }	
 .iire-newsvine16 { background-position: -288px -16px; }	
 .iire-orkut16 { background-position: -304px -16px; }
+
 .iire-pinterest16 { background-position: 0px -32px; }
 .iire-picasa16 { background-position: -16px -32px; }			
 .iire-reddit16 { background-position: -32px -32px; }	
@@ -63,8 +65,11 @@
 .iire-wordpress16 { background-position: -224px -32px; }
 .iire-xing16 { background-position: -240px -32px; }		
 .iire-yahoo16 { background-position: -256px -32px; }	
-.iire-yelp16 { background-position: -272px -32px; }	
-.iire-youtube16 { background-position: -288px -32px; }	
+.iire-yelp16 { background-position: -272px -32px; }
+.iire-youtube16 { background-position: -288px -32px; }
+.iire-blank16 { background-position: -304px -32px; }	
+
+
 .iire-favorite16 { background-position: 0px -48px; }			
 .iire-link16 { background-position: -16px -48px; }	
 .iire-website16 { background-position: -32px -48px; }
@@ -72,4 +77,16 @@
 .iire-info216 { background-position: -64px -48px; }
 .iire-chat16 { background-position: -80px -48px; }																				
 .iire-contact16 { background-position: -96px -48px; }	
-.iire-blank16 { background-position: -112px -48px; }
+.iire-print16 { background-position: -112px -48px; }			
+.iire-etsy16 { background-position: -128px -48px; }	
+.iire-buzznet16 { background-position: -144px -48px; }
+.iire-paypal16 { background-position: -160px -48px; }		
+.iire-reverbnation16 { background-position: -176px -48px; }
+.iire-ebay16 { background-position: -192px -48px; }			
+.iire-mixx16 { background-position: -208px -48px; }	
+.iire-purevolume16 { background-position: -224px -48px; }
+.iire-designfloat16 { background-position: -240px -48px; }		
+.iire-500px16 { background-position: -256px -48px; }	
+.iire-smugmug16 { background-position: -272px -48px; }	
+.iire-geocaching16 { background-position: -288px -48px; }
+.iire-evernote16 { background-position: -304px -48px; }

@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation - 10-20-2012
+// Social Icons Installation - 11-01-2012
 
 global $iire_social_version;
-$iire_social_version = "0.20";
+$iire_social_version = "0.21";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {
@@ -99,7 +99,7 @@ function iire_update_social_check() {
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('41', 'widget_orientation', 'horizontal')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('42', 'widget_align', 'left')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('43', 'widget_width', '225')");
-	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('44', 'widget_height', '350')");
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('44', 'widget_height', '225')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('45', 'widget_pad_top', '0')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('46', 'widget_pad_left', '0')");	
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('47', 'widget_pad_bottom', '0')");

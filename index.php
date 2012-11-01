@@ -5,15 +5,15 @@ Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins
 Description: Add social media icons and links you your site with a customizable user interface. Majority of social networks are supported!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 0.20
+Version: 0.21
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube
 Copyright (C) 2012 iiRe Productions
 */
 	
 // ASSIGN VERSION
 global $wpdb, $iire_social_version;
-$iire_version = "0.20";
-$last_modified = "10-20-2012";
+$iire_version = "0.21";
+$last_modified = "11-01-2012";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -27,8 +27,12 @@ if ( !defined( 'WP_PLUGIN_DIR' ) )
 require_once("iire_social_install.php");
 register_activation_hook(__FILE__,'iire_social_install');
 
-// UNINSTALL
+// DEACTIVATE
 require_once("uninstall.php");
+if ( function_exists('iire_social_deactivate') )
+register_deactivation_hook( __FILE__, 'iire_social_deactivate' );
+
+// UNINSTALL
 if ( function_exists('iire_social_uninstall') )
 register_uninstall_hook(__FILE__,'iire_social_uninstall');
 
@@ -283,11 +287,11 @@ function iire_social_icons() {
 	}	
 
 	if ($settings['clone_widget_settings'] == '1' ) {
-		$sc .= '<div id="iire_social_widget" class="iire_social_widget">';	
+		$sc = '<div id="iire_social_widget" class="iire_social_widget">';	
 		$sc .= stripslashes($settings['widget_output']);
 		$sc .= '</div>';		
 	} else {
-		$sc .= '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
+		$sc = '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
 		$sc .= stripslashes($settings['sc_output']);
 		$sc .= '</div>';		
 	}		

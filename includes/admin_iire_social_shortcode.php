@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Shortcode - 10-20-2012
+// Admin Page for Social Icons Shortcode - 11-01-2012
 
 function iire_admin_social_shortcode() {
 	global $wpdb;
@@ -98,7 +98,7 @@ function iire_admin_social_shortcode() {
 ?>	
 
 <style>
-	div#viewport { width:auto; min-width:680px; min-height:360px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_shortcode.png'); background-repeat:no-repeat; background-position: top right;}
+	div#viewport { width:auto; min-width:680px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_shortcode.png'); background-repeat:no-repeat; background-position: top right;}
 
 	<?php echo $settings['css']; ?>	
 	
@@ -289,7 +289,9 @@ function iire_admin_social_shortcode() {
 		<div>
 			<p><select id="sc_icon_theme" name="sc_icon_theme" class="w185">
 				<?php
-				$d = "../wp-content/plugins/iire-social-icons/themes/";
+				$x = explode('/',IIRE_SOCIAL_BASENAME);
+				//$d = "../wp-content/plugins/iire-social-icons/themes/";
+				$d = "../wp-content/plugins/".$x[0]."/themes/";		
 				$subd = glob($d . "*");
 				foreach($subd as $f) {
 					if(is_dir($f)) {
@@ -752,12 +754,12 @@ function iire_admin_social_shortcode() {
 
 	<div id="chooseicons">
 		<ul id="chooseicons">
-			<li class="choose <?php echo $th; ?>" id="iire-facebook" alt="https://facebook.com/stephen.russell.904" title="Facebook" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-twitter" alt="http://twitter.com/srussell13/" title="Twitter" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com/pub/stephen-russell/1/223/b82" title="Linked In" lang=""></li>		
-			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://youtube.com/user/iirepr2" title="You Tube" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-facebook" alt="http://facebook.com" title="Facebook" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-twitter" alt="http://twitter.com" title="Twitter" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com" title="Linked In" lang=""></li>		
+			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://youtube.com" title="You Tube" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterst" lang=""></li>						
-			<li class="choose <?php echo $th; ?>" id="iire-email" alt="srussell@iireproductions.com" title="Email Me!" lang="Use the email settings for this information!"></li>
+			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email Me!" lang="Use the email settings for this information!"></li>
 			<li class="choose <?php echo $th; ?>" id="iire-rss" alt="<?php echo get_option('siteurl'); ?>/feed.rss" title="RSS Feed" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-favorite" alt="" title="Add to Favorites" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-link" alt="http://" title="Custom Link" lang=""></li>
@@ -765,8 +767,10 @@ function iire_admin_social_shortcode() {
 			<li class="choose <?php echo $th; ?>" id="iire-info1" alt="http://" title="More Information" lang=""></li>			
 			<li class="choose <?php echo $th; ?>" id="iire-info2" alt="http://" title="More Information" lang=""></li>	
 			<li class="choose <?php echo $th; ?>" id="iire-chat" alt="http://" title="Chat" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-contact" alt="http://" title="Contact Page" lang=""></li>			
-			
+			<li class="choose <?php echo $th; ?>" id="iire-contact" alt="http://" title="Contact Page" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-print" alt="http://" title="Print" lang=""></li>						
+
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-500px" alt="http://500px.com" title="500px" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-activerain" alt="http://activerain.com/srussell13" title="Active Rain" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-aim" alt="http://aim.com" title="AIM" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-amazon" alt="http://amazon.com" title="Amazon" lang=""></li>			
@@ -777,16 +781,22 @@ function iire_admin_social_shortcode() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-bebo" alt="http://bebo.com" title="Bebo" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-blinklist" alt="http://blinklist.com" title="Blinklist" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-blogger" alt="http://blogger.com" title="Blogger" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-buzznet" alt="http://buzznet.com" title="Buzznet" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-cafemom" alt="http://cafemom.com" title="Cafe Mom" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-delicious" alt="http://delicious.com" title="Delicious" lang=""></li>							
+			<li class="choose trial <?php echo $th; ?>" id="iire-delicious" alt="http://delicious.com" title="Delicious" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-designfloat" alt="http://designfloat.com" title="Design Float" lang=""></li>										
 			<li class="choose trial <?php echo $th; ?>" id="iire-deviantart" alt="http://deviantart.com" title="Deviant Art" lang=""></li>															
 			<li class="choose trial <?php echo $th; ?>" id="iire-digg" alt="http://digg.com" title="Digg" lang=""></li>		
 			<li class="choose trial <?php echo $th; ?>" id="iire-dribbble" alt="http://dribbble.com" title="Dribbble" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-feedburner" alt="http://feedburner.com" title="Feed Burner" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-ebay" alt="http://ebay.com" title="Ebay" lang=""></li>			
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-etsy" alt="http://etsy.com" title="Etsy" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-evernote" alt="http://evernote.com" title="Evernote" lang=""></li>					
+			<li class="choose trial <?php echo $th; ?>" id="iire-feedburner" alt="http://feedburner.com" title="Feed Burner" lang=""></li>					
 			<li class="choose trial <?php echo $th; ?>" id="iire-flickr" alt="http://flickr.com" title="Flickr" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-friendfeed" alt="http://friendfeed.com" title="Friend Feed" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-friendster" alt="http://friendster.com" title="Friendster" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-foursquare" alt="http://foursquare.com" title="Foursquare" lang=""></li>										
+			<li class="choose trial <?php echo $th; ?>" id="iire-foursquare" alt="http://foursquare.com" title="Foursquare" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-geocaching" alt="http://geocaching.com" title="Geocaching" lang=""></li>													
 			<li class="choose trial <?php echo $th; ?>" id="iire-google" alt="http//google.com/" title="Google" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-googleplus" alt="https://plus.google.com/u/0/110362418117155780512/posts" title="Google +" lang=""></li>							
 			<li class="choose trial <?php echo $th; ?>" id="iire-gmail" alt="http//mail.google.com/" title="Gmail" lang=""></li>
@@ -794,19 +804,24 @@ function iire_admin_social_shortcode() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-instagram" alt="http://instagram.com" title="Instagram" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-lastfm" alt="http://lastfm.com" title="Last FM" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-livejournal" alt="http://livejournal.com" title="Live Journal" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-microsoft" alt="http://microsoft.com" title="Microsoft" lang=""></li>	
+			<li class="choose trial <?php echo $th; ?>" id="iire-microsoft" alt="http://microsoft.com" title="Microsoft" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-mixx" alt="http://mixx.com" title="Mixx"></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-meetup" alt="http://meetup.com" title="Meet Up" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-mylife" alt="http://mylife.com" title="My Life" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-myspace" alt="http://myspace.com" title="My Space" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-ning" alt="http://ning.com" title="Ning" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-newsvine" alt="http://newsvine.com" title="News Vine" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-orkut" alt="http://orkut.com" title="Orkut" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-paypal" alt="http://paypal.com" title="Paypal" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-picasa" alt="http://picasa.com" title="Picasa" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-reddit" alt="http://reddit.com" title="Reddit" lang=""></li>						
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-purevolume" alt="http://purevolume.com" title="Pure Volume" lang=""></li>			
+			<li class="choose trial <?php echo $th; ?>" id="iire-reddit" alt="http://reddit.com" title="Reddit" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-reverbnation" alt="http://reverbnation.com" title="Reverb Nation" lang=""></li>									
 			<li class="choose trial <?php echo $th; ?>" id="iire-sharethis" alt="http://sharethis.com" title="Share This" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-skype" alt="srussell.iireproductions" title="Skype" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-slashdot" alt="http://slashdot.com" title="Slash Dot" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-slideshare" alt="http://slideshare.net" title="Slide Share" lang=""></li>
+			<li class="choose trial hidden <?php echo $th; ?>" id="iire-smugmug" alt="http://smugmug.com" title="Smugmug"></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-soundcloud" alt="http://soundcloud.com" title="Sound Cloud" lang=""></li>								
 			<li class="choose trial <?php echo $th; ?>" id="iire-spotify" alt="http://spotify.com" title="Spotify" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-stumbleupon" alt="http://stumbleupon.com" title="Stumble Upon" lang=""></li>
@@ -817,7 +832,8 @@ function iire_admin_social_shortcode() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-wordpress" alt="http://wordpress.com" title="Wordpress" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-xing" alt="http://xing.com" title="Xing" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-yahoo" alt="http://yahoo.com" title="Yahoo" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-yelp" alt="http://yelp.com" title="Yelp"></li>																															
+			<li class="choose trial <?php echo $th; ?>" id="iire-yelp" alt="http://yelp.com" title="Yelp" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-blank" alt="http://" title="Blank" lang=""></li>																																							
 
 			<li class="choose hidden <?php echo $th; ?>" id="iire-addthis" alt="http://www.addthis.com/bookmark.php?v=250" title="Add This" lang=""></li>	
 		</ul>
