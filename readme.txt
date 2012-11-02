@@ -135,7 +135,8 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Rewrote the javascript for the "Add to Favorites" Works in FireFox and IE, a prompt is displayed for Chrome,Safari and Opera  
 * Adjusted the default minimum height of the Widget/Shortcode Designer preview area
 * Added javascript to hide Wordpress nag messages when editing in the Widget/Shortcode Designer
-* Add a "blank" icon - Designers can graphically modify a theme to add an icon logo that may not be available in the network.  
+* Added a "blank" icon - Designers can graphically modify a theme to add an icon logo that may not be available in the network.
+* Updated the uninstaller to properly delete the database table upon deactivation.  
 * Additional support for future upgrades.
 * Updated readme.txt file
 
