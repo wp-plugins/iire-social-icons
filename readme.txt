@@ -146,7 +146,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Updated readme.txt file
 
 
-= 0.21
+= 0.21 =
 * Fix an issue where themes were not properly detected when plugin was installed into a different location other that the default folder
 * Rewrote the javascript for the "Add to Favorites" Works in FireFox and IE, a prompt is displayed for Chrome,Safari and Opera  
 * Adjusted the default minimum height of the Widget/Shortcode Designer preview area
