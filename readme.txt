@@ -134,15 +134,15 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 
 = 0.30 Make sure to deactivate and delete all prior versions! =
-* Added the following networks: Esty, Buzznet, Paypal, Reverbnation, Ebay, Mixx, Pure Volume, Design Float, 500px, Smugmug, GoeCaching, EVernote
+* Added the following networks: Esty, Buzznet, Paypal, Reverbnation, Ebay, Mixx, Pure Volume, Design Float, 500px, Smugmug, GoeCaching, Evernote
 * Added support for up to 5 custom folders using the grid layout
-* Add a Print icon and function
+* Added a Print icon and function
 * Changed the default icon size on reset to 64x64 for the widget
 * Changed the default icon size on reset to 32x32 for the shortcode
-* Updated the Widget/Shortcode Designer screenshots
-* Included the jQuery base javascript, CSS and image files
-* Fixed issue when using plugin on a site that uses a SSL certificate.
 * Added additional detection of jQuery UI
+* Included the jQuery UI base javascript, CSS and image files
+* Fixed issue when using plugin on a site that uses a SSL certificate.
+* Updated the Widget/Shortcode Designer screenshots
 * Updated readme.txt file
 
 
