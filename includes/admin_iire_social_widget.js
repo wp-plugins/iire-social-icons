@@ -1,4 +1,4 @@
-// IIRE SOCIAL WIDGET  - 11/01/2012 - 9:00 PM
+// IIRE SOCIAL WIDGET  - 11/10/2012 - 9:00 PM
 
 jQuery(document).ready(function() {
 	var plugin_path =jQuery("input#plugin_path").val(); 

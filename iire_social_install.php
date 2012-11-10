@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation - 11-01-2012
+// Social Icons Installation - 11-10-2012
 
 global $iire_social_version;
-$iire_social_version = "0.21";
+$iire_social_version = "0.30";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {
@@ -68,7 +68,11 @@ function iire_update_social_check() {
 
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('12', 'clone_widget_settings', '0')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('13', 'addthis', '0')");
-	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('14', 'addthis_key', '')");						
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('14', 'addthis_key', '')");
+
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('15', 'jquery', '')");		
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('16', 'jquery_ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js')");			
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('17', 'jquery_ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css')");								
 	
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('18', 'link_target', '_blank')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('19', 'link_title', '1')");
@@ -119,7 +123,7 @@ function iire_update_social_check() {
 	
 	// SHORTCODE
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('63', 'sc_icon_theme', 'default')");
-	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('64', 'sc_icon_size', '64')");
+	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('64', 'sc_icon_size', '32')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('65', 'sc_icon_spacing', '10')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('66', 'sc_icon_opacity', '100')");
 	$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('67', 'sc_icon_bgcolor', '0')");

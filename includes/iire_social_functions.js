@@ -1,10 +1,9 @@
-// IIRE SOCIAL  - 11/01/2012 - 9:00 AM
+// IIRE SOCIAL  - 11/10/2012 - 9:00 AM
 
 jQuery(document).ready(function() {
 
 // SEND EMAIL
 	jQuery('div#iire-email').bind('click', function(e) {
-		//alert("Email")											
 		e.preventDefault();	
 
 		jQuery("#emaildialog").dialog( "destroy" );
@@ -63,7 +62,6 @@ jQuery(document).ready(function() {
 	
 	// ADD TO FAVORITES
 	jQuery('div#iire-favorite').bind('click', function(e) {
-		//alert("Add To Favorites")														   
 		e.preventDefault();	
 
 		var sURL = location.href;
@@ -93,12 +91,10 @@ jQuery(document).ready(function() {
 			return;
 		}
 		if (jQuery.browser.msie == true) {
-			//alert ('Press Ctrl+D to bookmark this page in Internet Explorer.');
  			window.external.AddFavorite (sURL,sTitle);			
 			return;
 		}
 		if (jQuery.browser.mozilla == true) {
-			//alert ('Press Ctrl+D to bookmark this page in Firefox.');
 			window.sidebar.addPanel(sTitle,sURL, "");			
 			return;
 		}
@@ -111,8 +107,6 @@ jQuery(document).ready(function() {
 		window.print();		
 	});
 
-
-
 	// ICON OPACITY ON MOUSE ENTER
 	jQuery('div.opacity').live('mouseenter', function() {
 		jQuery(this).css("opacity", "1.00");			
@@ -123,6 +117,5 @@ jQuery(document).ready(function() {
 	jQuery('div.opacity').live('mouseout', function() {
 		jQuery(this).css("opacity", opac);			
 	});
-
 
 }); // End Document Ready

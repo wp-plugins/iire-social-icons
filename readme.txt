@@ -4,7 +4,7 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
 Tested up to: 3.42
-Stable tag: 0.21 
+Stable tag: 0.30 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Add social media icons and links to your site with a customizable user interface
 
 == Description ==
 
-The overall idea behind this plugin was to be able to easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling.
+Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling.
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
@@ -45,17 +45,19 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Customize the container background color
 * Add This social media support
 * Built-in email contact form w/ recipient settings
+* Built-in print function
 * A "Reset" button!
 * Works in most modern browsers, including IE9!
 * Accordian-style options panel
 * Options panel is collapsible!
+* Add up to five custom themes
 
 
 **Supported Networks**
 
-Add This, Amazon, Aim, AOL, Apple, Android, Beboo, Badoo, Blink List, Blogger, Cafe Mom, Delicious, Deviant Art, Digg, Dribble, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Microsoft, Meetup, Myspace, Newsvine, Ning, Orkut, Pinterest, Picasa, Reddit, RSS, Share This, Skype, Slash Dot, Slideshare, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yahoo, Yelp, You Tube
+500px, Add This, Amazon, Aim, AOL, Apple, Android, Beboo, Badoo, Blink List, Blogger, Buzznet, Cafe Mom, Delicious, Design Float, Deviant Art, Digg, Dribble, Ebay, Esty, Evernote, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Geocaching, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Meetup, Microsoft, Mixx, Myspace, Newsvine, Ning, Orkut, Paypal, Pinterest, Picasa, Pure VOlume, Reddit, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yahoo, Yelp, You Tube
 
-There are additional icons for email, custom links, alternate website, add to favorites, more information, chat and a contact us page.
+There are additional icons for email, custom links, alternate website, add to favorites, more information, chat, print and a contact us page.
 
 
 **Quick Start**
@@ -107,7 +109,7 @@ Q. Why two different admin panels for the widget and the shortcode?
 A. All settings for the widget and the shortcode are stored independently. The widget(best used in the sidebar) and the shortcode(best used on a page or post) can be designed differently, with different themes, size, icon order, etc.
 
 Q. Can I add my own icons?
-A. No, not at this time. Each icon theme is designed as a set of individual image sprites (All the icons are arranged in a grid as a single image). Icons are not available as individual files.
+A. Yes, you can create a "custom1" (up to 5 respectively) folder under the plugin themes directory. Each icon theme is designed as a set of individual image sprites (All the icons are arranged in a grid as a single image), so your "icon grid" must match the layout on one of the other themes. Icons are not available as individual files.
 
 Q. How were the icons created?
 A. All icons were designed in-house at iiRe Productions using high-resolution vector images. This method helps us to produce the highest quality images.
@@ -130,7 +132,21 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 == Changelog ==
 
-= 0.21 Make sure to deactivate and delete all prior versions! =
+
+= 0.30 Make sure to deactivate and delete all prior versions! =
+* Added the following networks: Esty, Buzznet, Paypal, Reverbnation, Ebay, Mixx, Pure Volume, Design Float, 500px, Smugmug, GoeCaching, EVernote
+* Added support for up to 5 custom folders using the grid layout
+* Add a Print icon and function
+* Changed the default icon size on reset to 64x64 for the widget
+* Changed the default icon size on reset to 32x32 for the shortcode
+* Updated the Widget/Shortcode Designer screenshots
+* Included the jQuery base javascript, CSS and image files
+* Fixed issue when using plugin on a site that uses a SSL certificate.
+* Added additional detection of jQuery UI
+* Updated readme.txt file
+
+
+= 0.21
 * Fix an issue where themes were not properly detected when plugin was installed into a different location other that the default folder
 * Rewrote the javascript for the "Add to Favorites" Works in FireFox and IE, a prompt is displayed for Chrome,Safari and Opera  
 * Adjusted the default minimum height of the Widget/Shortcode Designer preview area
@@ -158,13 +174,6 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 = 0.10 =
 * Initial beta release
-
-= To Do list = 
-* Print icon and functionality
-* Additional social networks
-* Custom theme capabilities
-
-
 == Upgrade Notice ==
 ** Make sure to deactivate and delete all prior versions! **
 

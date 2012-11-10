@@ -1,10 +1,6 @@
 // Modified JS Color Picker
 
-//alert("Color Picker"+ getCookie("Plugin Path"));
-
 var jscolor = {
-	//dir : '../wp-content/plugins/iire_social_0.10/includes/images/', // location of jscolor directory (leave empty to autodetect)
-	//dir : ''+getCookie("Plugin Path")+'includes/images/',
 	dir : '../wp-content/plugins/iire-social-icons/includes/images/',	
 	bindClass : 'color', // class name
 	binding : true, // automatic binding via <input class="...">

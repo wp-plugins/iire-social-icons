@@ -1,4 +1,4 @@
-// IIRE SOCIAL SHORTCODE  - 11/01/2012 - 9:00 PM
+// IIRE SOCIAL SHORTCODE  - 11/10/2012 - 9:00 PM
 
 jQuery(document).ready(function() {
 	var plugin_path =jQuery("input#plugin_path").val(); 
@@ -935,7 +935,7 @@ jQuery(document).ready(function() {
 			
 			jQuery('select#sc_icon_theme').val('default');
 			
-			jQuery('select#sc_icon_size').val('64');
+			jQuery('select#sc_icon_size').val('32');
 			
 			jQuery('select#sc_icon_spacing').val('10');	
 			

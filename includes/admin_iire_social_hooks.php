@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - 11-01-2012
+// Admin Social Hooks - 11-10-2012
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');
@@ -12,7 +12,15 @@ add_action('admin_menu', 'iire_social_admin_pages');
 function iire_social_admin_enable_js() {
     if (is_admin() && (($_GET['page'] == 'iire_admin_social_widget') || ($_GET['page'] == 'iire_admin_social_shortcode'))  ){
 		wp_enqueue_script( 'color-picker', IIRE_SOCIAL_URL.'includes/admin_colorpicker.js');
-		wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');
+		if( !wp_script_is('jquery-ui') ) { 		
+			$x = explode('/',IIRE_SOCIAL_BASENAME);
+			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.min.js";	
+			if (file_exists($d)) {
+				wp_enqueue_script( 'jquery-ui', IIRE_SOCIAL_URL.'includes/jquery-ui.min.js');				
+			} else {
+				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');						
+			}
+		}	
     }
 	
 	 if (is_admin() && ($_GET['page'] == 'iire_admin_social_widget')){
@@ -28,7 +36,16 @@ add_action('admin_print_scripts', 'iire_social_admin_enable_js');
 
 function iire_social_admin_enable_styles() {
     if ( is_admin() && (($_GET['page'] == 'iire_admin_social_widget') || ($_GET['page'] == 'iire_admin_social_shortcode')) ){
-		wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');
+		if( !wp_script_is('jquery-ui_css') ) { 		
+			$x = explode('/',IIRE_SOCIAL_BASENAME);
+			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.css";	
+			if (file_exists($d)) {
+				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
+			} else {
+				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');						
+			}
+		}			
+				
     }
 }
 add_action( 'admin_print_styles', 'iire_social_admin_enable_styles' );

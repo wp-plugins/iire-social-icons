@@ -5,15 +5,15 @@ Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins
 Description: Add social media icons and links you your site with a customizable user interface. Majority of social networks are supported!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 0.21
+Version: 0.30
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube
 Copyright (C) 2012 iiRe Productions
 */
 	
 // ASSIGN VERSION
 global $wpdb, $iire_social_version;
-$iire_version = "0.21";
-$last_modified = "11-01-2012";
+$iire_version = "0.30";
+$last_modified = "11-10-2012";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -241,9 +241,6 @@ add_action('wp_head', 'iire_social_head');
 function iire_social_footer() {
     if (! is_admin() ){
 		// Live Site
-		wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js');	
-		wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
-
 		global $wpdb;
 		global $blog_id;
 
@@ -255,6 +252,26 @@ function iire_social_footer() {
 		foreach ($rs as $row) {
 			$settings[$row->option_name] = $row->option_value;
 		}	
+
+		if( !wp_script_is('jquery-ui') ) { 		
+			$x = explode('/',IIRE_SOCIAL_BASENAME);
+			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.min.js";	
+			if (file_exists($d)) {
+				wp_enqueue_script( 'jquery-ui', IIRE_SOCIAL_URL.'includes/jquery-ui.min.js');				
+			} else {
+				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');						
+			}
+		}
+		
+		if( !wp_script_is('jquery-ui_css') ) { 		
+			$x = explode('/',IIRE_SOCIAL_BASENAME);
+			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.css";	
+			if (file_exists($d)) {
+				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
+			} else {
+				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');						
+			}
+		}				
 
 		echo '<div id="emaildialog" title="Send A Message" style="display:none;">';
 		echo '<p><input type="text" id="email_name" name="email_name" onfocus="if(this.value==this.defaultValue) this.value=\'\';" onblur="if(this.value==\'\') this.value=this.defaultValue;" value="- Your Name -" class="text ui-widget-content ui-corner-all" /></p>';
