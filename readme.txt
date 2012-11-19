@@ -115,7 +115,7 @@ Q. How were the icons created?
 A. All icons were designed in-house at iiRe Productions using high-resolution vector images. This method helps us to produce the highest quality images.
 
 Q. How do I access all the icons?
-A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
+A. The free version of this plugin has limited access to certain social networks. Facebook, Twitter, Pinterest, Linked In, You Tube, Email, RSS, Favorites, Print, External Links, Website, Contact Us, More Info and Chat work immediately on installation without activation. If you would like to receive a registration code to unlock the additional networks, please consider making a donation.
 
 Q. Are there additional icon themes?
 A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
