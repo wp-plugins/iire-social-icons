@@ -5,15 +5,15 @@ Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins
 Description: Add social media icons and links you your site with a customizable user interface. Majority of social networks are supported!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 0.30
+Version: 0.40
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube
 Copyright (C) 2012 iiRe Productions
 */
 	
 // ASSIGN VERSION
 global $wpdb, $iire_social_version;
-$iire_version = "0.30";
-$last_modified = "11-10-2012";
+$iire_version = "0.40";
+$last_modified = "12-12-2012";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -21,6 +21,15 @@ define ('IIRE_SOCIAL_PATH', trailingslashit(dirname(__FILE__)));
 define ('IIRE_SOCIAL_URL', trailingslashit(WP_PLUGIN_URL) . str_replace(basename(__FILE__), "", plugin_basename(__FILE__)));
 if ( !defined( 'WP_PLUGIN_DIR' ) )
     define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
+
+$c = substr(str_replace(get_option('siteurl'), "",  content_url()), 1);
+if ($c != 'wp-content') {
+	$contenturl = $c;
+} else {
+	$contenturl = 'wp-content';			
+}
+define ('IIRE_SOCIAL_CONTENT_URL', $contenturl);	
+	
 
 
 // INSTALL / UPGRADE
@@ -259,7 +268,8 @@ function iire_social_footer() {
 			if (file_exists($d)) {
 				wp_enqueue_script( 'jquery-ui', IIRE_SOCIAL_URL.'includes/jquery-ui.min.js');				
 			} else {
-				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');						
+				//wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');
+				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js');											
 			}
 		}
 		
@@ -269,7 +279,8 @@ function iire_social_footer() {
 			if (file_exists($d)) {
 				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
 			} else {
-				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');						
+				//wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');
+				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css');										
 			}
 		}				
 
@@ -315,4 +326,26 @@ function iire_social_icons() {
 	return $sc;	
 }
 add_shortcode('iire_social_icons', 'iire_social_icons');
+
+
+// SHORTCODE FOR THEME 
+function iire_social_theme() {
+	global $wpdb;
+	global $blog_id;
+
+	$table_name = $wpdb->get_blog_prefix($blog_id)."iire_social";
+	
+	// GET SETTINGS
+	$settings = array();		
+	$rs = $wpdb->get_results("SELECT * FROM $table_name");
+	foreach ($rs as $row) {
+		$settings[$row->option_name] = $row->option_value;
+	}	
+
+	echo '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
+	echo stripslashes($settings['sc_output']);
+	echo '</div>';		
+	return;	
+}
+
 ?>

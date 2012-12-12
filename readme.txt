@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: iiRe Productions
 Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
-Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, You Tube  
+Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
-Tested up to: 3.42
-Stable tag: 0.30 
+Tested up to: 3.5
+Stable tag: 0.40 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 * Create an independent social media icons widget and shortcode
 * Majority of social networks supported
-* 80 different icons!
+* Over 80 different icons!
 * 5 different icon sizes (16x16px, 24x24px, 32x32px, 48x48px, 64x64px)!
 * Additional free icon themes available
 * Real-time editing! Change icon theme, size. spacing, etc. dynamically
@@ -115,7 +115,7 @@ Q. How were the icons created?
 A. All icons were designed in-house at iiRe Productions using high-resolution vector images. This method helps us to produce the highest quality images.
 
 Q. How do I access all the icons?
-A. The free version of this plugin has limited access to certain social networks. Facebook, Twitter, Linked In, You Tube, Pinterest, Email, RSS, Add To Favorites, External Link, Website, Info 1, Info 2, Chat, Contact Us, Print and Blank work immediately on installation without activation. If you would like to receive a registration code to unlock the additional networks, please consider making a donation.
+A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
 
 Q. Are there additional icon themes?
 A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
@@ -133,7 +133,20 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 == Changelog ==
 
 
-= 0.30 Make sure to deactivate and delete all prior versions! =
+= 0.40 Make sure to deactivate and delete all prior versions! =
+* Updated the Google CDN links for jQuery UI for Wordpress 3.5 compatibility!!!
+* Updated the included jQuery UI library files
+* Fixed the email dialog in Wordpress 3.5
+* Fixed an issue with an MYSQL insert query on installation
+* Fixed an issue with the dynamic CSS generator
+* Updated the installation function
+* Undated the uninstall function
+* Removed the admin default email address from the Email section
+* Added support for additional free iiRe themes
+* Updated readme.txt file
+
+
+= 0.30 =
 * Added the following networks: Esty, Buzznet, Paypal, Reverbnation, Ebay, Mixx, Pure Volume, Design Float, 500px, Smugmug, GoeCaching, Evernote
 * Added support for up to 5 custom folders using the grid layout
 * Added a Print icon and function

@@ -1,4 +1,4 @@
-// IIRE SOCIAL SHORTCODE  - 11/10/2012 - 9:00 PM
+// IIRE SOCIAL SHORTCODE  - 12/12/2012 - 9:00 PM
 
 jQuery(document).ready(function() {
 	var plugin_path =jQuery("input#plugin_path").val(); 
@@ -145,12 +145,11 @@ jQuery(document).ready(function() {
 			return;
 		}
 
-		jQuery("#editdialog").dialog( "destroy" );
 		jQuery("#editdialog").dialog({
 			resizable: false,
 			draggable: true,
 			width: 320,
-			height: 200,
+			height: 220,
 			modal: true,
     		buttons: {}			
 		});
@@ -194,7 +193,7 @@ jQuery(document).ready(function() {
 		if (trial == true) {
 			if ((regKey != validKey) || (regEmail == '') ) {
 				jQuery("h3#registration").trigger('click');			
-				jQuery("#unlockdialog").dialog( "destroy" );
+				//jQuery("#unlockdialog").dialog( "destroy" );
 				jQuery("#unlockdialog").dialog({
 					resizable: false,
 					draggable: true,
@@ -396,7 +395,7 @@ jQuery(document).ready(function() {
 	// ICONS - CHANGE THEME
 	jQuery('select#sc_icon_theme').bind('change', function() {
 		var theme = jQuery(this).val();
-		var allthemes = "default iphone circular_cutouts chrome_panels eco_green gold_bars light_bulbs post_it_notes punch_thru red_alert stickers symbols_black symbols_gray symbols_white wood_crates custom1 custom2 custom3 custom4 custom5";
+		var allthemes = "default iphone circular_cutouts chrome_panels eco_green glossy_black glossy_white gold_bars light_bulbs post_it_notes punch_thru red_alert stickers symbols_black symbols_gray symbols_white wood_crates custom1 custom2 custom3 custom4 custom5";
 		var imgsrc = plugin_path+'themes/'+theme+'/screenshot.png';
 		jQuery("img.icon_theme").attr("src", imgsrc );
 
@@ -519,7 +518,7 @@ jQuery(document).ready(function() {
 		jQuery("div.move").removeClass("roundedcorners");	
 
 		var theme = jQuery('select#sc_icon_theme').val();
-		if (theme == 'circular_cutouts' || theme == 'red_alert') {
+		if (theme == 'circular_cutouts' || theme == 'red_alert' || theme == 'glossy_black' || theme == 'glossy_white') {
 			var rs = wis/2;
 		}		
 		

@@ -1,4 +1,4 @@
-// IIRE SOCIAL  - 11/10/2012 - 9:00 AM
+// IIRE SOCIAL  - 12/12/2012 - 12:00 PM
 
 jQuery(document).ready(function() {
 
@@ -6,7 +6,6 @@ jQuery(document).ready(function() {
 	jQuery('div#iire-email').bind('click', function(e) {
 		e.preventDefault();	
 
-		jQuery("#emaildialog").dialog( "destroy" );
 		jQuery("#emaildialog").dialog({
 			resizable: false,
 			draggable: true,			

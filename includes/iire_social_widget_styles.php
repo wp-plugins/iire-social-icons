@@ -18,6 +18,8 @@ header('Content-type: text/css');
 		$pb = $p[2];
 		$pl = $p[3];						
 		$pad = 'padding: '.$p[0].'px '.$p[1].'px '.$p[2].'px '.$p[3].'px; ';
+	} else {
+		$pad = '';	
 	}
 
 	// Widget Margin		
@@ -28,16 +30,22 @@ header('Content-type: text/css');
 		$mb = $m[2];
 		$ml = $m[3];						
 		$mar = 'margin: '.$m[0].'px '.$m[1].'px '.$m[2].'px '.$m[3].'px; ';
+	} else {
+		$mar = '';			
 	}				
 
 	// Widget Background Color?
 	if ( $_GET['wbk'] == '1' ) {		
-		$wbgc = 'background-color:#'.$_GET['wbgc'].'; ';	
+		$wbgc = 'background-color:#'.$_GET['wbgc'].'; ';
+	} else {
+		$wbgc = '';			
 	}	
 
 	// Widget Border Width/Color
 	if ( $_GET['wbrs'] != '0' ) {		
-		$bor = 'border:#'. $_GET['wbrc'].' '. $_GET['wbrs'].'px solid;';	
+		$bor = 'border:#'. $_GET['wbrc'].' '. $_GET['wbrs'].'px solid;';
+	} else {
+		$bor = '';				
 	}	
 		
 	echo 'div.iire_social_widget { position:relative; '.$wid.$hgt.$pad.$mar.$wbgc.$bor.' }';			

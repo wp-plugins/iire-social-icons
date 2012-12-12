@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Widget - 11-10-2012
+// Admin Page for Social Icons Widget - 12-12-2012
 
 function iire_admin_social_widget() {
 	global $wpdb;
@@ -31,12 +31,6 @@ function iire_admin_social_widget() {
 	foreach ($rs as $row) {
 		$settings[$row->option_name] = $row->option_value;
 	}		
-
-	// Get Admin Email
-	$email = get_option('admin_email');	
-	if ($email == '' || $email == $settings['email_recipient']) {
-		$email = $settings['email_recipient'];
-	}
 
 
 	// Widget Theme
@@ -108,10 +102,11 @@ function iire_admin_social_widget() {
 		
 	//Add Classes											
 	$addclasses = $iconsize.' '.$th.' '.$ot.' '.$sp.$ds.$rc.$op.$bg;
-?>	
+?>
 
 <style>
-	div#viewport { width:auto; min-width:680px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_widget.png'); background-repeat:no-repeat; background-position: top right;}
+	div#viewport { width:auto; min-width:680px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_shortcode.png'); background-repeat:no-repeat; background-position: top right;}
+
 	<?php echo $settings['css']; ?>	
 	
 	.opacity { opacity:<?php echo $opval; ?>; }
@@ -139,7 +134,9 @@ function iire_admin_social_widget() {
 	.icon16.iphone{ background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/iphone/16_sprite.png); }
 	.icon16.circular_cutouts { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/16_sprite.png); }
 	.icon16.chrome_panels { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/16_sprite.png); }
-	.icon16.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/16_sprite.png); }	
+	.icon16.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/16_sprite.png); }
+	.icon16.glossy_black { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/16_sprite.png); }
+	.icon16.glossy_white { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/16_sprite.png); }			
 	.icon16.gold_bars { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/16_sprite.png); }
 	.icon16.light_bulbs { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/16_sprite.png); }	
 	.icon16.post_it_notes { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/16_sprite.png); }	
@@ -162,7 +159,9 @@ function iire_admin_social_widget() {
 	.icon24.iphone { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/iphone/24_sprite.png); }
 	.icon24.circular_cutouts { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/24_sprite.png); }
 	.icon24.chrome_panels { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/24_sprite.png); }
-	.icon24.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/24_sprite.png); }	
+	.icon24.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/24_sprite.png); }
+	.icon24.glossy_black { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/24_sprite.png); }
+	.icon24.glossy_white { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/24_sprite.png); }				
 	.icon24.gold_bars { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/24_sprite.png); }
 	.icon24.light_bulbs { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/24_sprite.png); }		
 	.icon24.post_it_notes { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/24_sprite.png); }	
@@ -185,7 +184,9 @@ function iire_admin_social_widget() {
 	.icon32.iphone { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/iphone/32_sprite.png); }
 	.icon32.circular_cutouts { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/32_sprite.png); }
 	.icon32.chrome_panels { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/32_sprite.png); }
-	.icon32.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/32_sprite.png); }	
+	.icon32.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/32_sprite.png); }
+	.icon32.glossy_black { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/32_sprite.png); }
+	.icon32.glossy_white { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/32_sprite.png); }				
 	.icon32.gold_bars { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/32_sprite.png); }
 	.icon32.light_bulbs { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/32_sprite.png); }		
 	.icon32.post_it_notes { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/32_sprite.png); }	
@@ -208,7 +209,9 @@ function iire_admin_social_widget() {
 	.icon48.iphone { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/iphone/48_sprite.png); }
 	.icon48.circular_cutouts { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/48_sprite.png); }
 	.icon48.chrome_panels { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/48_sprite.png); }
-	.icon48.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/48_sprite.png); }	
+	.icon48.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/48_sprite.png); }
+	.icon48.glossy_black { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/48_sprite.png); }
+	.icon48.glossy_white { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/48_sprite.png); }				
 	.icon48.gold_bars { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/48_sprite.png); }
 	.icon48.light_bulbs { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/48_sprite.png); }		
 	.icon48.post_it_notes { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/48_sprite.png); }	
@@ -232,6 +235,8 @@ function iire_admin_social_widget() {
 	.icon64.circular_cutouts { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/64_sprite.png); }
 	.icon64.chrome_panels { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/64_sprite.png); }		
 	.icon64.eco_green { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/64_sprite.png); }
+	.icon64.glossy_black { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/64_sprite.png); }
+	.icon64.glossy_white { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/64_sprite.png); }			
 	.icon64.gold_bars { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/64_sprite.png); }
 	.icon64.light_bulbs { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/64_sprite.png); }		
 	.icon64.post_it_notes { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/64_sprite.png); }	
@@ -249,8 +254,30 @@ function iire_admin_social_widget() {
 	.icon64.custom5 { background-color: <?php echo $bup; ?>; background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/custom5/64_sprite.png); }					
 		
 
-	/* Icon Hover Colors */	
-	.icon<?php echo $sz; ?>.default:hover, .icon<?php echo $sz; ?>.iphone:hover, .icon<?php echo $sz; ?>.circular_cutouts:hover, .icon<?php echo $sz; ?>.chrome_panels:hover, .icon<?php echo $sz; ?>.eco_green:hover, .icon<?php echo $sz; ?>.gold_bars:hover, .icon<?php echo $sz; ?>.post_it_notes:hover, .icon<?php echo $sz; ?>.punch_thru:hover, .icon<?php echo $sz; ?>.red_alert:hover, .icon<?php echo $sz; ?>.wood_crates:hover, .icon<?php echo $sz; ?>.stickers:hover, .icon<?php echo $sz; ?>.symbols_black, .icon<?php echo $sz; ?>.symbols_gray, .icon<?php echo $sz; ?>.symbols_white, .icon<?php echo $sz; ?>.custom1:hover, .icon<?php echo $sz; ?>.custom2:hover, .icon<?php echo $sz; ?>.custom3:hover, .icon<?php echo $sz; ?>.custom4:hover, .icon<?php echo $sz; ?>.custom5:hover { background-color: <?php echo $bov; ?>; }
+	/* Icon Hover Colors */
+	.icon<?php echo $sz; ?>.chrome_panels:hover, 	
+	.icon<?php echo $sz; ?>.circular_cutouts:hover,  
+	.icon<?php echo $sz; ?>.default:hover, 
+	.icon<?php echo $sz; ?>.eco_green:hover, 
+	.icon<?php echo $sz; ?>.glossy_black:hover, 
+	.icon<?php echo $sz; ?>.glossy_white:hover, 
+	.icon<?php echo $sz; ?>.gold_bars:hover, 	 
+	.icon<?php echo $sz; ?>.iphone:hover, 	
+	.icon<?php echo $sz; ?>.light_bulbs:hover, 
+	.icon<?php echo $sz; ?>.post_it_notes:hover, 	 
+	.icon<?php echo $sz; ?>.punch_thru:hover, 
+	.icon<?php echo $sz; ?>.red_alert:hover, 
+	.icon<?php echo $sz; ?>.stickers:hover, 
+	.icon<?php echo $sz; ?>.symbols_black:hover, 
+	.icon<?php echo $sz; ?>.symbols_gray:hover, 
+	.icon<?php echo $sz; ?>.symbols_white:hover,
+	.icon<?php echo $sz; ?>.wood_crates:hover,
+	.icon<?php echo $sz; ?>.custom1:hover,
+	.icon<?php echo $sz; ?>.custom2:hover,	
+	.icon<?php echo $sz; ?>.custom3:hover,	
+	.icon<?php echo $sz; ?>.custom4:hover,	
+	.icon<?php echo $sz; ?>.custom5:hover { background-color: <?php echo $bov; ?>; }
+
 
 	/* CHOOSE ICONS */
 	li.choose { width:24px; height:24px; margin:0px; padding:0px; display: inline-table; cursor:pointer; }		
@@ -258,7 +285,9 @@ function iire_admin_social_widget() {
 	li.choose.iphone { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/iphone/24_sprite.png); }
 	li.choose.circular_cutouts { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/circular_cutouts/24_sprite.png); }
 	li.choose.chrome_panels { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/chrome_panels/24_sprite.png); }
-	li.choose.eco_green { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/24_sprite.png); }			
+	li.choose.eco_green { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/eco_green/24_sprite.png); }
+	li.choose.glossy_black { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_black/24_sprite.png); }
+	li.choose.glossy_white { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/glossy_white/24_sprite.png); }					
 	li.choose.gold_bars { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/gold_bars/24_sprite.png); }
 	li.choose.light_bulbs { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/light_bulbs/24_sprite.png); }	
 	li.choose.post_it_notes { background-image: url(<?php echo IIRE_SOCIAL_URL ?>themes/post_it_notes/24_sprite.png); }	
@@ -302,8 +331,8 @@ function iire_admin_social_widget() {
 			<p><select id="widget_icon_theme" name="widget_icon_theme" class="w185">
 				<?php
 				$x = explode('/',IIRE_SOCIAL_BASENAME);
-				//$d = "../wp-content/plugins/iire-social-icons/themes/";
-				$d = "../wp-content/plugins/".$x[0]."/themes/";		
+				//$d = "../wp-content/plugins/".$x[0]."/themes/";
+				$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/themes/";							
 				$subd = glob($d . "*");
 				foreach($subd as $f) {
 					if(is_dir($f)) {
@@ -581,7 +610,7 @@ function iire_admin_social_widget() {
 		<div>
 			<!-- Recipient -->
 			<p><label>Recipient Email:</label>
-			<input type="text" id="email_recipient" name="email_recipient" value="<?php echo $email; ?>" class="w100p">
+			<input type="text" id="email_recipient" name="email_recipient" value="<?php echo $settings['email_recipient']; ?>" class="w100p">
 			</p>
 						
  			<!-- CC -->
@@ -704,7 +733,7 @@ function iire_admin_social_widget() {
 			<li class="choose <?php echo $th; ?>" id="iire-facebook" alt="http://facebook.com" title="Facebook" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-twitter" alt="http://twitter.com" title="Twitter" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com" title="Linked In" lang=""></li>		
-			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://youtube.com" title="You Tube" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://www.youtube.com/" title="You Tube" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterst" lang=""></li>						
 			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email Me!" lang="Use the email settings for this information!"></li>
 			<li class="choose <?php echo $th; ?>" id="iire-rss" alt="<?php echo get_option('siteurl'); ?>/feed.rss" title="RSS Feed" lang=""></li>
