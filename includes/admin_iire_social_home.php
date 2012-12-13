@@ -1,5 +1,5 @@
 <?php
-// Admin Social Home Landing Page - 12-12-2012
+// Admin Social Home Landing Page - 12-13-2012
 
 function iire_admin_social_home() {
 	global $wpdb;
@@ -12,7 +12,7 @@ function iire_admin_social_home() {
 <h2>iiRe Social Icons</h2>
 
 <h3>Version <?php echo get_option('iire_social_version'); ?> </h3>
-<p>This is an beta version of this plugin for Social Media icons and Links.  Additional releases and updates will be available on the <a href="http://wordpress.org/extend/plugins/iire-social-icons/" target="_blank">Wordpress plugin repository</a> or <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">iiRe Productions</a>.</p>
+<p>Welcome to Social Media Icons and Links.  Additional releases and updates are available on the <a href="http://wordpress.org/extend/plugins/iire-social-icons/" target="_blank">Wordpress plugin repository</a> or <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">iiRe Productions</a>.</p>
 
 
 <h3>Overview</h3>

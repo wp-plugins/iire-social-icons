@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - 12-12-2012
+// Admin Social Hooks - 12-13-2012
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');
@@ -12,15 +12,22 @@ add_action('admin_menu', 'iire_social_admin_pages');
 function iire_social_admin_enable_js() {
     if (is_admin() && (($_GET['page'] == 'iire_admin_social_widget') || ($_GET['page'] == 'iire_admin_social_shortcode'))  ){
 		wp_enqueue_script( 'color-picker', IIRE_SOCIAL_URL.'includes/admin_colorpicker.js');
-		if( !wp_script_is('jquery-ui') ) { 		
-			$x = explode('/',IIRE_SOCIAL_BASENAME);
-			$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui.min.js";					
-			if (file_exists($d)) {
-				wp_enqueue_script( 'jquery-ui', IIRE_SOCIAL_URL.'includes/jquery-ui.min.js');				
-			} else {
-				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js');											
-			}
-		}	
+	
+		wp_enqueue_script('jquery-ui-core');
+		wp_enqueue_script('jquery-ui-widget');
+		wp_enqueue_script('jquery-ui-mouse');	
+		wp_enqueue_script('jquery-ui-draggable');
+		wp_enqueue_script('jquery-ui-droppable');
+		wp_enqueue_script('jquery-ui-resizable');	
+		wp_enqueue_script('jquery-ui-selectable');
+		wp_enqueue_script('jquery-ui-sortable');	
+		wp_enqueue_script('jquery-ui-effect');	
+		wp_enqueue_script('jquery-ui-accordion');
+		wp_enqueue_script('jquery-ui-button');				
+		wp_enqueue_script('jquery-ui-dialog');
+		wp_enqueue_script('jquery-ui-position');		
+		wp_enqueue_script('jquery-ui-slider');		
+		wp_enqueue_script('jquery-ui-tabs');			
     }
 	
 	 if (is_admin() && ($_GET['page'] == 'iire_admin_social_widget')){
@@ -38,11 +45,11 @@ function iire_social_admin_enable_styles() {
     if ( is_admin() && (($_GET['page'] == 'iire_admin_social_widget') || ($_GET['page'] == 'iire_admin_social_shortcode')) ){
 		if( !wp_script_is('jquery-ui_css') ) { 		
 			$x = explode('/',IIRE_SOCIAL_BASENAME);
-			$d = "../".IIRE_SOCIAL_LITE_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui.min.js";					
+			$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui.css";					
 			if (file_exists($d)) {
 				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
-			} else {
-				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css');										
+			//} else {
+			//	wp_enqueue_style( 'jquery-ui_css', ''.$settings['jquery_ui_css'].'');										
 			}
 		}			
 				

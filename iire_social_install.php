@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation - 12-12-2012
+// Social Icons Installation - 12-13-2012
 
 global $iire_social_version;
-$iire_social_version = "0.40";
+$iire_social_version = "0.41";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {
@@ -72,8 +72,8 @@ function iire_update_social_check() {
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('14', 'addthis_key', '')");
 
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('15', 'jquery', '')");		
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('16', 'jquery_ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js')");			
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('17', 'jquery_ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css')");								
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('16', 'jquery_ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js')");			
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('17', 'jquery_ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css')");								
 	
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('18', 'link_target', '_blank')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('19', 'link_title', '1')");

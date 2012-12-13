@@ -6,12 +6,8 @@ $fnln = $_REQUEST['fnln'];
 $sender = $_REQUEST['sender'];
 $subject = $_REQUEST['subject'];
 $message = $_REQUEST['message'];
-$now = date("l, F j, Y - g:i A");
-
 
 $msg="iiRe Social Icons Message
-
-Date: ".$now."
 
 Name: ".$fnln."
 Email: ".$recipient."

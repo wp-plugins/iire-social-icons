@@ -5,15 +5,15 @@ Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins
 Description: Add social media icons and links you your site with a customizable user interface. Majority of social networks are supported!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 0.40
+Version: 0.41
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube
 Copyright (C) 2012 iiRe Productions
 */
 	
 // ASSIGN VERSION
 global $wpdb, $iire_social_version;
-$iire_version = "0.40";
-$last_modified = "12-12-2012";
+$iire_version = "0.41";
+$last_modified = "12-13-2012";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -29,7 +29,6 @@ if ($c != 'wp-content') {
 	$contenturl = 'wp-content';			
 }
 define ('IIRE_SOCIAL_CONTENT_URL', $contenturl);	
-	
 
 
 // INSTALL / UPGRADE
@@ -69,6 +68,13 @@ function iire_social_head() {
 		foreach ($rs as $row) {
 			$settings[$row->option_name] = $row->option_value;
 		}
+		
+		// Check if jQuery is loaded
+		if ($settings['email_recipient'] != 'you@yoursite.com') {
+			if ( !wp_script_is('jquery') ) { 	
+				wp_enqueue_script('jquery');
+			}
+		}		
 
 		// Widget Cache
 		$cache = $settings['css_cache'];
@@ -262,39 +268,30 @@ function iire_social_footer() {
 			$settings[$row->option_name] = $row->option_value;
 		}	
 
-		if( !wp_script_is('jquery-ui') ) { 		
-			$x = explode('/',IIRE_SOCIAL_BASENAME);
-			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.min.js";	
-			if (file_exists($d)) {
-				wp_enqueue_script( 'jquery-ui', IIRE_SOCIAL_URL.'includes/jquery-ui.min.js');				
-			} else {
-				//wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js');
-				wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js');											
-			}
-		}
+		if ($settings['email_recipient'] != 'you@yoursite.com') {
 		
-		if( !wp_script_is('jquery-ui_css') ) { 		
-			$x = explode('/',IIRE_SOCIAL_BASENAME);
-			$d = "../wp-content/plugins/".$x[0]."/includes/jquery-ui.css";	
-			if (file_exists($d)) {
+			wp_enqueue_script('jquery-ui-core');
+			wp_enqueue_script('jquery-ui-widget');
+			wp_enqueue_script('jquery-ui-mouse');	
+			wp_enqueue_script('jquery-ui-draggable');
+			wp_enqueue_script('jquery-ui-dialog');
+		
+			if ( !wp_script_is('jquery-ui_css') ) { 		
 				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
-			} else {
-				//wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css');
-				wp_enqueue_style( 'jquery-ui_css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css');										
-			}
-		}				
+			}				
 
-		echo '<div id="emaildialog" title="Send A Message" style="display:none;">';
-		echo '<p><input type="text" id="email_name" name="email_name" onfocus="if(this.value==this.defaultValue) this.value=\'\';" onblur="if(this.value==\'\') this.value=this.defaultValue;" value="- Your Name -" class="text ui-widget-content ui-corner-all" /></p>';
-		echo '<p><input type="text" id="email_sender" name="email_sender" onfocus="if(this.value==this.defaultValue) this.value=\'\';" onblur="if(this.value==\'\') this.value=this.defaultValue;" value="- Your Email -" class="text ui-widget-content ui-corner-all" /></p>';
-		echo '<p><textarea id="email_message" name="email_message" cols="5" rows="3" onfocus="if(this.value==this.defaultValue) this.value=\'\';" class="text ui-widget-content ui-corner-all">'.$settings['email_message'].'</textarea></p>';
-		echo '<p class="email_message">Enter your name, email address and a message.</p>';
-		echo '<input type="hidden" id="email_recipient" name="email_recipient" value="'.$settings['email_recipient'].'">';
-		echo '<input type="hidden" id="email_cc" name="email_cc" value="'.$settings['email_cc'].'">';
-		echo '<input type="hidden" id="email_bcc" name="email_bcc" value="'.$settings['email_bcc'].'">';				
-		echo '<input type="hidden" id="email_subject" name="email_subject" value="'.$settings['email_subject'].'">';
-		echo '<input type="hidden" id="plugin_url" name="plugin_url" value="'.IIRE_SOCIAL_URL.'">';		
-		echo '</div>';			
+			echo '<div id="emaildialog" title="Send A Message" style="display:none;">';
+			echo '<p><input type="text" id="email_name" name="email_name" onfocus="if(this.value==this.defaultValue) this.value=\'\';" onblur="if(this.value==\'\') this.value=this.defaultValue;" value="- Your Name -" class="text ui-widget-content ui-corner-all" /></p>';
+			echo '<p><input type="text" id="email_sender" name="email_sender" onfocus="if(this.value==this.defaultValue) this.value=\'\';" onblur="if(this.value==\'\') this.value=this.defaultValue;" value="- Your Email -" class="text ui-widget-content ui-corner-all" /></p>';
+			echo '<p><textarea id="email_message" name="email_message" cols="5" rows="3" onfocus="if(this.value==this.defaultValue) this.value=\'\';" class="text ui-widget-content ui-corner-all">'.$settings['email_message'].'</textarea></p>';
+			echo '<p class="email_message">Enter your name, email address and a message.</p>';
+			echo '<input type="hidden" id="email_recipient" name="email_recipient" value="'.$settings['email_recipient'].'">';
+			echo '<input type="hidden" id="email_cc" name="email_cc" value="'.$settings['email_cc'].'">';
+			echo '<input type="hidden" id="email_bcc" name="email_bcc" value="'.$settings['email_bcc'].'">';				
+			echo '<input type="hidden" id="email_subject" name="email_subject" value="'.$settings['email_subject'].'">';
+			echo '<input type="hidden" id="plugin_url" name="plugin_url" value="'.IIRE_SOCIAL_URL.'">';		
+			echo '</div>';
+		}				
    }		
 }
 add_action('wp_footer', 'iire_social_footer');

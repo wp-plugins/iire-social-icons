@@ -4,7 +4,7 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
 Tested up to: 3.5
-Stable tag: 0.40 
+Stable tag: 0.41 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,25 +102,25 @@ To install additional icon themes via FTP:
 
 == Frequently Asked Questions ==
 
-Q. What are the plugin requirements?
-A. The admin section requires Jquery and Jquery UI to be enabled. These libraries will be loaded from the Google CDN if not present, then initialized on the widget and shortcode admin pages.
+**Q. What are the plugin requirements?** 
+A. The admin section requires Jquery and Jquery UI to be enabled. These libraries are usually included with your default Wordpress installation, then initialized on the widget and shortcode admin pages.
 
-Q. Why two different admin panels for the widget and the shortcode?
+**Q. Why two different admin panels for the widget and the shortcode?** 
 A. All settings for the widget and the shortcode are stored independently. The widget(best used in the sidebar) and the shortcode(best used on a page or post) can be designed differently, with different themes, size, icon order, etc.
 
-Q. Can I add my own icons?
+**Q. Can I add my own icons?** 
 A. Yes, you can create a "custom1" (up to 5 respectively) folder under the plugin themes directory. Each icon theme is designed as a set of individual image sprites (All the icons are arranged in a grid as a single image), so your "icon grid" must match the layout on one of the other themes. Icons are not available as individual files.
 
-Q. How were the icons created?
+**Q. How were the icons created?** 
 A. All icons were designed in-house at iiRe Productions using high-resolution vector images. This method helps us to produce the highest quality images.
 
-Q. How do I access all the icons?
+**Q. How do I access all the icons?** 
 A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
 
-Q. Are there additional icon themes?
+**Q. Are there additional icon themes?** 
 A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
 
-Q. How do I change the default links for each icon?
+**Q. How do I change the default links for each icon?** 
 A. In the Widget or Shortcode Designer, just double-click the desired icon to display the title/link icon and enter the appropriate values.   
 
 
@@ -132,8 +132,16 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 == Changelog ==
 
+= 0.41 Make sure to deactivate and delete all prior versions! =
+* Updated the footer initialization to  only use jQuery UI if the email function is active and a proper recipient address is specified
+* Updated the FAQ
+* Updated the plugin landing page
+* Updated the initialization of jQuery UI library files in the Admin section
+* Fixed an PHP 5.0 date error in the send email function
+* Updated readme.txt file
 
-= 0.40 Make sure to deactivate and delete all prior versions! =
+
+= 0.40 =
 * Updated the Google CDN links for jQuery UI for Wordpress 3.5 compatibility!!!
 * Updated the included jQuery UI library files
 * Fixed the email dialog in Wordpress 3.5

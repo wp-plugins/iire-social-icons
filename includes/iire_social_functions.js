@@ -1,16 +1,22 @@
-// IIRE SOCIAL  - 12/12/2012 - 12:00 PM
+// IIRE SOCIAL  - 12/13/2012 - 12:00 PM
 
 jQuery(document).ready(function() {
 
 // SEND EMAIL
 	jQuery('div#iire-email').bind('click', function(e) {
 		e.preventDefault();	
-
+		var recipient = jQuery("input#email_recipient").val();		
+		if (recipient == undefined) {
+			alert('No email recipient defined!');	
+			return;	
+		}
+		
+		
 		jQuery("#emaildialog").dialog({
 			resizable: false,
 			draggable: true,			
 			width: 320,									
-			height: 375,
+			height: 385,
 			modal: true,
 			buttons: {
 				"Send Message": function() {
@@ -62,10 +68,8 @@ jQuery(document).ready(function() {
 	// ADD TO FAVORITES
 	jQuery('div#iire-favorite').bind('click', function(e) {
 		e.preventDefault();	
-
 		var sURL = location.href;
 		var sTitle = document.title;
-
 		var userAgent = navigator.userAgent.toLowerCase();
 		var userBrowserName  = navigator.appName.toLowerCase();
 		jQuery.browser = {
