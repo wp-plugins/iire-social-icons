@@ -75,25 +75,25 @@ There are additional icons for email, custom links, alternate website, add to fa
 
 == Installation ==
 
-For an automatic installation through WordPress:
+**For an automatic installation through WordPress:**
 
 1. Go to the 'Add New' plugins screen in your WordPress admin area.
 2. Search for 'iiRe Social.'
 3. Click 'Install Now' button.
 4. Activate the plugin to finish the installation.
 
-For a manual installation via FTP:
+**For a manual installation via FTP:**
 
 1. Upload the iire-social-icons folder to the /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' screen in your WordPress admin area.
 
-To upload the plugin through WordPress, instead of FTP:
+**To upload the plugin through WordPress, instead of FTP:**
 
 1. Upload the downloaded zip file on the 'Add New' plugins screen in your WordPress admin area.
 2. Activate the plugin through the 'Plugins' screen in your WordPress admin area.
 
 
-To install additional icon themes via FTP:
+**To install additional icon themes via FTP:**
 
 1. Download the desired icon theme to your hardrive and unzip. (The name of the zip file is the name of the theme folder)
 2. Upload the icon theme folder to the /wp-content/plugins/iire-social-icons/themes/ directory.
@@ -133,7 +133,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 == Changelog ==
 
 = 0.42 Make sure to deactivate and delete all prior versions! =
-* Addd conditional testing for the jQuery UI CSS file based on Wordpress prior versions.
+* Added conditional testing for the jQuery UI CSS file based on Wordpress prior versions.
 * Fixed a typo in the Pinterest icon title
 * Fixed a bug in the Widget Alignment in the Widget Designer
 * Fixed a bug in the Shortcode Alignment in the Shortcode Designer
