@@ -145,7 +145,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 * Updated the readme.txt file
 
 
-= 0.41 Make sure to deactivate and delete all prior versions! =
+= 0.41 =
 * Updated the footer initialization to  only use jQuery UI if the email function is active and a proper recipient address is specified
 * Updated the FAQ
 * Updated the plugin landing page
