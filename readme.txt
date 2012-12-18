@@ -4,7 +4,7 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Google, Instagram, Linked In, Pinterest, Skype, Twitter, YouTube  
 Requires at least: 3.1
 Tested up to: 3.5
-Stable tag: 0.41 
+Stable tag: 0.42 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,7 +115,7 @@ A. Yes, you can create a "custom1" (up to 5 respectively) folder under the plugi
 A. All icons were designed in-house at iiRe Productions using high-resolution vector images. This method helps us to produce the highest quality images.
 
 **Q. How do I access all the icons?** 
-A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation.
+A. The free version of this plugin has limited access to certain social networks. If you would like to receive a registration code to unlock these, please consider making a donation or purchasing the full version.
 
 **Q. Are there additional icon themes?** 
 A. Yes, there are additional free theme available as downloadable zip file on http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
@@ -131,6 +131,19 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 
 
 == Changelog ==
+
+= 0.42 Make sure to deactivate and delete all prior versions! =
+* Addd conditional testing for the jQuery UI CSS file based on Wordpress prior versions.
+* Fixed a typo in the Pinterest icon title
+* Fixed a bug in the Widget Alignment in the Widget Designer
+* Fixed a bug in the Shortcode Alignment in the Shortcode Designer
+* Updated the Widget/Shortcode reset functions
+* Updated the Email icon title to "Email"
+* Updated the code for the Widget Veritcal Orientation
+* Updated the code for the Shortcode Veritcal Orientation
+* Updated the dynamic CSS alignment for the widget and shortcode outputs
+* Updated the readme.txt file
+
 
 = 0.41 Make sure to deactivate and delete all prior versions! =
 * Updated the footer initialization to  only use jQuery UI if the email function is active and a proper recipient address is specified

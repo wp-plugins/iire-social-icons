@@ -1,5 +1,5 @@
 <?php
-// Admin Social Home Landing Page - 12-13-2012
+// Admin Social Home Landing Page - 12-17-2012
 
 function iire_admin_social_home() {
 	global $wpdb;
@@ -57,7 +57,7 @@ Use one of the default icon themes or use the symbols and background colors with
 
 
 <h3>Donations</h3>
-<p>If you would like to contribute to future development of this plugin, please <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">donate</a> what you can. If we receive your donation, we will email you a registration key to unlock the addtional social media networks in the demo version.</p>
+<p>If you would like to contribute to future development of this plugin, please <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/" target="_blank">donate</a> what you can. When we receive your donation, we will email you a registration key within 24 hours to unlock the addtional social media networks in this demo version.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">

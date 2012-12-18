@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Widget - 12-12-2012
+// Admin Page for Social Icons Widget - 12-17-2012
 
 function iire_admin_social_widget() {
 	global $wpdb;
@@ -417,7 +417,7 @@ function iire_admin_social_widget() {
 			</p>							
 
 			<p class="ds <?php if ($settings['widget_dropshadow'] == '0') { echo 'hidden'; } ?>"><br /><br /></p>
-			<p>&nbsp;</p>			
+	
 
 	
  			<!-- Rounded Corners -->
@@ -445,7 +445,7 @@ function iire_admin_social_widget() {
 			</p>
 			
 			<p class="rc <?php if ($settings['widget_roundedcorners'] == '0') { echo 'hidden'; } ?>"><br /><br /></p>			
-			<p>&nbsp;</p>
+
 			
 			<p><label>Background Color?</label>			
 			<select id="widget_icon_bgcolor" name="widget_icon_bgcolor" class="w70">
@@ -685,9 +685,6 @@ function iire_admin_social_widget() {
 
 </div>	<!-- END RIGHT PANEL -->
 
-
-
-
 	<h3>Widget Designer <span class="instructions">(Double-click icon to edit link and title... Drag icon to change position... Drag to Trash to remove.)</span></h3>
 
 	<div id="viewport">
@@ -734,8 +731,8 @@ function iire_admin_social_widget() {
 			<li class="choose <?php echo $th; ?>" id="iire-twitter" alt="http://twitter.com" title="Twitter" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com" title="Linked In" lang=""></li>		
 			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://www.youtube.com/" title="You Tube" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterst" lang=""></li>						
-			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email Me!" lang="Use the email settings for this information!"></li>
+			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterest" lang=""></li>						
+			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email" lang="Use the email settings for this information!"></li>
 			<li class="choose <?php echo $th; ?>" id="iire-rss" alt="<?php echo get_option('siteurl'); ?>/feed.rss" title="RSS Feed" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-favorite" alt="" title="Add to Favorites" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-link" alt="http://" title="Custom Link" lang=""></li>
@@ -850,6 +847,9 @@ function iire_admin_social_widget() {
 
 <h3>Notes</h3>
 <p>To use the identical settings for the shortcode generated in the Widget Designer, go to "General Settings", set "Clone Widget Settings" to "Yes" and save your changes.</p>
+
+<p>Aligning the Widget Container to the right will order the icons in reverse. Drag and drop the icons to the desired order.</p>
+
 <p>The Widget Designer works independently!!  You can create vastly different settings for the widget (which is best used as a sidebar widget) and the shortcode (which is best used is a page or post).</p>
 
 <textarea id="widget_icons" name="widget_icons" cols="20" rows="3" class="h150" style="width:100%; visibility: hidden;"><?php echo stripslashes($settings['widget_icons']); ?></textarea>

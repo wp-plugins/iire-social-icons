@@ -1,5 +1,4 @@
-// IIRE SOCIAL  - 12/13/2012 - 12:00 PM
-
+// IIRE SOCIAL  - 12/17/2012 - 12:00 PM
 jQuery(document).ready(function() {
 
 // SEND EMAIL
@@ -10,7 +9,6 @@ jQuery(document).ready(function() {
 			alert('No email recipient defined!');	
 			return;	
 		}
-		
 		
 		jQuery("#emaildialog").dialog({
 			resizable: false,

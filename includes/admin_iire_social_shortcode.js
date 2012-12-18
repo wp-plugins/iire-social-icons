@@ -1,4 +1,4 @@
-// IIRE SOCIAL SHORTCODE  - 12/12/2012 - 9:00 PM
+// IIRE SOCIAL SHORTCODE  - 12/17/2012 - 9:00 PM
 
 jQuery(document).ready(function() {
 	var plugin_path =jQuery("input#plugin_path").val(); 
@@ -800,9 +800,10 @@ jQuery(document).ready(function() {
 
 	// Shortcode Alignment - OK
 	jQuery('select#sc_align').bind('change', function(e) {
-		var align = jQuery(this).val();
-		jQuery(".move").removeClass("alignleft").removeClass("alignright");
-		jQuery(".move").addClass("align"+align+"")		
+		//var align = jQuery(this).val();
+		//jQuery(".move").removeClass("alignleft").removeClass("alignright");
+		//jQuery(".move").addClass("align"+align+"");
+ 		adjustWidgetContainer();		
 	});		
 
 
@@ -845,6 +846,15 @@ jQuery(document).ready(function() {
 		var wb= jQuery("select#sc_background").val();
 		if (wb == '0') {
 			jQuery("div.iire_social_shortcode").css("border", "#AAAAAA 1px dashed");
+		}
+
+		var align = jQuery("select#sc_align").val();
+		if (align == 'right' && ot == 'horizontal') {	
+			jQuery(".move").removeClass("alignleft");
+			jQuery(".move").addClass("alignright");
+		} else {
+			jQuery(".move").removeClass("alignright");
+			jQuery(".move").addClass("alignleft");					
 		}
 
 		jQuery("li.hidden").hide();
@@ -939,16 +949,18 @@ jQuery(document).ready(function() {
 			jQuery('select#sc_icon_spacing').val('10');	
 			
 			jQuery('select#sc_dropshadow').val('1');
-			jQuery('select#sc_dropshadow_horizontal_offset').val('3');
-			jQuery('select#sc_dropshadow_vertical_offset').val('3');
-			jQuery('select#sc_dropshadow_blur').val('8');				
+			jQuery('select#sc_dropshadow_horizontal_offset').val('2');
+			jQuery('select#sc_dropshadow_vertical_offset').val('2');
+			jQuery('select#sc_dropshadow_blur').val('5');				
 			jQuery('input#sc_dropshadow_color').val('AAAAAA');
 
 			jQuery('select#sc_roundedcorners').val('1');
-			jQuery('select#sc_roundedcorners_topleft').val('4');
-			jQuery('select#sc_roundedcorners_topright').val('4');			
-			jQuery('select#sc_roundedcorners_bottomleft').val('4');
-			jQuery('select#sc_roundedcorners_bottomright').val('4');	
+			jQuery('input#sc_roundedcorners_topleft').val('4');
+			jQuery('input#sc_roundedcorners_topright').val('4');			
+			jQuery('input#sc_roundedcorners_bottomleft').val('4');
+			jQuery('input#sc_roundedcorners_bottomright').val('4');
+			jQuery('input#sc_icon_bgcolor_up').val('AAFF00');			
+			jQuery('input#sc_icon_bgcolor_hover').val('00AAFF');				
 		
 			jQuery('select#sc_icon_bgcolor').val('0');
 			jQuery('select#sc_icon_bgcolor_up').val('0');			
@@ -970,7 +982,11 @@ jQuery(document).ready(function() {
 			jQuery('input#sc_margin_left').val('0');
 			jQuery('input#sc_margin_right').val('0');
 
-			jQuery('select#sc_background').val('0');	
+			jQuery('select#sc_background').val('0');
+
+			jQuery('select#link_title').val('1');
+			jQuery('select#link_target').val('_blank');
+			jQuery('select#link_nofollow').val('1');	
 			
 			jQuery("input#submit").trigger('click');					
 		}										 

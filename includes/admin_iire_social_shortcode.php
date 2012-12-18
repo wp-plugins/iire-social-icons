@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Shortcode - 12-12-2012
+// Admin Page for Social Icons Shortcode - 12-17-2012
 
 function iire_admin_social_shortcode() {
 	global $wpdb;
@@ -792,8 +792,8 @@ function iire_admin_social_shortcode() {
 			<li class="choose <?php echo $th; ?>" id="iire-twitter" alt="http://twitter.com" title="Twitter" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com" title="Linked In" lang=""></li>		
 			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://www.youtube.com/" title="You Tube" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterst" lang=""></li>						
-			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email Me!" lang="Use the email settings for this information!"></li>
+			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="http://pinterest.com" title="Pinterest" lang=""></li>						
+			<li class="choose <?php echo $th; ?>" id="iire-email" alt="you@yourwebsite.com" title="Email" lang="Use the email settings for this information!"></li>
 			<li class="choose <?php echo $th; ?>" id="iire-rss" alt="<?php echo get_option('siteurl'); ?>/feed.rss" title="RSS Feed" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-favorite" alt="" title="Add to Favorites" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-link" alt="http://" title="Custom Link" lang=""></li>
@@ -909,7 +909,15 @@ function iire_admin_social_shortcode() {
 
 <h3>Notes</h3>
 <p>To use the identical settings for the shortcode generated in the Widget Designer, go to "Widget Settings", "General Settings", set "Clone Widget Settings" to "Yes" and save your changes.</p>
+
+<p>Aligning the Shortcode Container to the right will order the icons in reverse. Drag and drop the icons to the desired order.</p>
+
 <p>The Shortcode Designer works independently!!  You can create vastly different settings for the shortcode (which is best used is a page or post) or the widget (which is best used as a sidebar widget).</p>
+
+<p>To include the shortcode in a template, copy this code into the desired location in your template.</p>
+<code>
+&lt;?php if(function_exists('iire_social_theme')) { iire_social_theme(); } ?&gt;
+</code> 
 
 
 <textarea id="sc_icons" name="sc_icons" cols="20" rows="3" class="h150" style="width:100%; visibility: hidden;"><?php echo stripslashes($settings['sc_icons']); ?></textarea>

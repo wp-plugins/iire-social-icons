@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - 12-13-2012
+// Admin Social Hooks - 12-17-2012
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');
@@ -43,16 +43,21 @@ add_action('admin_print_scripts', 'iire_social_admin_enable_js');
 
 function iire_social_admin_enable_styles() {
     if ( is_admin() && (($_GET['page'] == 'iire_admin_social_widget') || ($_GET['page'] == 'iire_admin_social_shortcode')) ){
-		if( !wp_script_is('jquery-ui_css') ) { 		
+		if( !wp_script_is('jquery-ui_css') ) {
+			global $wp_version;		 		
 			$x = explode('/',IIRE_SOCIAL_BASENAME);
-			$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui.css";					
-			if (file_exists($d)) {
-				wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');				
-			//} else {
-			//	wp_enqueue_style( 'jquery-ui_css', ''.$settings['jquery_ui_css'].'');										
-			}
+			if (version_compare($wp_version, '3.5', '>=')) {
+				$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui.css";					
+				if (file_exists($d)) {
+					wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui.css');	
+				}						
+			} else {
+				$d = "../".IIRE_SOCIAL_CONTENT_URL."/plugins/".$x[0]."/includes/jquery-ui-older.css";					
+				if (file_exists($d)) {			
+					wp_enqueue_style( 'jquery-ui_css', IIRE_SOCIAL_URL.'includes/jquery-ui-older.css');
+				}									
+			}	
 		}			
-				
     }
 }
 add_action( 'admin_print_styles', 'iire_social_admin_enable_styles' );

@@ -9,6 +9,20 @@ header('Content-type: text/css');
 	// Widget Width/Height
 	$wid = 'width: '.$_GET['w'].'px; '; 
 	$hgt = 'height: '.$_GET['h'].'px; ';
+	
+	// Widget Vertical
+	if ($_GET['o'] == 'vertical') {
+		$sz = $_GET['sz'];		
+		$sp = $_GET['sp'];
+		if ($_GET['ds'] == '1') { 		
+			$vw = $sz + $sp;
+		} else {
+			$vw = $sz;		
+		}	
+		$vh = ($sz * 9) + ($sp * 9);
+		$wid = 'width: '.$vw.'px; '; 
+		$hgt = 'height: '.$vh.'px; ';							
+	}	
 
 	// Widget Padding
 	if ($_GET['p'] != '') {		
@@ -53,16 +67,14 @@ header('Content-type: text/css');
 
 	// Widget Orientation
 	if ($_GET['o'] == 'horizontal') {
-		echo 'div.iire_social_widget div.horizontal { float:left; }';
+		if ($_GET['a'] == 'left') {
+			echo 'div.iire_social_widget div.horizontal { float:left; text-align:left; }';	
+		} else {	
+			echo 'div.iire_social_widget div.horizontal { float:right; text-align:right; }';
+		}		
 	} else {	
 		echo 'div.iire_social_widget div.vertical { float:none; }';
 	}	
-	
-	if ($_GET['a'] == 'left') {
-		echo 'div.iire_social_widget div.horizontal.alignleft { float:left; text-align:left; }';	
-	} else {	
-		echo 'div.iire_social_widget div.horizontal.alignright{ float:right; text-align:right; }';
-	}		
 
 
 	$theme = $_GET['theme'];
@@ -81,7 +93,6 @@ header('Content-type: text/css');
 		echo 'div.iire_social_widget .icon'.$sz.'.'.$theme.' { background-color: none; background-image: url('.$_GET['pluginurl'].'themes/'.$theme.'/'.$sz.'_sprite.png); }';
 		echo 'div.iire_social_widget .icon'.$sz.'.'.$theme.':hover { background-color: none; }';			 			
 	}		
-		
 
 
 	// Widget Icon Spacing			

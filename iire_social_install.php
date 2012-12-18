@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation - 12-13-2012
+// Social Icons Installation - 12-17-2012
 
 global $iire_social_version;
-$iire_social_version = "0.41";
+$iire_social_version = "0.42";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {
@@ -81,7 +81,7 @@ function iire_update_social_check() {
 	
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('21', 'css_cache', '0')");		
 
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('23', 'themes', 'default;iphone;chrome_panels;circle_cutouts;eco_green;gold_bars;light_bulbs;post_it_notes;punch_thru;red_alert;stickers;symbols_black;symbols_gray;symbols_white;wood_crates;custom1;custom2;custom3;custom4;custom5')");
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('23', 'themes', 'default;iphone;chrome_panels;circle_cutouts;eco_green;glossy_black;glossy_white;gold_bars;light_bulbs;post_it_notes;punch_thru;red_alert;stickers;symbols_black;symbols_gray;symbols_white;wood_crates;custom1;custom2;custom3;custom4;custom5')");
 	
 		// WIDGET	
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('24', 'widget_icon_theme', 'default')");
@@ -125,16 +125,16 @@ function iire_update_social_check() {
 		// SHORTCODE
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('63', 'sc_icon_theme', 'default')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('64', 'sc_icon_size', '32')");
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('65', 'sc_icon_spacing', '10')");
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('65', 'sc_icon_spacing', '8')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('66', 'sc_icon_opacity', '100')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('67', 'sc_icon_bgcolor', '0')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('68', 'sc_icon_bgcolor_up', 'AAFF00')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('69', 'sc_icon_bgcolor_hover', '00AAFF')");			
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('70', 'sc_dropshadow', '1')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('71', 'sc_dropshadow_color', 'AAAAAA')");
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('72', 'sc_dropshadow_horizontal_offset', '3')");
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('73', 'sc_dropshadow_vertical_offset', '3')");		
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('74', 'sc_dropshadow_blur', '8')");
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('72', 'sc_dropshadow_horizontal_offset', '2')");
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('73', 'sc_dropshadow_vertical_offset', '2')");		
+		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('74', 'sc_dropshadow_blur', '5')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('75', 'sc_roundedcorners', '1')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('76', 'sc_roundedcorners_topleft', '4')");
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('77', 'sc_roundedcorners_topright', '4')");
