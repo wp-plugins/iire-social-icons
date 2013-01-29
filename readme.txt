@@ -8,7 +8,7 @@ Stable tag: 0.42
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and links to your site with a customizable user interface. Majority of social networks are supported!
+Add social media icons and links to your site with a customizable user interface. Major upgrade coming soon!
 
 == Description ==
 
@@ -16,11 +16,13 @@ Easily choose an from a library of social media icons, customize their appearanc
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
+*We are getting to release a major upgrade very shortly with additional icons, functions, networks, updated graphics and support for responsive themes. Please check back soon!* 
+
 
 **Features**
 
 * Create an independent social media icons widget and shortcode
-* Majority of social networks supported
+* Majority of social networks avaiable
 * Over 80 different icons!
 * 5 different icon sizes (16x16px, 24x24px, 32x32px, 48x48px, 64x64px)!
 * Additional free icon themes available
@@ -55,7 +57,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 **Supported Networks**
 
-500px, Add This, Amazon, Aim, AOL, Apple, Android, Beboo, Badoo, Blink List, Blogger, Buzznet, Cafe Mom, Delicious, Design Float, Deviant Art, Digg, Dribble, Ebay, Esty, Evernote, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Geocaching, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Meetup, Microsoft, Mixx, Myspace, Newsvine, Ning, Orkut, Paypal, Pinterest, Picasa, Pure VOlume, Reddit, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yahoo, Yelp, You Tube
+500px, Add This, Beboo, Badoo, Blink List, Blogger, Buzznet, Cafe Mom, Delicious, Design Float, Deviant Art, Digg, Dribble, Ebay, Esty, Evernote, Feedburner, Facebook, Flickr, Friendfeed, Friendster, Foursquare, Geocaching, Google, Google Plus, Gmail, Hi5, Instagram, Last FM, Linked In, Live Journal, Meetup, Mixx, Myspace, Newsvine, Ning, Orkut, Paypal, Pinterest, Picasa, Pure VOlume, Reddit, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Sound Cloud, Spotify, Stumbleupon, Tagged, Twitter, Vimeo, Wordpress, Yelp, YouTube
 
 There are additional icons for email, custom links, alternate website, add to favorites, more information, chat, print and a contact us page.
 
@@ -133,6 +135,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 == Changelog ==
 
 = 0.42 Make sure to deactivate and delete all prior versions! =
+* Corrections to the 32px size CSS file for More Info 2, Picasa and Reddit 
 * Added conditional testing for the jQuery UI CSS file based on Wordpress prior versions.
 * Fixed a typo in the Pinterest icon title
 * Fixed a bug in the Widget Alignment in the Widget Designer
