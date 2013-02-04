@@ -8,11 +8,11 @@ Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and links to your site with a customizable user interface. New themes, networks and functions in this MAJOR UPGRADE! Some networks require activation. The company logos in the icons are copyright of their respective owners. Please note that this is a major update and not backwards-compatible with prior versions.
+Add social media icons and links to your site with a customizable user interface. New themes, networks and functions in this MAJOR UPGRADE!
 
 == Description ==
 
-Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners.
+New themes, networks and functions in this MAJOR UPGRADE! Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners.
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
@@ -55,13 +55,14 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Add up to five custom themes
 
 
-**Avaialable Networks**
+**Available Networks**
 
 360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, Youtube, Ziki, Zorpia
 
-There are additional icons for two different emails, camera, shopping cart, custom links, alternate website, two different add to favorites, more information, icq, chat, print, profile,  and a contact us page.
+There are additional icons for two different Emails, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website, two different Add To Favorites, More Information, ICQ, Chat, Print, Profile,  and a Contact Us page.
 
-NOTE: Major networks such as Facebook, Twitter, Google Plus, Pinterest, YouTube and the additional icons are 100% functional. No registration is required. 
+
+**NOTE:** Major networks such as Facebook, Twitter, Google Plus, Pinterest, YouTube and the additional icons are 100% functional. No registration is required. 
 
 
 **Quick Start**
