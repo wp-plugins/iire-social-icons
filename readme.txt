@@ -18,6 +18,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 
 **Features**
+
 * Create an independent social media icons widget and shortcode
 * Majority of social networks available
 * Over 125 different icons (Donation or purchase required to access all icons)!
@@ -55,6 +56,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 
 **Available Networks**
+
 360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, Youtube, Ziki, Zorpia
 
 There are additional icons for 2 different Emails, 2 different Add To Favorites, 2 different More Information, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website,  ICQ, Chat, Print, Profile and a Contact Us page.
@@ -64,6 +66,7 @@ There are additional icons for 2 different Emails, 2 different Add To Favorites,
 
 
 **Quick Start**
+
 1. Go to 'Wordpress Admin', 'Appearance', 'Widgets'.
 2. Add the 'iiRe Social Media Icons' to a sidebar widget area and 'Save'.
 3. Go to 'Wordpress Admin', 'iiRe Social Icons', 'Widget Settings'.
