@@ -18,9 +18,8 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 
 **Features**
-
 * Create an independent social media icons widget and shortcode
-* Majority of social networks avaiable
+* Majority of social networks available
 * Over 125 different icons (Donation or purchase required to access all icons)!
 * 5 different icon sizes (16x16px, 24x24px, 32x32px, 48x48px, 64x64px)!
 * Additional free icon themes (as they become available)
@@ -56,17 +55,15 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 
 **Available Networks**
-
 360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, Youtube, Ziki, Zorpia
 
-There are additional icons for two different Emails, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website, two different Add To Favorites, More Information, ICQ, Chat, Print, Profile,  and a Contact Us page.
+There are additional icons for 2 different Emails, 2 different Add To Favorites, 2 different More Information, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website,  ICQ, Chat, Print, Profile and a Contact Us page.
 
 
 **NOTE:** Major networks such as Facebook, Twitter, Google Plus, Pinterest, YouTube and the additional icons are 100% functional. No registration is required. 
 
 
 **Quick Start**
-
 1. Go to 'Wordpress Admin', 'Appearance', 'Widgets'.
 2. Add the 'iiRe Social Media Icons' to a sidebar widget area and 'Save'.
 3. Go to 'Wordpress Admin', 'iiRe Social Icons', 'Widget Settings'.
@@ -80,27 +77,27 @@ There are additional icons for two different Emails, Camera/Photo Gallery, Shopp
 
 == Installation ==
 
-For an automatic installation through WordPress:
+**For an automatic installation through WordPress:**
 
-NOTE: if you are installing the most recent version, but sure to clear your browser cache. The latest images sprites are aligned differently than previous versions.
+**NOTE:** if you are installing the most recent version, but sure to clear your browser cache! The latest images sprites are aligned differently than prior versions.
 
 1. Go to the 'Add New' plugins screen in your WordPress admin area.
 2. Search for 'iiRe Social.'
 3. Click 'Install Now' button.
 4. Activate the plugin to finish the installation.
 
-For a manual installation via FTP:
+**For a manual installation via FTP:**
 
 1. Upload the iire-social-icons folder to the /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' screen in your WordPress admin area.
 
-To upload the plugin through WordPress, instead of FTP:
+**To upload the plugin through WordPress, instead of FTP:**
 
 1. Upload the downloaded zip file on the 'Add New' plugins screen in your WordPress admin area.
 2. Activate the plugin through the 'Plugins' screen in your WordPress admin area.
 
 
-To install additional icon themes via FTP:
+**To install additional icon themes via FTP:**
 
 1. Download the desired icon theme to your hardrive and unzip. (The name of the zip file is the name of the theme folder)
 2. Upload the icon theme folder to the /wp-content/plugins/iire-social-icons/themes/ directory.
@@ -127,8 +124,11 @@ A. Yes, there are additional free theme available as downloadable zip files on h
 **Q. How do I change the default links for each icon?** 
 A. In the Widget or Shortcode Designer, just double-click the desired icon to display the title/link icon and enter the appropriate values.   
 
-**Q. Why two differnt email icons?** 
+**Q. Why two different email icons?** 
 A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The second email icon uses the http://mailto: function and launches the visitor's email client, such as Outlook.   
+
+**Q. When do I enable the responsive options?** 
+A. If you are using a Wordpress theme that is designed to adapt to different devices, such as tablets and smart phone, set the "Responsive" width option to "Yes". The width of the Widget or Shortcode containers will adjust automatically.
 
 
 == Screenshots ==
@@ -140,11 +140,11 @@ A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The 
 
 = 1.5.0 MAJOR VERSION UPDATE! Deactivate and delete all prior versions! =
 * Extensive testing under Wordpress 3.5.1
-* Change plugin to mostly social networks.
+* Changed plugin to mostly social networks
 * Changed the revision numbering scheme
 * Updated the installer
-* Additional networks and icons added. See supported networks
-* updated some networks default sample links
+* Additional networks and icons added. See <a href="http://wordpress.org/extend/plugins/iire-social-icons/">available networks</a>
+* Updated some networks default sample links
 * Updated graphic sprites for all icon themes
 * Updated Twitter, Google Plus and My Space logos
 * New additional email icon that uses HTML mailto: function
@@ -155,7 +155,7 @@ A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The 
 * Added 2 additional blank icons (3 total)
 * Added dark backgrounds to the Widget/Shortcode Designer when a light-colored theme is selected
 * Rename a theme to "Mobile Phone"
-* Rename a theme to "Cuouts Circular Dark"
+* Rename a theme to "Cutouts Circular Dark"
 * Removed the "Stickers" theme to keep file size down. Will be available for download on website.
 * Amazon, Google, Microsoft, AOL, Ebay, Yahoo have been removed and replaced with all-purpose icons 
 * Added responsive widget/shortcode width option in the Widget/Short Designers for better integration with responsive Wordpress themes
@@ -168,7 +168,7 @@ A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The 
 * Fixed wrapping issue with the Email and Add To Favorites icons
 * Fixed the show hide title function
 * Fixed the application of the opacity current level to icons in Widget/Shortcode Designers
-* Fixed reordering output bug when email icons are used
+* Fixed re-ordering output bug when email icons are used
 * Other miscellaneous bug fixes
 * Updated the screenshot
 * Updated the readme.txt file
