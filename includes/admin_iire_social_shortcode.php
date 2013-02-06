@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Shortcode - (Demo Version) - 02-04-2013
+// Admin Page for Social Icons Shortcode - (Demo Version) - 02-06-2013
 
 function iire_admin_social_shortcode() {
 	global $wpdb;
@@ -655,7 +655,8 @@ function iire_admin_social_shortcode() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-bebo" alt="http://bebo.com" title="Bebo" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-beatport" alt="http://beatport.com" title="Beatport" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-behance" alt="http://behance.net" title="Behance" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-blinklist" alt="http://blinklist.com" title="Blinklist" lang=""></li>				
+			<li class="choose trial <?php echo $th; ?>" id="iire-blinklist" alt="http://blinklist.com" title="Blinklist" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-bloglovin" alt="http://bloglovin.com" title="Blog Lovin" lang=""></li>								
 			<li class="choose trial <?php echo $th; ?>" id="iire-blogmarks" alt="http://blogmarks.com" title="Blog Marks" lang=""></li>						
 			<li class="choose trial <?php echo $th; ?>" id="iire-blogger" alt="http://blogger.com" title="Blogger" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-brightkite" alt="http://limbo.com" title="Brightkite" lang=""></li>			

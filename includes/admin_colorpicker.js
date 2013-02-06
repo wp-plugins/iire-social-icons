@@ -1,4 +1,4 @@
-// Modified JS Color Picker - 02-04-2013
+// Modified JS Color Picker - 02-06-2013
 
 var jscolor = {
 	dir : '../wp-content/plugins/iire-social-icons/includes/images/',	

@@ -4,15 +4,15 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email  
 Requires at least: 3.1
 Tested up to: 3.5.1
-Stable tag: 1.5.0 
+Stable tag: 1.5.1 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and links to your site with a customizable user interface. New themes, networks and functions in this MAJOR UPGRADE!
+Add social media icons and links to your site with a customizable user interface. New themes, networks and functions!
 
 == Description ==
 
-New themes, networks and functions in this MAJOR UPGRADE! Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners.
+Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New themes, networks and functions in this latest version! NOTE: If you have a previous installation, please deactivate and remove all prior versions completely! Don't forget to clear your browser cache!
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
@@ -52,14 +52,14 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Works in most modern browsers, including IE9!
 * Accordian-style options panel
 * Options panel is collapsible!
-* Add up to five custom themes
+* Add up to 5 custom themes
 
 
 **Available Networks**
 
-360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, Youtube, Ziki, Zorpia
+360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, YouTube, Ziki, Zorpia
 
-There are additional icons for 2 different Emails, 2 different Add To Favorites, 2 different More Information, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website,  ICQ, Chat, Print, Profile and a Contact Us page.
+There are additional icons for 2 different Emails, 2 different Add To Favorites, 2 different More Information, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website, ICQ, Chat, Print, Profile and a Contact Us page.
 
 
 **NOTE:** Major networks such as Facebook, Twitter, Google Plus, Pinterest, YouTube and the additional icons are 100% functional. No registration is required. 
@@ -131,7 +131,7 @@ A. In the Widget or Shortcode Designer, just double-click the desired icon to di
 A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The second email icon uses the http://mailto: function and launches the visitor's email client, such as Outlook.   
 
 **Q. When do I enable the responsive options?** 
-A. If you are using a Wordpress theme that is designed to adapt to different devices, such as tablets and smart phone, set the "Responsive" width option to "Yes". The width of the Widget or Shortcode containers will adjust automatically.
+A. If you are using a Wordpress theme that is designed to adapt to different devices, such as tablets and smart phones, set the "Responsive" width option to "Yes". The width of the Widget or Shortcode containers will adjust automatically.
 
 
 == Screenshots ==
@@ -140,6 +140,13 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 
 
 == Changelog ==
+
+= 1.5.1 =
+* Replaced missing Blog lovin icon in the Widget/Shortcode Designers
+* Added a note about uninstalling all prior versions
+* Updated the screenshot
+* Updated the readme.txt file
+
 
 = 1.5.0 MAJOR VERSION UPDATE! Deactivate and delete all prior versions! =
 * Extensive testing under Wordpress 3.5.1

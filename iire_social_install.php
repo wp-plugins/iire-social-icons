@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation (Demo Version) - 02-04-2013
+// Social Icons Installation (Demo Version) - 02-06-2013
 
 global $iire_social_version;
-$iire_social_version = "1.5.0";
+$iire_social_version = "1.5.1";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {

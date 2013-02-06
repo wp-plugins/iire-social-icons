@@ -5,15 +5,15 @@ Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins
 Description: Add social media icons and links you your site with a customizable user interface. New themes, networks and functions in this MAJOR UPGRADE!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 1.5.0
+Version: 1.5.1
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email
 Copyright (C) 2012-2013 iiRe Productions
 */
 	
 // ASSIGN VERSION (DEMO)
 global $wpdb, $iire_social_version;
-$iire_version = "1.5.0";
-$last_modified = "02-04-2013";
+$iire_version = "1.5.1";
+$last_modified = "02-06-2013";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));

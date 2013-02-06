@@ -1,4 +1,4 @@
-// IIRE SOCIAL SHORTCODE (Demo Version) - 02-04-2013
+// IIRE SOCIAL SHORTCODE (Demo Version) - 02-06-2013
 
 jQuery(document).ready(function() {
 	var plugin_path = jQuery("input#plugin_path").val(); 
