@@ -12,7 +12,9 @@ Add social media icons and links to your site with a customizable user interface
 
 == Description ==
 
-Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New themes, networks and functions in this latest version! NOTE: If you have a previous installation, please deactivate and remove all prior versions completely! Don't forget to clear your browser cache!
+Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New themes, networks and functions in this latest version! 
+
+**NOTE: If you have a previous installation, please deactivate and remove all prior versions completely! Don't forget to clear your browser cache!**
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
@@ -142,7 +144,7 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 == Changelog ==
 
 = 1.5.1 =
-* Replaced missing Blog lovin icon in the Widget/Shortcode Designers
+* Replaced missing Blog Lovin icon in the Widget/Shortcode Designers
 * Added a note about uninstalling all prior versions
 * Updated the screenshot
 * Updated the readme.txt file
