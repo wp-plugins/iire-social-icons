@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - (Demo Version) - 02-06-2013
+// Admin Social Hooks - (Demo Version) - 06-12-2013
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');
@@ -27,7 +27,7 @@ function iire_social_admin_enable_js() {
 		wp_enqueue_script('jquery-ui-dialog');
 		wp_enqueue_script('jquery-ui-position');		
 		wp_enqueue_script('jquery-ui-slider');		
-		wp_enqueue_script('jquery-ui-tabs');			
+		wp_enqueue_script('jquery-ui-tabs');
     }
 	
 	 if (is_admin() && ($_GET['page'] == 'iire_admin_social_widget')){

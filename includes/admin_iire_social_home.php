@@ -1,5 +1,5 @@
 <?php
-// Admin Social Home Landing Page - (Demo Version) - 02-06-2013
+// Admin Social Home Landing Page - (Demo Version) - 06-12-2013
 
 function iire_admin_social_home() {
 	global $wpdb;
@@ -50,7 +50,7 @@ Use one of the default icon themes or use the symbols and background colors with
 <ul>
 <li>- More Themes!</li>
 <li>- More Icon Sizes (in pixels)! - 96x96, 128x128, 192x192, 256x256</li>
-<li>- Support of additional social networks</li>
+<li>- Support of Additional Social Networks</li>
 <li>- Additional Customer Support</li>
 </ul>
 
@@ -66,7 +66,6 @@ Use one of the default icon themes or use the symbols and background colors with
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-
 
 </div>
 

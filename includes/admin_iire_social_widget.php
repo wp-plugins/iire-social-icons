@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Widget - (Demo Version) - 02-06-2013
+// Admin Page for Social Icons Widget - (Demo Version) - 06-12-2013
 
 function iire_admin_social_widget() {
 	global $wpdb;
@@ -318,7 +318,30 @@ function iire_admin_social_widget() {
 			<p class="bg <?php if ($settings['widget_icon_bgcolor'] =='0') { echo 'hidden'; } ?>"><label>Hover State:</label>	
 			<input type="text" id="widget_icon_bgcolor_hover" name="widget_icon_bgcolor_hover" value="<?php echo $settings['widget_icon_bgcolor_hover']; ?>" class="w70 bg color <?php if ($settings['widget_icon_bgcolor'] == '0') { echo 'hidden'; } ?>"></p>
 			
-			<p class="bg <?php if ($settings['widget_icon_bgcolor'] =='0') { echo 'hidden'; } ?>"><br />Background colors are best used with the "Symbol" or "Cutout" themes.</p>		
+			<p class="bg <?php if ($settings['widget_icon_bgcolor'] =='0') { echo 'hidden'; } ?>"><br />Background colors are best used with the "Symbol" or "Cutout" themes.</p>
+			
+			
+			<p>&nbsp;</p>
+
+ 			<!-- Effect -->			
+			<p><label>Effect?</label>			
+			<select id="widget_effect" name="widget_effect" class="w70">
+				<option value="" <?php if ($settings['widget_effect'] == '') { echo 'selected'; } ?>>None</option>
+				<option value="bounce" <?php if ($settings['widget_effect'] == 'bounce') { echo 'selected'; } ?>>Bounce</option>					
+				<option value="drop" <?php if ($settings['widget_effect'] == 'drop') { echo 'selected'; } ?>>Drop</option>
+				<option value="expand" <?php if ($settings['widget_effect'] == 'expand') { echo 'selected'; } ?>>Expand</option>									
+				<option value="fadein" <?php if ($settings['widget_effect'] == 'fadein') { echo 'selected'; } ?>>Fade In</option>
+				<option value="fadeout" <?php if ($settings['widget_effect'] == 'fadeout') { echo 'selected'; } ?>>Fade Out</option>
+				<option value="fliphz" <?php if ($settings['widget_effect'] == 'fliphz') { echo 'selected'; } ?>>Flip Horizontal</option>
+				<option value="flipvt" <?php if ($settings['widget_effect'] == 'flipvt') { echo 'selected'; } ?>>Flip Vertical</option>									
+				<option value="glow" <?php if ($settings['widget_effect'] == 'glow') { echo 'selected'; } ?>>Glow</option>				
+				<option value="highlight" <?php if ($settings['widget_effect'] == 'highlight') { echo 'selected'; } ?>>Highlight</option>
+				<option value="rotate" <?php if ($settings['widget_effect'] == 'rotate') { echo 'selected'; } ?>>Rotate</option>
+				<option value="shake" <?php if ($settings['widget_effect'] == 'shake') { echo 'selected'; } ?>>Shake</option>
+				<option value="shrink" <?php if ($settings['widget_effect'] == 'shrink') { echo 'selected'; } ?>>Shrink</option>				
+			</select>
+			</p>
+					
 
 			<p>&nbsp;</p>
 
@@ -326,7 +349,6 @@ function iire_admin_social_widget() {
 			<p><label>Icon Opacity:</label>	
 			<input type="text" id="op" name="widget_icon_opacity" value="<?php echo $settings['widget_icon_opacity']; ?>" class="w50"> %</p>
 			<div id="widget_opacity" class="slider"></div>					
-			
 							
 		</div> 
 		<!-- End Icons Styling -->
@@ -606,8 +628,8 @@ function iire_admin_social_widget() {
 			<li class="choose <?php echo $th; ?>" id="iire-pinterest" alt="https://pinterest.com/source/example.pl/" title="Pinterest" lang=""></li>						
 			<li class="choose <?php echo $th; ?>" id="iire-youtube" alt="http://www.youtube.com/user/example" title="YouTube" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-rss" alt="<?php echo get_option('siteurl'); ?>/feed.rss" title="RSS Feed" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-favorite1" alt="" title="Add to Favorites 1" lang=""></li>
-			<li class="choose <?php echo $th; ?>" id="iire-favorite2" alt="" title="Add to Favorites 2" lang=""></li>			
+			<li class="choose <?php echo $th; ?>" id="iire-favorite1" alt="" title="Add to Favorites" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-favorite2" alt="" title="Add to Favorites" lang=""></li>			
 			<li class="choose <?php echo $th; ?>" id="iire-website" alt="<?php echo get_option('siteurl'); ?>" title="Alternate Website" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-map" alt="http://maps.google.com/maps" title="Map" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-profile" alt="<?php echo get_option('siteurl'); ?>/profile" title="Profile" lang=""></li>			
@@ -616,8 +638,8 @@ function iire_admin_social_widget() {
 			<li class="choose <?php echo $th; ?>" id="iire-icq" alt="http://" title="ICQ" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-music" alt="http://" title="Music" lang=""></li>											
 			<li class="choose <?php echo $th; ?>" id="iire-customlink" alt="http://" title="Custom Link" lang=""></li>			
-			<li class="choose <?php echo $th; ?>" id="iire-info1" alt="<?php echo get_option('siteurl'); ?>/more-information" title="More Information 1" lang=""></li>			
-			<li class="choose <?php echo $th; ?>" id="iire-info2" alt="<?php echo get_option('siteurl'); ?>/more-information" title="More Information 2" lang=""></li>
+			<li class="choose <?php echo $th; ?>" id="iire-info1" alt="<?php echo get_option('siteurl'); ?>/more-information" title="More Information" lang=""></li>			
+			<li class="choose <?php echo $th; ?>" id="iire-info2" alt="<?php echo get_option('siteurl'); ?>/more-information" title="More Information" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-camera" alt="<?php echo get_option('siteurl'); ?>/gallery" title="Photo Gallery" lang=""></li>			
 			<li class="choose <?php echo $th; ?>" id="iire-cart" alt="<?php echo get_option('siteurl'); ?>/shop" title="Shop" lang=""></li>
 			<li class="choose <?php echo $th; ?>" id="iire-print" alt="http://" title="Print" lang=""></li>
@@ -632,7 +654,9 @@ function iire_admin_social_widget() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-500px" alt="http://500px.com" title="500px" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-aboutme" alt="http://about.me" title="About Me" lang=""></li>							
 			<li class="choose trial <?php echo $th; ?>" id="iire-activerain" alt="http://activerain.com" title="Active Rain" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-bandcamp" alt="http://bandcamp.com" title="Band Camp" lang=""></li>			
+			<li class="choose trial <?php echo $th; ?>" id="iire-amazon" alt="http://amazon.com" title="Amazon"></li>			
+			<li class="choose trial <?php echo $th; ?>" id="iire-bandcamp" alt="http://bandcamp.com" title="Band Camp" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-bandmix" alt="http://bandmix.com" title="BandMix"></li>						
 			<li class="choose trial <?php echo $th; ?>" id="iire-badoo" alt="http://badoo.com" title="Badoo" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-bebo" alt="http://bebo.com" title="Bebo" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-beatport" alt="http://beatport.com" title="Beatport" lang=""></li>			
@@ -644,6 +668,7 @@ function iire_admin_social_widget() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-brightkite" alt="http://limbo.com" title="Brightkite" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-buzznet" alt="http://buzznet.com" title="Buzznet" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-cafemom" alt="http://cafemom.com" title="Cafe Mom" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-cdbaby" alt="http://cdbaby.com" title="CD Baby"></li>				
 
 			<li class="choose trial <?php echo $th; ?>" id="iire-delicious" alt="http://delicious.com" title="Delicious" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-designbump" alt="http://designbump.com" title="Design Bump" lang=""></li>			
@@ -674,9 +699,10 @@ function iire_admin_social_widget() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-grooveshark" alt="http://grooveshark.com" title="Groove Shark" lang=""></li>						
 			<li class="choose trial <?php echo $th; ?>" id="iire-hellocotton" alt="http://hellocotton.com" title="Hello Cotton" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-hi5" alt="http://hi5.com" title="Hi 5" lang=""></li>
-			<li class="choose trail <?php echo $th; ?>" id="iire-hyves" alt="http://hyves.nl" title="Hyves" lang=""></li>				
+			<li class="choose trial <?php echo $th; ?>" id="iire-hyves" alt="http://hyves.nl" title="Hyves" lang=""></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-ilike" alt="http://ilike.com" title="ILIke" lang=""></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-instagram" alt="http://instagram.com" title="Instagram" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-itunes" alt="http://itunes.com" title="iTunes"></li>				
 			<li class="choose trial <?php echo $th; ?>" id="iire-lastfm" alt="http://lastfm.com" title="Last FM" lang=""></li>
 			
 			<li class="choose trial <?php echo $th; ?>" id="iire-linkedin" alt="http://linkedin.com" title="Linked In" lang=""></li>						
@@ -712,7 +738,8 @@ function iire_admin_social_widget() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-slideshare" alt="http://slideshare.net" title="Slide Share" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-smugmug" alt="http://smugmug.com" title="Smugmug"></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-snapjoy" alt="http://snapjoy.com" title="Snap Joy"></li>						
-			<li class="choose trial <?php echo $th; ?>" id="iire-soundcloud" alt="http://soundcloud.com" title="Sound Cloud" lang=""></li>	
+			<li class="choose trial <?php echo $th; ?>" id="iire-soundcloud" alt="http://soundcloud.com" title="Sound Cloud" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-sonicbids" alt="http://sonicbids.com" title="Sonic Bids"></li>					
 			<li class="choose trial <?php echo $th; ?>" id="iire-spurl" alt="http://spurl.net" title="Spurl" lang=""></li>				
 										
 			<li class="choose trial <?php echo $th; ?>" id="iire-spotify" alt="http://spotify.com" title="Spotify" lang=""></li>
@@ -722,7 +749,8 @@ function iire_admin_social_widget() {
 			<li class="choose trial <?php echo $th; ?>" id="iire-stumbleupon" alt="http://stumbleupon.com" title="Stumble Upon" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-tagged" alt="http://www.tagged.com/" title="Tagged" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-technorati" alt="http://technorati.com" title="Technorati" lang=""></li>
-			<li class="choose trial <?php echo $th; ?>" id="iire-thumb" alt="http://thumb.com" title="Thumb" lang=""></li>			
+			<li class="choose trial <?php echo $th; ?>" id="iire-thumb" alt="http://thumb.com" title="Thumb" lang=""></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-tripadvisor" alt="http://tripadvisor.com" title="Trip Advisor"></li>						
 			<li class="choose trial <?php echo $th; ?>" id="iire-tumblr" alt="http://tumblr.com" title="Tumblr" lang=""></li>
 			<li class="choose trial <?php echo $th; ?>" id="iire-viddler" alt="http://viddler.com" title="Viddler"></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-vimeo" alt="http://vimeo.com" title="Vimeo" lang=""></li>
@@ -736,6 +764,7 @@ function iire_admin_social_widget() {
 
 			<li class="choose trial <?php echo $th; ?>" id="iire-ziki" alt="http://ziki.com" title="Ziki"></li>			
 			<li class="choose trial <?php echo $th; ?>" id="iire-zorpia" alt="http://zorpia.com" title="Zorpia"></li>
+			<li class="choose trial <?php echo $th; ?>" id="iire-zune" alt="http://zune.com" title="Zune"></li>						
 
 			<li class="choose hidden <?php echo $th; ?>" id="iire-addthis" alt="http://www.addthis.com/bookmark.php?v=250&pubid=<?php echo $settings['addthis_key']; ?>" title="Add This Social Bookmarking" lang=""></li>																																			
 		</ul>
@@ -786,13 +815,13 @@ function iire_admin_social_widget() {
 <input type="text" id="theme_names" name="theme_names" value="<?php echo $settings['theme_names']; ?>" style="width:100%; visibility: hidden;">
 <input type="text" id="theme_sizes" name="theme_sizes" value="<?php echo $settings['theme_sizes']; ?>" style="width:100%; visibility: hidden;">
 
-<textarea id="widget_icons" name="widget_icons" cols="20" rows="3" class="h150" style="width:100%; visibility: visible;"><?php echo stripslashes($settings['widget_icons']); ?></textarea>
-<textarea id="widget_output" name="widget_output" cols="20" rows="3" class="h150" style="width:100%;  visibility: visible;"><?php echo stripslashes($settings['widget_output']); ?></textarea>
+<textarea id="widget_icons" name="widget_icons" cols="20" rows="3" class="h150" style="width:100%; visibility: hidden;"><?php echo stripslashes($settings['widget_icons']); ?></textarea>
+<textarea id="widget_output" name="widget_output" cols="20" rows="3" class="h150" style="width:100%;  visibility: hidden;"><?php echo stripslashes($settings['widget_output']); ?></textarea>
 	
 
 <!-- EDIT ICON SETTINGS -->
 <div id="editdialog" title="Edit Icon Settings" style="display:none;">
-	<p>Enter your site link and a title.</p>
+	<p class="instructions">Enter your site link and a title.</p>
 	<p align="left">Link:&nbsp;&nbsp;<input type="text" id="choose_url" value="" class="choose_url" style="display:inline; width:250px"></p>
 	<p align="left">Title: <input type="text" id="choose_title" value="" class="choose_title" style="display:inline; width:250px"></p>
 	<p align="left"><span id="instructions"></span></p>
@@ -804,7 +833,7 @@ function iire_admin_social_widget() {
 <!-- UNLOCK DIALOG -->
 <div id="unlockdialog" title="Unlock Features" style="display:none;">
 	<p align="center">Please consider making a donation<br/>or upgrading to the full version<br/>to unlock this feature.</p>
-	<p align="center">Visit <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-media-icons/" target="_blank">iiRe Productions</a> for more information.</p>
+	<p align="center">Visit <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/#donate" target="_blank">iiRe Productions</a> for more information.</p>
 	<p align="right"><a id="unlock_close" class="button-secondary">Close</a></p>			
 </div>
 

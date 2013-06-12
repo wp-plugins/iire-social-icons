@@ -1,4 +1,4 @@
-/* Admin CSS - 02-06-2013 */
+/* Admin CSS - 06-12-2013 */
 
 /* Admin Settings Page */
 div.settings { display:block; position:relative; width:950px; height:1100px; border:0px solid #E2EAED; background:#FFFFFF; margin: 0px 0 0 10px;}
@@ -213,7 +213,14 @@ li#iire-zorpia { background-position: -48px -144px; }
 li#iire-aboutme { background-position: -72px -144px; }	
 li#iire-bandcamp { background-position: -96px -144px; }
 li#iire-github { background-position: -120px -144px; }																				
-li#iire-hyves { background-position: -144px -144px; }	
+li#iire-hyves { background-position: -144px -144px; }
+li#iire-bandmix { background-position: -168px -144px; }			
+li#iire-cdbaby { background-position: -192px -144px; }	
+li#iire-sonicbids { background-position: -216px -144px; }
+li#iire-tripadvisor { background-position: -240px -144px; }
+li#iire-zune { background-position: -264px -144px; }
+li#iire-amazon { background-position: -288px -144px; }
+li#iire-itunes { background-position: -312px -144px; }	
 li#iire-blank { background-position: -408px -144px; }	
 li#iire-blank2 { background-position: -432px -144px; }
 li#iire-blank3 { background-position: -456px -144px; }

@@ -1,4 +1,4 @@
-// IIRE SOCIAL WIDGET (Demo Version) - 02-06-2013
+// IIRE SOCIAL WIDGET (Demo Version) - 06-12-2013
 
 jQuery(document).ready(function() {
 	var plugin_path = jQuery("input#plugin_path").val(); 
@@ -141,9 +141,11 @@ jQuery(document).ready(function() {
 		}
 		
 		if (id == 'iire-favorite1' || id == 'iire-favorite2') {
-			alert("No settings needed for Add To Favorites!");			
-			return;
-		}		
+			var lang = "No link required. You can change the title!";			
+		} else {
+			var lang = "Enter your site link and a title.";			
+		}
+		jQuery("p.instructions").text(lang);		
 
 		jQuery("#editdialog").dialog({
 			resizable: false,
@@ -167,18 +169,6 @@ jQuery(document).ready(function() {
 		jQuery("input.choose_url").val(url);
 		jQuery("input.choose_title").val(title);
 		jQuery("input.choose_id").val(id);
-	});	
-
-
-	// ICON OPACITY ON MOUSE ENTER
-	jQuery('div.opacity').live('mouseenter', function() {
-		jQuery(this).css("opacity", "1.00");			
-	});	
-
-	// ICON OPACITY ON MOUSE OUT
-	jQuery('div.opacity').live('mouseout', function() {
-		var op = jQuery("input#op").val();
-		jQuery(this).css("opacity", op/100);			
 	});	
 
 
@@ -770,8 +760,6 @@ jQuery(document).ready(function() {
 			jQuery("div.move").css("opacity", ui.value/100);
 			if (ui.value < 100) {
 				jQuery("div.move").addClass("opacity");	
-			//} else {
-			//	jQuery("div.move").removeClass("opacity");				
 			}
      	}
 	});
@@ -782,11 +770,210 @@ jQuery(document).ready(function() {
 		jQuery("div.move").css("opacity", p/100);
 		if (ui.value < 100) {
 			jQuery("div.move").addClass("opacity");	
-		//} else {
-		//	jQuery("div.move").removeClass("opacity");				
 		}		
 	});	
 	
+	// ICON OPACITY ON MOUSE ENTER
+	jQuery('div.opacity').live('mouseenter', function() {
+		var eff = jQuery("select#widget_effect").val();	
+		if (eff != 'fadein') {												  
+			jQuery(this).css("opacity", "1.00");
+		}
+	});	
+
+	// ICON OPACITY ON MOUSE OUT
+	jQuery('div.opacity').live('mouseout', function() {
+		var eff = jQuery("select#widget_effect").val();	
+		if (eff != 'fadein') {
+			var op = jQuery("input#op").val();
+			jQuery(this).css("opacity", op/100);
+		}
+	});	
+
+
+	// Icon - Effect
+	jQuery('select#widget_effect').bind('change', function() {
+		var eff = jQuery(this).val();
+		//alert(eff);
+		jQuery("div.move").removeClass("bounce drop expand fadein fadeout fliphz flipvt glow highlight rotate shake shrink");
+		jQuery("div.move").addClass(eff);
+		jQuery('div.move').each(function(){
+			var id = jQuery(this).attr('id');							 
+			jQuery("div#codepreview div#"+id).removeClass("bounce drop expand fadein fadeout fliphz flipvt glow highlight rotate shake shrink");
+			jQuery("div#codepreview div#"+id).addClass(eff);
+		});	
+
+		if (eff == '') {		// None
+			jQuery("div.move").removeClass("opacity");			
+			jQuery("div.move").css("opacity", "1.0");
+			jQuery("input#op").val('100');			
+		}	
+
+		if (eff == 'fadein') {	// Fade In	
+			jQuery("div.move").addClass("opacity");			
+			jQuery("div.move").css("opacity", "0.5");
+			jQuery("input#op").val('50');
+			alert('Use the Opacity Slider to adjust the amount of Fade! The default valie is 50.');				
+		}		
+		
+		if (eff == 'fadeout') {	// Fade Out		
+			jQuery("div.move").removeClass("opacity");			
+			jQuery("div.move").css("opacity", "1.0");
+			jQuery("input#op").val('50');
+			alert('Use the Opacity Slider to adjust the amount of Fade! The default valie is 50.');			
+		}
+		
+		if (eff == 'glow') {	// Glow
+			jQuery("p.bg").removeClass('hidden');
+			jQuery("input#widget_icon_bgcolor_up").removeClass('hidden');			
+			jQuery("input#widget_icon_bgcolor_hover").removeClass('hidden');			
+			alert('Use the Icon BackGround Color Hover State to define the color of the glow!');			
+		}		
+
+		updateTextAreas();		
+	});
+
+
+	// ICON EFFECT - FADE IN
+	jQuery('div.fadein').live('mouseenter', function() {
+  		jQuery(this).animate({ opacity: 1.0}, 200);		
+	});
+   jQuery("div.fadein").live('mouseout', function() {
+		var op = jQuery("input#op").val();
+		jQuery(this).animate({ opacity: op/100}, 200);
+    });
+
+	// ICON EFFECT - FADE OUT
+	jQuery('div.fadeout').live('mouseenter', function() {
+		var op = jQuery("input#op").val();
+		jQuery(this).animate({ opacity: op/100}, 200);													  
+	});
+   jQuery("div.fadeout").live('mouseout', function() {
+  		jQuery(this).animate({ opacity: 1.0}, 200);	
+    });
+
+	// ICON EFFECT - SHAKE
+	jQuery('div.shake').live('mouseenter', function() {
+		var sp = jQuery("select#widget_icon_spacing").val();													
+		var sh1 = parseInt(sp)+3;
+		var sh2 = parseInt(sp)+2;		
+		var sh3 = parseInt(sp)+1;		
+		jQuery(this).stop().animate({ marginLeft: "-3px", marginRight: ""+sh1+"px" }, 40).animate({  marginLeft: ""+sh1+"px", marginRight: "-3px"  }, 40);
+		jQuery(this).stop().animate({ marginLeft: "-2px", marginRight: ""+sh2+"px" }, 40).animate({  marginLeft: ""+sh2+"px", marginRight: "-2px"  }, 40);
+		jQuery(this).stop().animate({ marginLeft: "-1px", marginRight: ""+sh3+"px" }, 40).animate({  marginLeft: ""+sh3+"px", marginRight: "-1px"  }, 40);
+		jQuery(this).stop().animate({ marginLeft: "0px", marginRight: ""+sp+"px" }, 40);			
+	});
+
+	// ICON EFFECT - BOUNCE
+	jQuery('div.bounce').live('mouseenter', function() {
+		var sz = jQuery("select#widget_icon_size").val();
+		if (sz == '64') { var hv = '10'; var hb = '5'; }
+		if (sz == '48') { var hv = '8'; var hb = '4'; }
+		if (sz == '32') { var hv = '6'; var hb = '3'; }
+		if (sz == '24') { var hv = '4'; var hb = '2'; }		
+		if (sz == '16') { var hv = '2'; var hb = '1'; }
+		jQuery(this).stop().animate({ marginTop: "-"+hv+"px" }, 40).animate({ marginTop: "0px" }, 40).animate({ marginTop: "-"+hb+"px" }, 40).animate({ marginTop: "0px" }, 40);	
+	});
+
+	// ICON EFFECT - DROP
+	jQuery('div.drop').live('mouseenter', function() {
+		var sz = jQuery("select#widget_icon_size").val();
+		if (sz == '64') { var hb = '5'; }
+		if (sz == '48') { var hb = '4'; }
+		if (sz == '32') { var hb = '3'; }
+		if (sz == '24') { var hb = '2'; }		
+		if (sz == '16') { var hb = '1'; }		
+		jQuery(this).stop().animate({ marginTop: ""+sz+"px", height: ""+hb+"px" }, 200).animate({ marginTop: "0px", height: ""+sz+"px" }, 400);			
+	});
+
+	// ICON EFFECT - HIGHLIGHT
+	jQuery('div.highlight').live('mouseenter', function() {
+		jQuery(this).stop().animate({ 'opacity': '0.4' }, 200).animate({ 'opacity': '1' }, 200);		
+	});
+	
+	// ICON EFFECT - GLOW
+	jQuery('div.glow').live('mouseenter', function() {
+		var sz = jQuery("select#widget_icon_size").val();
+		if (sz == '64') { var hb = '20'; }
+		if (sz == '48') { var hb = '16'; }
+		if (sz == '32') { var hb = '12'; }
+		if (sz == '24') { var hb = '8'; }		
+		if (sz == '16') { var hb = '4'; }
+		
+		var bc = jQuery("input#widget_icon_bgcolor_hover").val();
+		jQuery(this).css({'-webkit-box-shadow': '0 0 '+hb+'px #'+bc+'', '-moz-box-shadow': '0 0 '+hb+'px #'+bc+'', 'box-shadow': '0 0 '+hb+'px #'+bc+''});
+	});
+	jQuery('div.glow').live('mouseleave', function() {   
+		setDropShadowParms();		
+	});
+
+
+	// ICON EFFECT - FLIP HORIZONTAL
+	jQuery('div.fliphz').live('mouseenter', function() {
+		jQuery(this).css({'-moz-transform': 'scaleX(-1)', '-o-transform': 'scaleX(-1)', '-webkit-transform': 'scaleX(-1)', 'transform': 'scaleX(-1)', 'filter': 'FlipH', '-ms-filter': 'FlipH', '-webkit-transition': 'all 1s', '-moz-transition': 'all 1s',  '-o-transition-duration': '1s' });
+	});
+	jQuery('div.fliphz').live('mouseleave', function() {   
+		jQuery(this).css({'-moz-transform': 'scaleX(1)', '-o-transform': 'scaleX(1)', '-webkit-transform': 'scaleX(1)', 'transform': 'scaleX(1)', 'filter': 'FlipH', '-ms-filter': 'FlipH', '-webkit-transition': 'all 1s', '-moz-transition': 'all 1s',  '-o-transition-duration': '1s' });		
+	});	
+
+	// ICON EFFECT - FLIP VERTICAL
+	jQuery('div.flipvt').live('mouseenter', function() {
+		jQuery(this).css({'-moz-transform': 'scaleY(-1)', '-o-transform': 'scaleY(-1)', '-webkit-transform': 'scaleY(-1)', 'transform': 'scaleY(-1)', 'filter': 'FlipV', '-ms-filter': 'FlipV', '-webkit-transition': 'all 1s', '-moz-transition': 'all 1s',  '-o-transition-duration': '1s' });
+	});
+	jQuery('div.flipvt').live('mouseleave', function() {   
+		jQuery(this).css({'-moz-transform': 'scaleY(1)', '-o-transform': 'scaleY(1)', '-webkit-transform': 'scaleY(1)', 'transform': 'scaleY(1)', 'filter': 'FlipV', '-ms-filter': 'FlipV', '-webkit-transition': 'all 1s', '-moz-transition': 'all 1s',  '-o-transition-duration': '1s' });		
+	});	
+
+
+
+	// ICON EFFECT - ROTATE
+	jQuery('div.rotate').live('mouseenter', function() {
+		var $ico = jQuery(this);
+     	rotate(20);
+     	function rotate(degree) {
+		    $ico.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+		    $ico.css({ '-ms-transform': 'rotate(' + degree + 'deg)'});				
+		    $ico.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+		    $ico.css({ '-o-transform': 'rotate(' + degree + 'deg)'});
+		    $ico.css({ 'transform': 'rotate(' + degree + 'deg)'});
+    		if (degree < 360) {// Animate rotation with a recursive call
+				t = setTimeout(function() { rotate(++degree); },5);
+  			}
+		}
+	});
+
+	jQuery('div.rotate').live('mouseleave', function() {
+		clearTimeout(t);
+		var $ico = jQuery(this);		
+     	rotate(20);		
+     	function rotate(degree) {
+		    $ico.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+		    $ico.css({ '-ms-transform': 'rotate(' + degree + 'deg)'});				
+		    $ico.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+		    $ico.css({ '-o-transform': 'rotate(' + degree + 'deg)'});
+		    $ico.css({ 'transform': 'rotate(' + degree + 'deg)'});
+    		if (degree > 0 && degree < 360) {// Animate rotation with a recursive call
+				x = setTimeout(function() { rotate(--degree); },10);
+  			}
+		}	
+	});												   
+
+	// ICON EFFECT - SCALE EXPAND
+	jQuery('div.expand').live('mouseenter', function() {
+		jQuery(this).css({ '-ms-transform': 'scale(1.15, 1.15)', '-moz-transform': 'scale(1.15, 1.15)', '-o-transform': 'scale(1.15, 1.15)', '-webkit-transform': 'scale(1.15, 1.15)', 'transform': 'scale(1.15, 1.15)', '-webkit-transition': 'all 0.25s', '-moz-transition': 'all 0.25s', '-o-transition-duration': '0.25s' });
+	});
+	jQuery('div.expand').live('mouseleave', function() {   
+		jQuery(this).css({'-ms-transform': 'scale(1.0, 1.0)', '-moz-transform': 'scale(1.0, 1.0)', '-o-transform': 'scale(1.0, 1.0)', '-webkit-transform': 'scale(1.0, 1.0)', 'transform': 'scale(1.0, 1.0)', '-webkit-transition': 'all 0.25s', '-moz-transition': 'all 0.25s', '-o-transition-duration': '0.25s' });		
+	});	
+	
+
+	// ICON EFFECT - SCALE SHRINK
+	jQuery('div.shrink').live('mouseenter', function() {
+		jQuery(this).css({ '-ms-transform': 'scale(0.85, 0.85)', '-moz-transform': 'scale(0.85, 0.85)', '-o-transform': 'scale(0.85, 0.85)', '-webkit-transform': 'scale(0.85, 0.85)', 'transform': 'scale(0.85, 0.85)', '-webkit-transition': 'all 0.25s', '-moz-transition': 'all 0.25s', '-o-transition-duration': '0.25s' });
+	});
+	jQuery('div.shrink').live('mouseleave', function() {   
+		jQuery(this).css({ '-ms-transform': 'scale(1.0, 1.0)', '-moz-transform': 'scale(1.0, 1.0)', '-o-transform': 'scale(1.0, 1.0)', '-webkit-transform': 'scale(1.0, 1.0)', 'transform': 'scale(1.0, 1.0)', '-webkit-transition': 'all 0.25s', '-moz-transition': 'all 0.25s', '-o-transition-duration': '0.25s' });		
+	});	
 
 
 	// Widget Container Width
@@ -915,16 +1102,19 @@ jQuery(document).ready(function() {
 		}		
 
 		var op = jQuery("input#op").val();
+		var eff = jQuery("select#widget_effect").val();		
 		if (op < 100) {
-			//alert(op);
-			jQuery("div.move").addClass("opacity");			
-			jQuery("div.move").css("opacity", p/100);
-			//updateTextAreas();
+			if (eff != 'fadeout') {
+				jQuery("div.move").addClass("opacity");			
+				jQuery("div.move").css("opacity", p/100);
+			} else {
+				jQuery("div.move").removeClass("opacity");			
+				jQuery("div.move").css("opacity", "1.0");				
+			}
 		}
 
 		jQuery("li.hidden").hide();
 		jQuery("div.update-nag").hide();	
-
 		return;
 	}
 
@@ -1063,9 +1253,10 @@ jQuery(document).ready(function() {
 			jQuery('select#widget_icon_bgcolor').val('0');
 			jQuery('select#widget_icon_bgcolor_up').val('0');
 			jQuery('input#widget_icon_bgcolor_up').val('AAFF00');			
-			jQuery('input#widget_icon_bgcolor_hover').val('00AAFF');				
+			jQuery('input#widget_icon_bgcolor_hover').val('FFFF00');				
 		
-			jQuery('input#op').val('100');
+			jQuery('select#widget_effect').val('');
+			jQuery('select#widget_effect');			
 
 			jQuery('select#widget_orientation').val('horizontal');	
 			jQuery('select#widget_align').val('left');	

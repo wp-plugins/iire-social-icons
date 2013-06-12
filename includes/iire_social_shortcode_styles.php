@@ -152,5 +152,17 @@ header('Content-type: text/css');
 	if ($opacity >= 10 && $opacity < 100) { 
 		$opval = $opacity/100;
 		echo'div.iire_social_shortcode .opacity { opacity:'.$opval.'; }';			
-	}		
+	}
+	
+	// Shortcode Icon Glow	
+	if ($_GET['seff'] == 'glow') { 
+		$sz = $_GET['sz'];
+		if ($sz == '64') { $hb = '20'; }
+		if ($sz == '48') { $hb = '16'; }
+		if ($sz == '32') { $hb = '12'; }
+		if ($sz == '24') { $hb = '8'; }		
+		if ($sz == '16') { $hb = '4'; }	
+		$bov = '#'.$_GET['bov']; 	
+		echo'div.iire_social_shortcode .addglow { -moz-box-shadow: 0 0 '.$hb.'px '.$bov.'; -webkit-box-shadow:  0 0 '.$hb.'px '.$bov.'; box-shadow:  0 0 '.$hb.'px '.$bov.'; filter: progid:DXImageTransform.Microsoft.Glow(Color='.$bov.',Strength=3); }';
+	}	
 ?>	

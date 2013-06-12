@@ -2,18 +2,18 @@
 /*
 Plugin Name: iiRe Social Icons 
 Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
-Description: Add social media icons and links you your site with a customizable user interface. New themes, networks and functions in this MAJOR UPGRADE!
+Description: Add social media icons and links you your site with a customizable user interface. Please deactivate and uninstall plugin versions prior to (0.42) before updating to this latest version!
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 1.5.1
+Version: 1.6.0
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email
 Copyright (C) 2012-2013 iiRe Productions
 */
 	
 // ASSIGN VERSION (DEMO)
 global $wpdb, $iire_social_version;
-$iire_version = "1.5.1";
-$last_modified = "02-06-2013";
+$iire_version = "1.6.0";
+$last_modified = "06-12-2013";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -37,8 +37,6 @@ register_activation_hook(__FILE__,'iire_social_install');
 
 // DEACTIVATE
 require_once("uninstall.php");
-if ( function_exists('iire_social_deactivate') )
-register_deactivation_hook( __FILE__, 'iire_social_deactivate' );
 
 // UNINSTALL
 if ( function_exists('iire_social_uninstall') )
@@ -159,8 +157,11 @@ function iire_social_head() {
 		$bgc = $settings['widget_icon_bgcolor'];
 		$bup = $settings['widget_icon_bgcolor_up'];
 		$bov = $settings['widget_icon_bgcolor_hover']; 
+
+		// Widget Icon Effect	
+		$weff = $settings['widget_effect'];
 	
-		$w_styles = 'wresp='.$wresp.'&cache='.$cache.'&w='.$wid.'&h='.$hgt.'&a='.$align.'&o='.$ot.'&p='.$pad.'&m='.$mar.'&wbk='.$wbk.'&wbgc='.$wbgc.'&wbrc='.$wbrc.'&wbrs='.$wbrs.'&theme='.$th.'&sz='.$sz.'&sp='.$sp.'&ds='.$ds.'&dshz='.$dshz.'&dsvt='.$dsvt.'&dsblur='.$dsblur.'&dscolor='.$dscolor.'&rc='.$rc.'&rctl='.$rctl.'&rctr='.$rctr.'&rcbl='.$rcbl.'&rcbr='.$rcbr.'&op='.$op.'&bgc='.$bgc.'&bup='.$bup.'&bov='.$bov.'&pluginurl='.IIRE_SOCIAL_URL;
+		$w_styles = 'weff='.$weff.'&wresp='.$wresp.'&cache='.$cache.'&w='.$wid.'&h='.$hgt.'&a='.$align.'&o='.$ot.'&p='.$pad.'&m='.$mar.'&wbk='.$wbk.'&wbgc='.$wbgc.'&wbrc='.$wbrc.'&wbrs='.$wbrs.'&theme='.$th.'&sz='.$sz.'&sp='.$sp.'&ds='.$ds.'&dshz='.$dshz.'&dsvt='.$dsvt.'&dsblur='.$dsblur.'&dscolor='.$dscolor.'&rc='.$rc.'&rctl='.$rctl.'&rctr='.$rctr.'&rcbl='.$rcbl.'&rcbr='.$rcbr.'&op='.$op.'&bgc='.$bgc.'&bup='.$bup.'&bov='.$bov.'&pluginurl='.IIRE_SOCIAL_URL;
 		//echo $w_styles;
 
 
@@ -245,8 +246,9 @@ function iire_social_head() {
 		$s_bup = $settings['sc_icon_bgcolor_up'];
 		$s_bov = $settings['sc_icon_bgcolor_hover']; 	
 	
-	
-		$s_styles = 'sresp='.$sresp.'&cache='.$cache.'&w='.$s_wid.'&h='.$s_hgt.'&a='.$s_align.'&o='.$s_ot.'&p='.$s_pad.'&m='.$s_mar.'&wbk='.$s_wbk.'&wbgc='.$s_wbgc.'&wbrc='.$s_wbrc.'&wbrs='.$s_wbrs.'&theme='.$s_th.'&sz='.$s_sz.'&sp='.$s_sp.'&ds='.$s_ds.'&dshz='.$s_dshz.'&dsvt='.$s_dsvt.'&dsblur='.$s_dsblur.'&dscolor='.$s_dscolor.'&rc='.$s_rc.'&rctl='.$s_rctl.'&rctr='.$s_rctr.'&rcbl='.$s_rcbl.'&rcbr='.$s_rcbr.'&op='.$s_op.'&bgc='.$s_bgc.'&bup='.$s_bup.'&bov='.$s_bov.'&pluginurl='.IIRE_SOCIAL_URL;
+		$s_eff = $settings['sc_effect'];	
+			
+		$s_styles = 'seff='.$s_eff.'&sresp='.$sresp.'&cache='.$cache.'&w='.$s_wid.'&h='.$s_hgt.'&a='.$s_align.'&o='.$s_ot.'&p='.$s_pad.'&m='.$s_mar.'&wbk='.$s_wbk.'&wbgc='.$s_wbgc.'&wbrc='.$s_wbrc.'&wbrs='.$s_wbrs.'&theme='.$s_th.'&sz='.$s_sz.'&sp='.$s_sp.'&ds='.$s_ds.'&dshz='.$s_dshz.'&dsvt='.$s_dsvt.'&dsblur='.$s_dsblur.'&dscolor='.$s_dscolor.'&rc='.$s_rc.'&rctl='.$s_rctl.'&rctr='.$s_rctr.'&rcbl='.$s_rcbl.'&rcbr='.$s_rcbr.'&op='.$s_op.'&bgc='.$s_bgc.'&bup='.$s_bup.'&bov='.$s_bov.'&pluginurl='.IIRE_SOCIAL_URL;
 		//echo $s_styles;		
 		
 		// Live Site		
@@ -277,7 +279,6 @@ function iire_social_footer() {
 		}	
 
 		if ($settings['email_recipient'] != 'you@yoursite.com') {
-		
 			wp_enqueue_script('jquery-ui-core');
 			wp_enqueue_script('jquery-ui-widget');
 			wp_enqueue_script('jquery-ui-mouse');	
@@ -319,12 +320,14 @@ function iire_social_icons() {
 		$settings[$row->option_name] = $row->option_value;
 	}	
 
+	$opac =	$settings['sc_icon_opacity']/100;
+
 	if ($settings['clone_widget_settings'] == '1' ) {
-		$sc = '<div id="iire_social_widget" class="iire_social_widget">';	
+		$sc = '<div id="iire_social_widget" class="iire_social_widget" data-opacity="'.$opac.'" data-effect="'.$settings['sc_effect'].'" data-color="'.$settings['sc_icon_bgcolor_hover'].'" data-size="'.$settings['sc_icon_size'].'" data-spacing="'.$settings['sc_icon_spacing'].'">';	
 		$sc .= stripslashes($settings['widget_output']);
 		$sc .= '</div>';		
 	} else {
-		$sc = '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
+		$sc = '<div id="iire_social_shortcode" class="iire_social_shortcode" data-opacity="'.$opac.'" data-effect="'.$settings['sc_effect'].'" data-color="'.$settings['sc_icon_bgcolor_hover'].'" data-size="'.$settings['sc_icon_size'].'" data-spacing="'.$settings['sc_icon_spacing'].'">';		
 		$sc .= stripslashes($settings['sc_output']);
 		$sc .= '</div>';		
 	}		
@@ -347,7 +350,9 @@ function iire_social_theme() {
 		$settings[$row->option_name] = $row->option_value;
 	}	
 
-	echo '<div id="iire_social_shortcode" class="iire_social_shortcode">';		
+	$opac =	$settings['sc_icon_opacity']/100;
+
+	echo '<div id="iire_social_shortcode" class="iire_social_shortcode" data-opacity="'.$opac.'" data-effect="'.$settings['sc_effect'].'" data-color="'.$settings['sc_icon_bgcolor_hover'].'" data-size="'.$settings['sc_icon_size'].'" data-spacing="'.$settings['sc_icon_spacing'].'">';		
 	echo stripslashes($settings['sc_output']);
 	echo '</div>';		
 	return;	

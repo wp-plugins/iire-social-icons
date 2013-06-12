@@ -4,26 +4,28 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email  
 Requires at least: 3.1
 Tested up to: 3.5.1
-Stable tag: 1.5.1 
+Stable tag: 1.6.0 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and links to your site with a customizable user interface. New themes, networks and functions!
+Add social media icons and links to your site with a customizable user interface. New CSS3 and animation effects! See the description for more information
 
 == Description ==
 
-Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New themes, networks and functions in this latest version! 
+Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New CSS3 and animation effects (Bounce, Drop, Expand, Fade In, Fade Out, Flip Horizontal, Flip Vertical, Glow, Highlight, Rotate, Shake, Shrink) in this latest version! 
 
-**NOTE: If you have a previous installation, please deactivate and remove all prior versions completely! Don't forget to clear your browser cache!**
+**NOTE: If you have a previous installation, please deactivate and uninstall plugin versions prior to (0.42) before updating to this latest version!  Don't forget to clear your browser cache!**
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
+
+There also is <a href="http://wordpress.org/extend/plugins/iire-social-lite/">iiRe Social Lite</a> version available for those who just need basic icons and additional themes.
 
 
 **Features**
 
 * Create an independent social media icons widget and shortcode
 * Majority of social networks available
-* Over 125 different icons (Donation or purchase required to access all icons)!
+* Over 130 different icons (Donation or purchase required to access all icons)!
 * 5 different icon sizes (16x16px, 24x24px, 32x32px, 48x48px, 64x64px)!
 * Additional free icon themes (as they become available)
 * Real-time editing! Change icon theme, size. spacing, etc. dynamically
@@ -36,6 +38,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 * Add background colors!
 * Add background hover colors!
 * Add CSS opacity!
+* NEW! - Add CSS3 and animation effects (support for most modern browsers)
 * Links in new or same window/tab (link target)
 * Show or Hide the title (alt/title tag)
 * Hide links from search engines (no follow)
@@ -59,7 +62,7 @@ See our <a href="http://iireproductions.com/web/website-development/wordpress-pl
 
 **Available Networks**
 
-360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Badoo, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy,Sound Cloud, Spotify, Spurl, Squidoo, Stack OVerflow, Steam, Stumbleupon, Tagged, Thumb, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, YouTube, Ziki, Zorpia
+360 Cities, 43 Things, 500px, About Me, Active Rain, Add This, Amazon, Badoo, BandMix, Bandcamp, Bebo, Beatport, Behanced, Blink List, Blog Lovin', Blog Marks, Blogger, BrightKite, Buzznet, Cafe Mom, CD Baby, Delicious, Design Bump, Design Float, Design Moo, Deviant Art, Digg, Diigo, Disgus, Dopplr, Dribble, Dzone, Ember, Esty, Evernote, Feedburner, Facebook, Flickr, Fine Art America, Formspring, Friendfeed, Friendster, Foursquare, Geocaching, Git Hub, Google Plus, Good Reads, Groove Shark, Hello Cotton, Hi5, Hyves, ILike, iTunes, Instagram, Last FM, Linked In, Live Journal, Medium, Meneame, Meetup, Mixcloud, Mixx, Myspace, Newsgator, Newsvine, Ning, Orkut, Paypal, Pheed, Pinterest, Postereous, Picasa, Pure Volume, Qik, Rdio, Reddit, Resident Advisor, Reverbnation, RSS, Share This, Skype, Slash Dot, Slideshare, Smug Mug, Snapjoy, Sonic Bids, Sound Cloud, Spotify, Spurl, Squidoo, Stack Overflow, Steam, Stumbleupon, Tagged, Thumb, Trip Advisor, Tumblr, Twitter, Viddler, Virb, Wikio, Vimeo, Wordpress, Xanga, Xing, Yammer, Yelp, YouTube, Ziki, Zorpia, Zune
 
 There are additional icons for 2 different Emails, 2 different Add To Favorites, 2 different More Information, Camera/Photo Gallery, Shopping Cart, Custom Links, Alternate Website, ICQ, Chat, Print, Profile and a Contact Us page.
 
@@ -135,6 +138,9 @@ A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The 
 **Q. When do I enable the responsive options?** 
 A. If you are using a Wordpress theme that is designed to adapt to different devices, such as tablets and smart phones, set the "Responsive" width option to "Yes". The width of the Widget or Shortcode containers will adjust automatically.
 
+**Q. How do I add effects?** 
+A . In the Widget/Shortcode Designer, select the desire effect in the Icon Styling section. Jquery UI is not required for these effects. Effects are supported by most modern browsers.
+
 
 == Screenshots ==
 
@@ -143,12 +149,29 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 
 == Changelog ==
 
+= 1.6.0 =
+* Added basic jQuery animation and CCS3 effects such as  Bounce, Drop, Expand, Fade In, Fade Out, Flip Horizontal, Flip Vertical, Glow, Highlight, Rotate, Shake and Shrink
+* Added BandMix, CDBaby, Sonic Bids, Trip Advisor and Zune networks
+* Removed the code that deletes the database settings table upon deactivation
+* Updated the readme.txt file
+* Added ability to change title on Add To Favorites icons
+* Modified the default titles for the Add To Favorites icons
+* Add instructions for adding [RAW] tags to the shortcode
+* Fix a broken link to the website.
+
+= 1.5.2 =
+* Added support for Red Alert icons available on the website
+* Added support for Wood Crates icons available on the website
+* Hid debug code in the Widget/Shortcode Designers
+* Fixed typo in Hyves icon
+* Updated the screenshot
+* Updated the readme.txt file
+
 = 1.5.1 =
 * Replaced missing Blog Lovin icon in the Widget/Shortcode Designers
 * Added a note about uninstalling all prior versions
 * Updated the screenshot
 * Updated the readme.txt file
-
 
 = 1.5.0 MAJOR VERSION UPDATE! Deactivate and delete all prior versions! =
 * Extensive testing under Wordpress 3.5.1
@@ -185,7 +208,6 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 * Updated the screenshot
 * Updated the readme.txt file
 
-
 = 0.42 =
 * Added conditional testing for the jQuery UI CSS file based on Wordpress prior versions.
 * Fixed a typo in the Pinterest icon title
@@ -198,7 +220,6 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 * Updated the dynamic CSS alignment for the widget and shortcode outputs
 * Updated the readme.txt file
 
-
 = 0.41 =
 * Updated the footer initialization to  only use jQuery UI if the email function is active and a proper recipient address is specified
 * Updated the FAQ
@@ -206,7 +227,6 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 * Updated the initialization of jQuery UI library files in the Admin section
 * Fixed an PHP 5.0 date error in the send email function
 * Updated readme.txt file
-
 
 = 0.40 =
 * Updated the Google CDN links for jQuery UI for Wordpress 3.5 compatibility!!!
@@ -220,7 +240,6 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 * Added support for additional free iiRe themes
 * Updated readme.txt file
 
-
 = 0.30 =
 * Added the following networks: Esty, Buzznet, Paypal, Reverbnation, Ebay, Mixx, Pure Volume, Design Float, 500px, Smugmug, GoeCaching, Evernote
 * Added support for up to 5 custom folders using the grid layout
@@ -232,7 +251,6 @@ A. If you are using a Wordpress theme that is designed to adapt to different dev
 * Fixed issue when using plugin on a site that uses a SSL certificate.
 * Updated the Widget/Shortcode Designer screenshots
 * Updated readme.txt file
-
 
 = 0.21 =
 * Fix an issue where themes were not properly detected when plugin was installed into a different location other that the default folder
