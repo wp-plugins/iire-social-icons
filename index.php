@@ -2,18 +2,18 @@
 /*
 Plugin Name: iiRe Social Icons 
 Plugin URI: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
-Description: Add social media icons and links you your site with a customizable user interface. Please deactivate and uninstall plugin versions prior to (0.42) before updating to this latest version!
+Description: Add social media icons and links you your site with a customizable user interface. Latest version now has an option to remember your icon settings upon deactivation.
 Author: iiRe Productions
 Author URI: http://iireproductions.com/
-Version: 1.6.0
+Version: 1.6.1
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email
 Copyright (C) 2012-2013 iiRe Productions
 */
 	
 // ASSIGN VERSION (DEMO)
 global $wpdb, $iire_social_version;
-$iire_version = "1.6.0";
-$last_modified = "06-12-2013";
+$iire_version = "1.6.1";
+$last_modified = "07-05-2013";
 	
 define ('IIRE_SOCIAL_FILE', __FILE__);
 define ('IIRE_SOCIAL_BASENAME', plugin_basename(__FILE__));
@@ -37,6 +37,8 @@ register_activation_hook(__FILE__,'iire_social_install');
 
 // DEACTIVATE
 require_once("uninstall.php");
+if ( function_exists('iire_social_deactivate') )
+register_deactivation_hook( __FILE__, 'iire_social_deactivate' );
 
 // UNINSTALL
 if ( function_exists('iire_social_uninstall') )

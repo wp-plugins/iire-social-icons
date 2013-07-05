@@ -4,7 +4,7 @@ Donate link: http://iireproductions.com/web/website-development/wordpress-plugin
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email  
 Requires at least: 3.1
 Tested up to: 3.5.1
-Stable tag: 1.6.0 
+Stable tag: 1.6.1 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,7 +139,10 @@ A. The first email icon launches a pop up dialog w/ a form using JQuery UI. The 
 A. If you are using a Wordpress theme that is designed to adapt to different devices, such as tablets and smart phones, set the "Responsive" width option to "Yes". The width of the Widget or Shortcode containers will adjust automatically.
 
 **Q. How do I add effects?** 
-A . In the Widget/Shortcode Designer, select the desire effect in the Icon Styling section. Jquery UI is not required for these effects. Effects are supported by most modern browsers.
+A. In the Widget/Shortcode Designer, select the desire effect in the Icon Styling section. Jquery UI is not required for these effects. Effects are supported by most modern browsers.
+
+**Q. How do I remember my icon settings?** 
+A. Before deactivating the plugin, go to the Widget Designer, General Settings and set the Remember Icons select box to Yes.
 
 
 == Screenshots ==
@@ -148,6 +151,11 @@ A . In the Widget/Shortcode Designer, select the desire effect in the Icon Styli
 
 
 == Changelog ==
+
+= 1.6.1 =
+* Fixed an SQL insert error when upgrading to 1.6.0 version
+* Add an option to remember icon setting upon deactivation
+* Added addtional deactivation/uninstall function updates
 
 = 1.6.0 =
 * Added basic jQuery animation and CCS3 effects such as  Bounce, Drop, Expand, Fade In, Fade Out, Flip Horizontal, Flip Vertical, Glow, Highlight, Rotate, Shake and Shrink

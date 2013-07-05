@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Widget - (Demo Version) - 06-12-2013
+// Admin Page for Social Icons Widget - (Demo Version) - 07-05-2013
 
 function iire_admin_social_widget() {
 	global $wpdb;
@@ -22,8 +22,13 @@ function iire_admin_social_widget() {
 					$wpdb->query("UPDATE ".$table_name." SET option_value = '$value' WHERE option_name = '$scfield'");								
 				}
 			}	
-		}	
+		}
 	}		
+	
+	if (isset($_POST['iire_social_saveparms'])){
+		update_option("iire_social_saveparms", $_POST['iire_social_saveparms']);		
+	}	
+	
 	
 	// GET SETTINGS
 	$settings = array();		
@@ -528,6 +533,18 @@ function iire_admin_social_widget() {
  		<!-- Start General -->		
 		<h3 id="general"><a href="#">General Settings</a></h3>
 		<div>
+
+			<!-- Remember My Icons -->
+			<p><label>Remember Icons?</label>
+			<select id="iire_social_saveparms" name="iire_social_saveparms" class="w70">
+				<option value="0" <?php if ( get_option('iire_social_saveparms') =='0') { echo 'selected'; } ?>>No</option>
+				<option value="1" <?php if ( get_option('iire_social_saveparms') =='1') { echo 'selected'; } ?>>Yes</option>			
+			</select>
+			<br /><br />Save my icon settings upon plugin deactivation?							
+			</p>
+
+			<p>&nbsp;</p>		
+		
 			<!-- Recipient -->
 			<p><label>Clone Widget?</label>
 			<select id="clone_widget_settings" name="clone_widget_settings" class="w70">
@@ -804,6 +821,8 @@ function iire_admin_social_widget() {
 <p>&nbsp;</p>
 
 <h3>Notes</h3>
+<p>To remember your icon settings if you deactivate the plugin, go to "General Settings", set "Remember Icons" to "Yes" and save your changes.</p>
+
 <p>To use the identical settings for the shortcode generated in the Widget Designer, go to "General Settings", set "Clone Widget Settings" to "Yes" and save your changes.</p>
 
 <p>If you would like the icons to wrap in a Responsive Theme, go to "Widget Container, set "Responsive" to "Yes" and save your changes. This will override the Widget Container width.</p>

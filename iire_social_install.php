@@ -1,8 +1,8 @@
 <?php
-// Social Icons Installation (Demo Version) - 06-12-2013
+// Social Icons Installation (Demo Version) - 07-05-2013
 
 global $iire_social_version;
-$iire_social_version = "1.6.0";
+$iire_social_version = "1.6.1";
 
 // INSTALL/CREATE TABLES
 function iire_social_install() {
@@ -25,6 +25,7 @@ function iire_social_install() {
 
 	add_option("iire_social_version", $iire_social_version);
 	add_option("iire_social_data", '0');
+	add_option("iire_social_saveparms", '0');	
 
    //Check for update
    $installed_ver = get_option( "iire_social_version" );
@@ -52,11 +53,6 @@ function iire_update_social_check() {
     }
 
 	$table = $wpdb->prefix."iire_social";
-
-    if (get_site_option('iire_social_data') < '1.6.0') {	
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('62', 'widget_effect', '')");	
-		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('101', 'sc_effect', '')");
-	}		
 
     if (get_site_option('iire_social_data') == '0') {
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('1', 'registration_email', '')");		
@@ -172,7 +168,13 @@ function iire_update_social_check() {
 		$wpdb->query("INSERT INTO $table (option_id, option_name, option_value) VALUES ('101', 'sc_effect', '')");		
 		
 		update_option("iire_social_data", '1');		
-	}			
+	}
+	
+    if (get_site_option('iire_social_data') < '1.6.0') {	
+		$wpdb->query("REPLACE INTO $table (option_id, option_name, option_value) VALUES ('62', 'widget_effect', '')");	
+		$wpdb->query("REPLACE INTO $table (option_id, option_name, option_value) VALUES ('101', 'sc_effect', '')");
+	}	
+				
 }
 add_action('plugins_loaded', 'iire_update_social_check');
 ?>
