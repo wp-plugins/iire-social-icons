@@ -3,7 +3,7 @@ Contributors: iiRe Productions
 Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email  
 Requires at least: 3.1
-Tested up to: 3.5.1
+Tested up to: 3.9
 Stable tag: 1.6.1 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
