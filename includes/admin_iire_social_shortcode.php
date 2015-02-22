@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Shortcode - (Demo Version) - 06-12-2013
+// Admin Page for Social Icons Shortcode - (Demo Version) - 02-22-2015
 
 function iire_admin_social_shortcode() {
 	global $wpdb;
@@ -98,6 +98,8 @@ function iire_admin_social_shortcode() {
 ?>	
 
 <style>
+	.ui-widget-overlay { display:none; }
+
 	div#viewport { width:auto; min-width:300px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_shortcode.png'); background-repeat:no-repeat; background-position: top right;}
 
 	<?php echo $settings['css']; ?>	
@@ -263,7 +265,7 @@ function iire_admin_social_shortcode() {
 					echo '>'.$x.'</option>';
 				}
 				?>												
-			</select> px
+			</select>
 			</p>
 
 			<p class="ds <?php if ($settings['sc_dropshadow'] =='0') { echo 'hidden'; } ?>"><label>Vertical Offset:</label>
@@ -311,19 +313,19 @@ function iire_admin_social_shortcode() {
 			</p>
 			
 			<p class="rc <?php if ($settings['sc_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Top Left:</label>
-			<input type="text" id="sc_roundedcorners_topleft" name="sc_roundedcorners_topleft" value="<?php echo $settings['sc_roundedcorners_topleft']; ?>" class="w50"> px</p>				
+			<input type="text" id="sc_roundedcorners_topleft" name="sc_roundedcorners_topleft" value="<?php echo $settings['sc_roundedcorners_topleft']; ?>" class="w50"></p>				
 			</p>				
 
 			<p class="rc <?php if ($settings['sc_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Top Right:</label>
-			<input type="text" id="sc_roundedcorners_topright" name="sc_roundedcorners_topright" value="<?php echo $settings['sc_roundedcorners_topright']; ?>" class="w50"> px</p>			
+			<input type="text" id="sc_roundedcorners_topright" name="sc_roundedcorners_topright" value="<?php echo $settings['sc_roundedcorners_topright']; ?>" class="w50"></p>			
 			</p>
 			
 			<p class="rc <?php if ($settings['sc_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Bottom Left:</label>
-			<input type="text" id="sc_roundedcorners_bottomleft" name="sc_roundedcorners_bottomleft" value="<?php echo $settings['sc_roundedcorners_bottomleft']; ?>" class="w50"> px</p>			
+			<input type="text" id="sc_roundedcorners_bottomleft" name="sc_roundedcorners_bottomleft" value="<?php echo $settings['sc_roundedcorners_bottomleft']; ?>" class="w50"></p>			
 			</p>
 			
 			<p class="rc <?php if ($settings['sc_roundedcorners'] == '0') { echo 'hidden'; } ?>"><label>Bottom Right:</label>
-			<input type="text" id="sc_roundedcorners_bottomright" name="sc_roundedcorners_bottomright" value="<?php echo $settings['sc_roundedcorners_bottomright']; ?>" class="w50"> px</p>
+			<input type="text" id="sc_roundedcorners_bottomright" name="sc_roundedcorners_bottomright" value="<?php echo $settings['sc_roundedcorners_bottomright']; ?>" class="w50"></p>
 			</p>
 			
 			<p class="rc <?php if ($settings['sc_roundedcorners'] == '0') { echo 'hidden'; } ?>"><br /><br /></p>	

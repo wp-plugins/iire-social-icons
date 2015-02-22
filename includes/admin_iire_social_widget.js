@@ -1,4 +1,4 @@
-// IIRE SOCIAL WIDGET (Demo Version) - 06-12-2013
+// IIRE SOCIAL WIDGET (Demo Version) - 02-22-2015
 
 jQuery(document).ready(function() {
 	var plugin_path = jQuery("input#plugin_path").val(); 
@@ -151,7 +151,7 @@ jQuery(document).ready(function() {
 			resizable: false,
 			draggable: true,
 			width: 320,
-			height: 220,
+			height: 270,
 			modal: true,
     		buttons: {}			
 		});
@@ -286,9 +286,10 @@ jQuery(document).ready(function() {
 
 
 
-	// Accordian
+	// Accordian 04-15-2014
  	jQuery("#right_panel").accordion({ 
-		autoHeight: false
+		autoHeight: false,
+	    heightStyle: "content"		
 	});
 
 	var actab = getCookie("Accordian Tab");

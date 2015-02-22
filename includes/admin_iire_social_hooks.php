@@ -1,5 +1,5 @@
 <?php
-// Admin Social Hooks - (Demo Version) - 06-12-2013
+// Admin Social Hooks - (Demo Version) - 02-22-2015
 
 function iire_social_admin_pages() {
 	add_menu_page('iiRe Social Icons', 'iiRe Social Icons', 'administrator', 'iire_admin_social_home', 'iire_admin_social_home');

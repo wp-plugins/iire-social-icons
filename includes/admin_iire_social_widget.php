@@ -1,5 +1,5 @@
 <?php
-// Admin Page for Social Icons Widget - (Demo Version) - 07-05-2013
+// Admin Page for Social Icons Widget - (Demo Version) - 02-22-2015
 
 function iire_admin_social_widget() {
 	global $wpdb;
@@ -110,6 +110,8 @@ function iire_admin_social_widget() {
 ?>
 
 <style>
+	.ui-widget-overlay { display:none; }
+
 	div#viewport { width:auto; min-width:300px; min-height:235px; height:auto; padding:10px; background-color:#EDEDED; position:relative; top:0px; left:0px; background-image: url('<?php echo IIRE_SOCIAL_URL ?>/includes/images/preview_widget.png'); background-repeat:no-repeat; background-position: top right;}
 
 	<?php echo $settings['css']; ?>	
@@ -268,15 +270,15 @@ function iire_admin_social_widget() {
 			</p>
 
 			<p class="ds <?php if ($settings['widget_dropshadow'] =='0') { echo 'hidden'; } ?>"><label>Horizontal Offset:</label>
-			<input type="text" id="widget_dropshadow_horizontal_offset" name="widget_dropshadow_horizontal_offset" value="<?php echo $settings['widget_dropshadow_horizontal_offset']; ?>" class="w50"> px</p>			
+			<input type="text" id="widget_dropshadow_horizontal_offset" name="widget_dropshadow_horizontal_offset" value="<?php echo $settings['widget_dropshadow_horizontal_offset']; ?>" class="w50"></p>			
 			</p>
 
 			<p class="ds <?php if ($settings['widget_dropshadow'] =='0') { echo 'hidden'; } ?>"><label>Vertical Offset:</label>
-			<input type="text" id="widget_dropshadow_vertical_offset" name="widget_dropshadow_vertical_offset" value="<?php echo $settings['widget_dropshadow_vertical_offset']; ?>" class="w50"> px</p>				
+			<input type="text" id="widget_dropshadow_vertical_offset" name="widget_dropshadow_vertical_offset" value="<?php echo $settings['widget_dropshadow_vertical_offset']; ?>" class="w50"></p>				
 			</p>
 			
 			<p class="ds <?php if ($settings['widget_dropshadow'] =='0') { echo 'hidden'; } ?>"><label>Blur:</label>
-			<input type="text" id="widget_dropshadow_blur" name="widget_dropshadow_blur" value="<?php echo $settings['widget_dropshadow_blur']; ?>" class="w50"> px</p>				
+			<input type="text" id="widget_dropshadow_blur" name="widget_dropshadow_blur" value="<?php echo $settings['widget_dropshadow_blur']; ?>" class="w50"></p>				
 			</p>							
 
 			<p class="ds <?php if ($settings['widget_dropshadow'] == '0') { echo 'hidden'; } ?>"><br /><br /></p>
@@ -292,19 +294,19 @@ function iire_admin_social_widget() {
 			</p>
 			
 			<p class="rc <?php if ($settings['widget_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Top Left:</label>
-			<input type="text" id="widget_roundedcorners_topleft" name="widget_roundedcorners_topleft" value="<?php echo $settings['widget_roundedcorners_topleft']; ?>" class="w50"> px</p>				
+			<input type="text" id="widget_roundedcorners_topleft" name="widget_roundedcorners_topleft" value="<?php echo $settings['widget_roundedcorners_topleft']; ?>" class="w50"></p>				
 			</p>				
 
 			<p class="rc <?php if ($settings['widget_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Top Right:</label>
-			<input type="text" id="widget_roundedcorners_topright" name="widget_roundedcorners_topright" value="<?php echo $settings['widget_roundedcorners_topright']; ?>" class="w50"> px</p>			
+			<input type="text" id="widget_roundedcorners_topright" name="widget_roundedcorners_topright" value="<?php echo $settings['widget_roundedcorners_topright']; ?>" class="w50"></p>			
 			</p>
 			
 			<p class="rc <?php if ($settings['widget_roundedcorners'] =='0') { echo 'hidden'; } ?>"><label>Bottom Left:</label>
-			<input type="text" id="widget_roundedcorners_bottomleft" name="widget_roundedcorners_bottomleft" value="<?php echo $settings['widget_roundedcorners_bottomleft']; ?>" class="w50"> px</p>			
+			<input type="text" id="widget_roundedcorners_bottomleft" name="widget_roundedcorners_bottomleft" value="<?php echo $settings['widget_roundedcorners_bottomleft']; ?>" class="w50"></p>			
 			</p>
 			
 			<p class="rc <?php if ($settings['widget_roundedcorners'] == '0') { echo 'hidden'; } ?>"><label>Bottom Right:</label>
-			<input type="text" id="widget_roundedcorners_bottomright" name="widget_roundedcorners_bottomright" value="<?php echo $settings['widget_roundedcorners_bottomright']; ?>" class="w50"> px</p>
+			<input type="text" id="widget_roundedcorners_bottomright" name="widget_roundedcorners_bottomright" value="<?php echo $settings['widget_roundedcorners_bottomright']; ?>" class="w50"></p>
 			</p>
 			
 			<p class="rc <?php if ($settings['widget_roundedcorners'] == '0') { echo 'hidden'; } ?>"><br /><br /></p>			

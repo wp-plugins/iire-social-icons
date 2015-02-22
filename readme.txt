@@ -3,23 +3,22 @@ Contributors: iiRe Productions
 Donate link: http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/
 Tags: Social Media, Icons, Facebook, Twitter, Google Plus, Pinterest, YouTube, Email  
 Requires at least: 3.1
-Tested up to: 3.9
-Stable tag: 1.6.1 
+Tested up to: 4.1.1
+Stable tag: 1.6.2 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add social media icons and links to your site with a customizable user interface. New CSS3 and animation effects! See the description for more information
+Latest version includes various fixes to support latest version of Wordpress and jQuery UI. See the description for more information
 
 == Description ==
 
 Easily choose an from a library of social media icons, customize their appearance, and add them to a wordpress website as a widget or shortcode. Use one the default icon themes or use the symbols and background colors with CSS styling. The company logos in the icons are copyright of their respective owners. New CSS3 and animation effects (Bounce, Drop, Expand, Fade In, Fade Out, Flip Horizontal, Flip Vertical, Glow, Highlight, Rotate, Shake, Shrink) in this latest version! 
 
-**NOTE: If you have a previous installation, please deactivate and uninstall plugin versions prior to (0.42) before updating to this latest version!  Don't forget to clear your browser cache!**
+**NOTE: If you have a previous installation, please deactivate and uninstall plugin versions prior to (1.6.1) before updating to this latest version!  Don't forget to clear your browser cache!**
 
 See our <a href="http://iireproductions.com/web/website-development/wordpress-plugins/plugins-social-icons/">iiRe Social Icons page</a> for more information.
 
-There also is <a href="http://wordpress.org/extend/plugins/iire-social-lite/">iiRe Social Lite</a> version available for those who just need basic icons and additional themes.
-
+If you have purchased the full version thru PayPal, please send your purchase information to webmaster@iireproductions so we can provide you with a new download link to the latest version.
 
 **Features**
 
@@ -151,6 +150,13 @@ A. Before deactivating the plugin, go to the Widget Designer, General Settings a
 
 
 == Changelog ==
+= 1.6.2 =
+* Updated to latest jQuery UI css links and images for Widget and Shortcode Designers
+* Fixed a jQuery UI accordian panel auto height issue in the Widget and Shortcode Designers
+* Fixed an issue with the Jquery UI overlay that was covering the Icons dialog in the Widget and Shortcode Designers
+* Fixed an uninstall issue if uninstall.php was permaturely deleted
+* Adjusted the default height of the Link/Title dialog in the Widget and Shortcode Designers
+* Adjusted the line height in the right side panel accordian in the Widget and Shortcode Designers
 
 = 1.6.1 =
 * Fixed an SQL insert error when upgrading to 1.6.0 version

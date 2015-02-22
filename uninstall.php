@@ -1,5 +1,5 @@
 <?php
-// Social Icons Installation (Demo Version) - 07-05-2013
+// Social Icons Installation (Demo Version) - 02-22-2015
 
 // UNINSTALL
 function iire_social_uninstall() {
@@ -16,7 +16,7 @@ function iire_social_uninstall() {
 	
 	$table_name = $wpdb->get_blog_prefix($blog_id)."iire_social";
 	$SQL = "DROP TABLE IF EXISTS ".$table_name;		
-	mysql_query($SQL) or die("An unexpected error occured.".mysql_error());	
+	mysql_query($SQL); //or die("An unexpected error occured.".mysql_error());	
 
  	$table_name = $wpdb->prefix."iire_social";	
 	$wpdb->query("DROP TABLE IF EXISTS $table_name");
@@ -38,7 +38,7 @@ function iire_social_deactivate() {
 
 		$table_name = $wpdb->get_blog_prefix($blog_id)."iire_social";
 		$SQL = "DROP TABLE IF EXISTS ".$table_name;		
-		mysql_query($SQL) or die("An unexpected error occured.".mysql_error());	
+		mysql_query($SQL); //or die("An unexpected error occured.".mysql_error());	
 	
  		$table_name = $wpdb->prefix."iire_social";	
 		$wpdb->query("DROP TABLE IF EXISTS $table_name");
